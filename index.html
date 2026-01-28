@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RN III - Portfolio</title>
+    <title>Richard Newby III - Data & Analytics Leader</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a;
-            --accent: #d4af37;
-            --text: #2d2d2d;
-            --text-light: #666;
-            --bg: #fafafa;
-            --card-bg: #ffffff;
+            --primary: #e8e8e8;
+            --accent-blue: #4A9EFF;
+            --accent-cyan: #00D9FF;
+            --accent-coral: #FF6B6B;
+            --text: #e0e0e0;
+            --text-light: #a8a8a8;
+            --bg: #2d2d2d;
+            --bg-secondary: #232323;
+            --card-bg: #1e1e1e;
         }
 
         * {
@@ -24,7 +27,7 @@
         }
 
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
@@ -36,27 +39,30 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 2rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(250, 250, 250, 0.95);
+            background: rgba(35, 35, 35, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 6px;
             color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.4rem 1.2rem;
+            text-transform: uppercase;
         }
 
         nav ul {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
@@ -77,12 +83,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
+            background: var(--accent-cyan);
             transition: width 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--accent);
+            color: var(--accent-cyan);
         }
 
         nav a:hover::after {
@@ -94,33 +100,75 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 0 5%;
             position: relative;
             overflow: hidden;
+            --mouse-x: 50%;
+            --mouse-y: 50%;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
-            animation: float 20s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(74, 158, 255, 0.25) 0%, transparent 40%),
+                radial-gradient(circle at 20% 50%, rgba(74, 158, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(0, 217, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 107, 107, 0.15) 0%, transparent 50%);
+            filter: blur(60px);
+            animation: gradientShift 15s ease-in-out infinite;
+            opacity: 0.9;
+            transition: background 0.3s ease;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-50px, 50px) rotate(5deg); }
+        @keyframes gradientShift {
+            0%, 100% {
+                transform: translate(0%, 0%) scale(1);
+            }
+            25% {
+                transform: translate(-3%, 3%) scale(1.05);
+            }
+            50% {
+                transform: translate(3%, -3%) scale(0.98);
+            }
+            75% {
+                transform: translate(-2%, 2%) scale(1.02);
+            }
         }
 
-        .hero-content {
-            max-width: 1200px;
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1s ease-out;
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at calc(100% - var(--mouse-x)) calc(100% - var(--mouse-y)), rgba(255, 107, 107, 0.2) 0%, transparent 35%),
+                radial-gradient(circle at 60% 20%, rgba(255, 107, 107, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 30% 70%, rgba(74, 158, 255, 0.1) 0%, transparent 45%),
+                radial-gradient(circle at 70% 60%, rgba(0, 217, 255, 0.08) 0%, transparent 40%);
+            filter: blur(80px);
+            animation: gradientShift2 20s ease-in-out infinite;
+            opacity: 0.7;
+            transition: background 0.3s ease;
+        }
+
+        @keyframes gradientShift2 {
+            0%, 100% {
+                transform: translate(0%, 0%) scale(1) rotate(0deg);
+            }
+            33% {
+                transform: translate(3%, -3%) scale(1.05) rotate(3deg);
+            }
+            66% {
+                transform: translate(-3%, 3%) scale(0.95) rotate(-3deg);
+            }
         }
 
         @keyframes fadeInUp {
@@ -134,14 +182,24 @@
             }
         }
 
+        .hero-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+            text-align: left;
+        }
+
         .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 1.1;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 800;
+            line-height: 1.3;
             margin-bottom: 1.5rem;
             color: var(--primary);
             letter-spacing: -2px;
+            min-height: 3.9em;
+            text-align: left;
         }
 
         .hero-content .subtitle {
@@ -153,9 +211,51 @@
         }
 
         .accent-text {
-            color: var(--accent);
+            color: var(--accent-blue);
             position: relative;
             display: inline-block;
+            cursor: default;
+        }
+        
+        .rotating-text::after {
+            content: '|';
+            color: var(--accent-blue);
+            animation: blink 0.7s infinite;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            0%, 49% {
+                opacity: 1;
+            }
+            50%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        .accent-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: var(--accent-coral);
+            -webkit-mask-image: radial-gradient(circle 120px at var(--x, 50%) var(--y, 50%), 
+                                                rgba(0,0,0,1) 0%, 
+                                                rgba(0,0,0,0.9) 30%, 
+                                                rgba(0,0,0,0.5) 60%, 
+                                                rgba(0,0,0,0) 100%);
+            mask-image: radial-gradient(circle 120px at var(--x, 50%) var(--y, 50%), 
+                                        rgba(0,0,0,1) 0%, 
+                                        rgba(0,0,0,0.9) 30%, 
+                                        rgba(0,0,0,0.5) 60%, 
+                                        rgba(0,0,0,0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .accent-text:hover::before {
+            opacity: 1;
         }
 
         .cta-buttons {
@@ -163,6 +263,7 @@
             gap: 1.5rem;
             margin-top: 3rem;
             flex-wrap: wrap;
+            justify-content: flex-start;
         }
 
         .btn {
@@ -180,7 +281,7 @@
 
         .btn-primary {
             background: var(--primary);
-            color: white;
+            color: var(--bg);
             border: 2px solid var(--primary);
         }
 
@@ -191,7 +292,7 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: var(--accent);
+            background: var(--accent-blue);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: width 0.5s ease, height 0.5s ease;
@@ -215,13 +316,13 @@
 
         .btn-secondary:hover {
             background: var(--primary);
-            color: white;
+            color: var(--bg);
         }
 
         /* About Section */
         .about {
             padding: 8rem 5%;
-            background: white;
+            background: var(--bg-secondary);
         }
 
         .section-header {
@@ -230,9 +331,9 @@
         }
 
         .section-header h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
+            font-weight: 800;
             color: var(--primary);
             margin-bottom: 1rem;
             letter-spacing: -1px;
@@ -269,10 +370,23 @@
 
         .skill-item {
             padding: 1rem;
-            background: var(--bg);
-            border-left: 3px solid var(--accent);
+            background: var(--card-bg);
+            border-left: 3px solid var(--accent-blue);
             font-weight: 500;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            color: var(--text);
+        }
+
+        .skill-item:nth-child(3n+1) {
+            border-left-color: var(--accent-blue);
+        }
+
+        .skill-item:nth-child(3n+2) {
+            border-left-color: var(--accent-cyan);
+        }
+
+        .skill-item:nth-child(3n+3) {
+            border-left-color: var(--accent-coral);
         }
 
         .skill-item:hover {
@@ -297,22 +411,31 @@
             background: var(--card-bg);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .project-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, #d4af37 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--bg) 100%);
             position: relative;
             overflow: hidden;
+        }
+
+        .project-card:nth-child(2) .project-image {
+            background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--bg) 100%);
+        }
+
+        .project-card:nth-child(3) .project-image {
+            background: linear-gradient(135deg, var(--accent-coral) 0%, var(--bg) 100%);
         }
 
         .project-image::after {
@@ -322,7 +445,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3);
             transition: opacity 0.3s ease;
         }
 
@@ -335,7 +458,7 @@
         }
 
         .project-content h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
@@ -359,30 +482,33 @@
             background: var(--bg);
             font-size: 0.85rem;
             font-weight: 500;
-            color: var(--text);
+            color: var(--text-light);
             border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         /* Contact Section */
         .contact {
             padding: 8rem 5%;
-            background: var(--primary);
+            background: var(--card-bg);
             color: white;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .contact h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
+            font-weight: 800;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
+            color: var(--primary);
         }
 
         .contact p {
             font-size: 1.3rem;
             margin-bottom: 3rem;
-            opacity: 0.9;
+            color: var(--text-light);
         }
 
         .contact-links {
@@ -394,8 +520,8 @@
 
         .contact-link {
             padding: 1rem 2.5rem;
-            background: white;
-            color: var(--primary);
+            background: var(--primary);
+            color: var(--bg);
             text-decoration: none;
             font-weight: 600;
             border-radius: 2px;
@@ -404,17 +530,18 @@
         }
 
         .contact-link:hover {
-            background: var(--accent);
-            color: white;
+            background: var(--accent-coral);
+            color: var(--bg);
             transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
         }
 
         footer {
-            background: var(--primary);
-            color: rgba(255, 255, 255, 0.7);
+            background: var(--card-bg);
+            color: var(--text-light);
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         /* Mobile Responsive */
@@ -476,8 +603,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Building Digital <span class="accent-text">Excellence</span></h1>
-            <p class="subtitle">Creative professional crafting exceptional experiences through design, development, and innovation.</p>
+            <h1>Hi, I'm Richard and I'm a <span class="accent-text rotating-text" data-text="Data & Analytics Leader">Data & Analytics Leader</span></h1>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
                 <a href="#contact" class="btn btn-secondary"><span>Get In Touch</span></a>
@@ -493,16 +619,16 @@
         </div>
         <div class="about-content">
             <div class="about-text fade-in">
-                <p>I'm a dedicated professional with a passion for creating elegant solutions to complex problems. With expertise spanning design, development, and strategic thinking, I bring ideas to life with precision and creativity.</p>
-                <p>My approach combines technical excellence with thoughtful design, ensuring every project not only functions flawlessly but also delivers an exceptional user experience.</p>
+                <p>Strategic data and analytics leader with 5+ years of experience driving enterprise BI transformation, data governance, and scalable architecture across cross-functional domains. Currently serving as Principal Power Platform Architect at Majesco, where I lead enterprise data strategy and Microsoft Fabric implementations.</p>
+                <p>I specialize in building centralized data models, standardizing KPIs, and enabling data-driven decisions through self-service platforms and modern reporting tools. My approach combines technical excellence with strategic alignment, ensuring analytics solutions support long-term business growth while maintaining scalability and governance.</p>
             </div>
             <div class="skills fade-in">
-                <div class="skill-item">Web Development</div>
-                <div class="skill-item">UI/UX Design</div>
-                <div class="skill-item">Project Management</div>
-                <div class="skill-item">Strategic Planning</div>
-                <div class="skill-item">Creative Direction</div>
-                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Power BI & Fabric</div>
+                <div class="skill-item">Data Architecture</div>
+                <div class="skill-item">DAX & SQL</div>
+                <div class="skill-item">Azure DevOps & CI/CD</div>
+                <div class="skill-item">Data Governance</div>
+                <div class="skill-item">Strategic Leadership</div>
             </div>
         </div>
     </section>
@@ -517,36 +643,36 @@
             <div class="project-card fade-in">
                 <div class="project-image"></div>
                 <div class="project-content">
-                    <h3>Project One</h3>
-                    <p>A comprehensive solution that transformed client operations through innovative technology and streamlined processes.</p>
+                    <h3>Enterprise Data Warehouse</h3>
+                    <p>Led development of centralized EDW at Majesco integrating systems across Sales, Marketing, Services, Product, and HR. Built CI/CD framework for Power BI and Fabric using Azure DevOps, enabling automated deployments and version control.</p>
+                    <div class="project-tags">
+                        <span class="tag">Microsoft Fabric</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Azure DevOps</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Platform Migration & Cost Optimization</h3>
+                    <p>Led platform migration to Microsoft Fabric, cutting legacy BI system costs by 40% while enabling AI, automation, and self-service capabilities across five departments at Majesco.</p>
+                    <div class="project-tags">
+                        <span class="tag">Cost Reduction</span>
+                        <span class="tag">Migration</span>
+                        <span class="tag">Enterprise BI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>BI Modernization at Deltek</h3>
+                    <p>Developed BI strategy and roadmap for 350+ users, pioneering Power BI adoption and redesigning reporting for clarity. Increased user satisfaction scores by 14% through improved usability and governance.</p>
                     <div class="project-tags">
                         <span class="tag">Strategy</span>
-                        <span class="tag">Design</span>
-                        <span class="tag">Development</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Project Two</h3>
-                    <p>An elegant interface redesign that increased user engagement by 200% through intuitive design principles.</p>
-                    <div class="project-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Research</span>
-                        <span class="tag">Testing</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Project Three</h3>
-                    <p>A full-stack application that seamlessly connects users with the resources they need in real-time.</p>
-                    <div class="project-tags">
-                        <span class="tag">Full-Stack</span>
-                        <span class="tag">API</span>
-                        <span class="tag">Cloud</span>
+                        <span class="tag">Governance</span>
+                        <span class="tag">User Adoption</span>
                     </div>
                 </div>
             </div>
@@ -558,8 +684,8 @@
         <h2>Let's Work Together</h2>
         <p>Ready to start your next project? Get in touch.</p>
         <div class="contact-links">
-            <a href="mailto:your.email@example.com" class="contact-link">Email Me</a>
-            <a href="https://linkedin.com/in/yourprofile" class="contact-link">LinkedIn</a>
+            <a href="mailto:rnewby3@gmail.com" class="contact-link">Email Me</a>
+            <a href="https://www.linkedin.com/in/richardnewby3" class="contact-link">LinkedIn</a>
             <a href="https://github.com/rnewby3" class="contact-link">GitHub</a>
         </div>
     </section>
@@ -598,6 +724,86 @@
         }, observerOptions);
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Cursor spotlight effect for accent text
+        const accentText = document.querySelector('.accent-text');
+        if (accentText) {
+            accentText.addEventListener('mousemove', (e) => {
+                const rect = accentText.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                accentText.style.setProperty('--x', x + '%');
+                accentText.style.setProperty('--y', y + '%');
+            });
+        }
+
+        // Mouse-following gradient background in hero section
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                heroSection.style.setProperty('--mouse-x', x + '%');
+                heroSection.style.setProperty('--mouse-y', y + '%');
+            });
+        }
+
+        // Rotating text for hero titles with typewriter effect
+        const rotatingText = document.querySelector('.rotating-text');
+        if (rotatingText) {
+            const titles = [
+                'Data & Analytics Leader',
+                'Power BI Expert',
+                'Microsoft Fabric Architect',
+                'Data Governance Specialist',
+                'BI Strategy Consultant'
+            ];
+            let currentIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let isPaused = false;
+
+            function typeWriter() {
+                const currentTitle = titles[currentIndex];
+                
+                if (isPaused) {
+                    setTimeout(typeWriter, 2000); // Pause for 2 seconds at full text
+                    isPaused = false;
+                    isDeleting = true;
+                    return;
+                }
+
+                if (isDeleting) {
+                    // Delete characters
+                    rotatingText.textContent = currentTitle.substring(0, charIndex - 1);
+                    rotatingText.setAttribute('data-text', currentTitle.substring(0, charIndex - 1));
+                    charIndex--;
+
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        currentIndex = (currentIndex + 1) % titles.length;
+                        setTimeout(typeWriter, 500); // Short pause before typing next
+                        return;
+                    }
+                } else {
+                    // Type characters
+                    rotatingText.textContent = currentTitle.substring(0, charIndex + 1);
+                    rotatingText.setAttribute('data-text', currentTitle.substring(0, charIndex + 1));
+                    charIndex++;
+
+                    if (charIndex === currentTitle.length) {
+                        isPaused = true;
+                    }
+                }
+
+                const typingSpeed = isDeleting ? 50 : 100; // Faster deletion than typing
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            // Start the typewriter effect
+            setTimeout(typeWriter, 1000); // Initial delay
+        }
     </script>
 </body>
 </html>
