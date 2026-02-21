@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Richard Newby III</title>
+    <meta name="description" content="Professional experience, roles, and key initiatives of Richard Newby III, Data & Analytics Leader.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+    <style>
+        /* ── Page Header ───────────────────────────────────── */
+        .page-header {
+            padding-top: calc(68px + 5rem);
+            padding-bottom: 4rem;
+            padding-left: 5%;
+            padding-right: 5%;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 55%; height: 100%;
+            background: radial-gradient(ellipse 80% 80% at 80% 50%, var(--accent-dim) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .page-header-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── Experience Timeline ───────────────────────────── */
+        .experience-section { background: var(--bg-elev); }
+
+        .timeline {
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 8px;
+            width: 2px;
+            height: calc(100% - 8px);
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-dot {
+            position: absolute;
+            left: -6px; top: 8px;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg-elev);
+            z-index: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.4);
+        }
+
+        .timeline-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.6rem;
+        }
+
+        .timeline-company {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .timeline-sep {
+            width: 3px; height: 3px;
+            border-radius: 50%;
+            background: var(--text-faint);
+        }
+
+        .timeline-dates {
+            font-size: 0.8rem;
+            color: var(--text-faint);
+            font-weight: 500;
+        }
+
+        .timeline-role {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.9rem;
+        }
+
+        .timeline-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .timeline-achievements {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .timeline-achievements li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .timeline-achievements li::before {
+            content: '▸';
+            color: var(--accent);
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1.2rem;
+        }
+
+        /* ── Projects Grid ─────────────────────────────────── */
+        .projects-section { background: var(--bg); }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-strong);
+        }
+
+        .project-card-banner {
+            height: 8px;
+        }
+
+        .project-card-banner.blue  { background: linear-gradient(90deg, var(--accent), var(--cyan)); }
+        .project-card-banner.cyan  { background: linear-gradient(90deg, var(--cyan), var(--accent)); }
+        .project-card-banner.coral { background: linear-gradient(90deg, var(--coral), #ff9f43); }
+
+        .project-card-body { padding: 2rem; }
+
+        .project-card-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            margin-bottom: 0.65rem;
+        }
+
+        .project-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.85rem;
+        }
+
+        .project-card p {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-impact {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--surface);
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .impact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .impact-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text);
+        }
+
+        .impact-label {
+            font-size: 0.72rem;
+            color: var(--text-faint);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        /* ── Responsive ────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .timeline::before { display: none; }
+            .timeline-item { padding-left: 0; }
+            .timeline-dot  { display: none; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <span class="logo-rn">RN</span>
+            <span class="logo-divider"></span>
+            <span class="logo-iii">III</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html" class="active">Experience</a></li>
+            <li><a href="datasets.html">Datasets</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+                <svg class="icon-sun"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </button>
+            <a href="index.html#contact" class="btn nav-cta">Say Hello</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <p class="section-label">Career</p>
+            <h1>Experience &amp;<br>Key Initiatives</h1>
+            <p>A detailed look at my professional journey, the roles I've held, and the high-impact projects I've led across enterprise data and analytics.</p>
+        </div>
+    </header>
+
+    <!-- Experience Timeline -->
+    <section class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label reveal">Work History</p>
+                <h2 class="section-title reveal">Roles &amp; Responsibilities</h2>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Majesco -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">Majesco</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2022 — Present</span>
+                        <span class="tag">Current</span>
+                    </div>
+                    <div class="timeline-role">Principal Power Platform Architect</div>
+                    <p class="timeline-desc">
+                        Leading enterprise data and analytics strategy for a global insurance software company. Own the full BI architecture from platform selection and data modeling through deployment, governance, and end-user enablement.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Architected and delivered a centralized Enterprise Data Warehouse integrating five business domains: Sales, Marketing, Services, Product, and HR</li>
+                        <li>Led platform migration to Microsoft Fabric, reducing legacy BI licensing and infrastructure costs by 40%</li>
+                        <li>Built a CI/CD framework for Power BI and Fabric using Azure DevOps — enabling automated deployments, PR workflows, and version control for BI assets</li>
+                        <li>Established enterprise-wide data governance standards: KPI definitions, semantic layer ownership, refresh SLAs, and access control policies</li>
+                        <li>Enabled AI and automation capabilities across five departments through Fabric's Copilot and Dataflow Gen2 features</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Microsoft Fabric</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag tag-cyan">Azure DevOps</span>
+                        <span class="tag">Data Governance</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag tag-coral">EDW Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Deltek -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">Deltek</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2019 — 2022</span>
+                    </div>
+                    <div class="timeline-role">Business Intelligence Analyst / Lead</div>
+                    <p class="timeline-desc">
+                        Drove BI modernization across a project-based ERP software company, shifting the organization from static reports to a self-service Power BI ecosystem used by 350+ internal stakeholders.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Developed and executed a comprehensive BI strategy and multi-year roadmap aligned to organizational OKRs</li>
+                        <li>Pioneered Power BI adoption across business units — authored governance standards, training programs, and a report certification process</li>
+                        <li>Redesigned core operational reports for clarity, consistency, and actionability, increasing user satisfaction scores by 14%</li>
+                        <li>Standardized KPI definitions and created a shared semantic layer, eliminating conflicting numbers across departments</li>
+                        <li>Partnered with Finance, Sales, and Operations leadership to translate strategic goals into analytics requirements</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag tag-cyan">BI Strategy</span>
+                        <span class="tag">User Adoption</span>
+                        <span class="tag tag-coral">Governance</span>
+                    </div>
+                </div>
+
+                <!-- MicroStrategy -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">MicroStrategy</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2018 — 2019</span>
+                    </div>
+                    <div class="timeline-role">Applications Architect &amp; Lead Operations Analyst</div>
+                    <p class="timeline-desc">
+                        Delivered custom BI solutions and strategic advisory to enterprise clients worldwide, including onsite engagements for proof-of-concept deployments and full production rollouts.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Designed and deployed MicroStrategy dashboards and data models for clients across finance, retail, and government sectors</li>
+                        <li>Conducted onsite POC engagements — translating executive requirements into working prototypes under tight timelines</li>
+                        <li>Led workshops with C-suite executives and analyst teams to align reporting strategy with business objectives</li>
+                        <li>Bridged the gap between client business requirements and technical execution across implementation cycles</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">MicroStrategy</span>
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag tag-cyan">Client Advisory</span>
+                        <span class="tag">Dashboard Design</span>
+                    </div>
+                </div>
+
+                <!-- FedBid -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">FedBid, Inc.</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2017 — 2018</span>
+                    </div>
+                    <div class="timeline-role">Senior Account Lead</div>
+                    <p class="timeline-desc">
+                        Provided procurement analytics and reporting support to 15+ Army and federal contracting teams, while leading a high-visibility CRM platform migration.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Built and maintained MicroStrategy and Excel-based reports to track procurement performance across federal accounts</li>
+                        <li>Led the Salesforce Lightning migration for the accounts team, building custom dashboards for pipeline and account health</li>
+                        <li>Collaborated directly with Army contracting officers to streamline reverse-auction procurement data workflows</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">MicroStrategy</span>
+                        <span class="tag">Salesforce</span>
+                        <span class="tag tag-cyan">Federal Contracting</span>
+                        <span class="tag">Excel</span>
+                    </div>
+                </div>
+
+                <!-- LRA by Deloitte -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">LRA by Deloitte</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2016 — 2017</span>
+                    </div>
+                    <div class="timeline-role">Project Associate</div>
+                    <p class="timeline-desc">
+                        Supported a nationwide cash management system rollout for a major retail client, delivering onsite training and custom project tracking tooling.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Conducted onsite training sessions for store managers across multiple regions during a phased system rollout</li>
+                        <li>Built a custom Excel-based project tracking tool to monitor milestones, blockers, and completion rates across locations</li>
+                        <li>Served as a day-to-day liaison between the Deloitte project team and client store leadership</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag tag-cyan">Project Management</span>
+                        <span class="tag">Training</span>
+                        <span class="tag">Deloitte</span>
+                    </div>
+                </div>
+
+                <!-- Great Gatherings -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">Great Gatherings</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2013 — 2016</span>
+                    </div>
+                    <div class="timeline-role">Store Director</div>
+                    <p class="timeline-desc">
+                        Opened and operated a retail location from the ground up — hiring, training, and managing the full sales team while outperforming established locations in year one.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Hired and trained a team of 8, establishing sales processes and product knowledge curricula from scratch</li>
+                        <li>Outperformed all other established store locations in revenue during the first year of operation</li>
+                        <li>Developed standardized training programs adopted across multiple locations in the district</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Team Leadership</span>
+                        <span class="tag tag-coral">Retail Operations</span>
+                        <span class="tag">Sales</span>
+                        <span class="tag">Training</span>
+                    </div>
+                </div>
+
+                <!-- HH Gregg -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">HH Gregg Electronics</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2010 — 2013</span>
+                    </div>
+                    <div class="timeline-role">Home Theater Sales Manager</div>
+                    <p class="timeline-desc">
+                        Led a 20-person sales team in a high-volume consumer electronics environment, finishing in the top 10% of stores district-wide and placing second in a multi-state sales competition.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Managed a team of 20 sales associates — coaching performance, setting targets, and running floor operations</li>
+                        <li>Ranked top 10% of all stores in the district for department revenue</li>
+                        <li>Placed 2nd out of 260 locations in a multi-state sales contest for home theater systems</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Team Leadership</span>
+                        <span class="tag tag-coral">Sales Management</span>
+                        <span class="tag">Consumer Electronics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label reveal">Initiatives</p>
+                <h2 class="section-title reveal">Projects &amp; Delivered Outcomes</h2>
+                <p class="section-subtitle reveal">Significant initiatives I've owned end-to-end, with measurable results.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-card-banner blue"></div>
+                    <div class="project-card-body">
+                        <div class="project-card-label">Majesco</div>
+                        <h3>Enterprise Data Warehouse</h3>
+                        <p>Designed and delivered a centralized EDW on Microsoft Fabric, unifying data from Salesforce, NetSuite, ServiceNow, Workday, and custom product platforms. Implemented a medallion architecture (bronze/silver/gold) with clear ownership and refresh SLAs per domain.</p>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-value">5</span>
+                                <span class="impact-label">Domains Unified</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-value">1</span>
+                                <span class="impact-label">Source of Truth</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-tags">
+                            <span class="tag">Microsoft Fabric</span>
+                            <span class="tag">Lakehouse</span>
+                            <span class="tag tag-cyan">Data Modeling</span>
+                            <span class="tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-delay="100">
+                    <div class="project-card-banner cyan"></div>
+                    <div class="project-card-body">
+                        <div class="project-card-label">Majesco</div>
+                        <h3>Platform Migration &amp; Cost Optimization</h3>
+                        <p>Led the full decommission of a legacy BI platform and migration to Microsoft Fabric. Mapped all existing assets, rebuilt critical reports in the new platform, and ran a parallel-run validation period before cutover. Achieved sign-off from all five department heads.</p>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-value">40%</span>
+                                <span class="impact-label">Cost Reduction</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-value">5</span>
+                                <span class="impact-label">Depts. Migrated</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-tags">
+                            <span class="tag">Migration</span>
+                            <span class="tag tag-coral">Cost Savings</span>
+                            <span class="tag">Change Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-delay="200">
+                    <div class="project-card-banner blue"></div>
+                    <div class="project-card-body">
+                        <div class="project-card-label">Majesco</div>
+                        <h3>CI/CD Pipeline for BI Assets</h3>
+                        <p>Built a first-of-its-kind deployment pipeline for Power BI and Fabric assets at Majesco using Azure DevOps. Introduced branching strategy, automated testing hooks, workspace promotion (Dev → Test → Prod), and rollback procedures for BI reports.</p>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-value">3</span>
+                                <span class="impact-label">Env. Stages</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-value">100%</span>
+                                <span class="impact-label">Deployment Automation</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-tags">
+                            <span class="tag tag-cyan">Azure DevOps</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">XMLA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-delay="100">
+                    <div class="project-card-banner coral"></div>
+                    <div class="project-card-body">
+                        <div class="project-card-label">Deltek</div>
+                        <h3>BI Modernization &amp; Adoption Program</h3>
+                        <p>Replaced a fragmented reporting environment (Excel, SSRS, ad-hoc SQL) with a governed Power BI ecosystem. Delivered a certification program for self-service report authors, a report catalog, and an internal training curriculum reaching 350+ users.</p>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-value">350+</span>
+                                <span class="impact-label">Users Enabled</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-value">+14%</span>
+                                <span class="impact-label">Satisfaction</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag tag-coral">Governance</span>
+                            <span class="tag">Training</span>
+                            <span class="tag">Self-Service BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-delay="200">
+                    <div class="project-card-banner coral"></div>
+                    <div class="project-card-body">
+                        <div class="project-card-label">Deltek</div>
+                        <h3>KPI Standardization &amp; Semantic Layer</h3>
+                        <p>Owned the end-to-end design of a certified semantic layer in Power BI, eliminating conflicting metric definitions across Finance, Sales, and Operations. Produced a publicly searchable KPI dictionary adopted as the company analytics standard.</p>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-value">1</span>
+                                <span class="impact-label">Semantic Layer</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-value">3</span>
+                                <span class="impact-label">Depts. Aligned</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-tags">
+                            <span class="tag tag-cyan">DAX</span>
+                            <span class="tag">Data Modeling</span>
+                            <span class="tag">KPI Design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label reveal">Background</p>
+                <h2 class="section-title reveal">Education</h2>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Ursinus College -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">Ursinus College</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2004 — 2008</span>
+                    </div>
+                    <div class="timeline-role">B.S. Psychology</div>
+                    <p class="timeline-desc">Collegeville, Pennsylvania. Four-year degree with coursework in research methodology, statistics, and human behavior — foundational skills directly applied to data analysis and stakeholder communication throughout my career.</p>
+                </div>
+
+                <!-- Saint James School -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-company">Saint James School</span>
+                        <span class="timeline-sep"></span>
+                        <span class="timeline-dates">2002 — 2004</span>
+                    </div>
+                    <div class="timeline-role">High School Diploma</div>
+                    <p class="timeline-desc">Hagerstown, Maryland.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <span>RN</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:var(--accent);display:inline-block;margin:0 4px;"></span>
+            <span style="color:var(--accent);font-weight:300;letter-spacing:3px;font-size:1rem;line-height:1;">III</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Experience</a></li>
+            <li><a href="datasets.html">Datasets</a></li>
+            <li><a href="mailto:rnewby3@gmail.com">Email</a></li>
+        </ul>
+        <p class="footer-copy">&copy; 2026 Richard Newby III. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const { animate } = anime;
+            // Page header entrance
+            animate(['.page-header .section-label', '.page-header h1', '.page-header p'], {
+                opacity: [0, 1], translateY: [30, 0],
+                delay: anime.stagger(120), duration: 800, ease: 'outExpo'
+            });
+        });
+    </script>
+</body>
+</html>
