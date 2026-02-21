@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasets — Richard Newby III</title>
+    <meta name="description" content="Free sample datasets for building analytics POCs, practicing data modeling, and testing dashboard skills — curated by a working BI architect.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+    <style>
+        /* ── Coming Soon Hero ──────────────────────────────── */
+        .ds-hero {
+            min-height: 60vh;
+            padding-top: calc(68px + 5rem);
+            padding-bottom: 5rem;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: flex;
+            align-items: center;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ds-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 70% at 70% 50%, var(--cyan-dim) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 20% 80%, var(--accent-dim) 0%, transparent 55%);
+            filter: blur(50px);
+            pointer-events: none;
+        }
+
+        .ds-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .cs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.9rem;
+            background: color-mix(in srgb, var(--cyan) 15%, transparent);
+            border: 1px solid color-mix(in srgb, var(--cyan) 35%, transparent);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-badge-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--cyan);
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { opacity: 1; transform: scale(1); }
+            50%      { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        .ds-hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .ds-hero h1 span { color: var(--cyan); }
+
+        .ds-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+            max-width: 560px;
+        }
+
+        /* ── Email Signup ──────────────────────────────────── */
+        .signup-form {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            max-width: 480px;
+        }
+
+        .signup-form input[type="email"] {
+            flex: 1;
+            min-width: 220px;
+            padding: 0.85rem 1.2rem;
+            border-radius: 8px;
+            border: 1.5px solid var(--border-strong);
+            background: var(--surface);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.25s ease;
+        }
+
+        .signup-form input[type="email"]::placeholder { color: var(--text-faint); }
+        .signup-form input[type="email"]:focus { border-color: var(--cyan); }
+
+        .signup-form button {
+            padding: 0.85rem 1.5rem;
+            background: var(--cyan);
+            color: var(--bg);
+            border: none;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.25s ease, transform 0.2s ease;
+        }
+
+        .signup-form button:hover { opacity: 0.88; transform: translateY(-1px); }
+
+        .signup-note {
+            font-size: 0.78rem;
+            color: var(--text-faint);
+            margin-top: 0.6rem;
+        }
+
+        /* ── Value Prop ────────────────────────────────────── */
+        .value-section { background: var(--bg-elev); }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            padding: 1.75rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+        }
+
+        .value-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .value-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* ── Category Preview ──────────────────────────────── */
+        .categories-section { background: var(--bg); }
+
+        .categories-intro {
+            max-width: 640px;
+            margin-bottom: 3.5rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-strong);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+        }
+
+        .category-card.sales::before    { background: var(--accent); }
+        .category-card.finance::before  { background: var(--green); }
+        .category-card.marketing::before{ background: var(--cyan); }
+        .category-card.hr::before       { background: #ff9f43; }
+        .category-card.dirty::before    { background: var(--coral); }
+        .category-card.modelling::before{ background: #a29bfe; }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .category-emoji { font-size: 1.5rem; }
+
+        .category-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .category-card p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        .category-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .category-example {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-muted);
+        }
+
+        .coming-soon-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.65rem;
+            background: var(--accent-dim);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+        }
+
+        /* ── Timeline ──────────────────────────────────────── */
+        .roadmap-section { background: var(--bg-elev); }
+
+        .roadmap-list {
+            max-width: 640px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .roadmap-q {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            white-space: nowrap;
+            padding-top: 2px;
+            min-width: 48px;
+        }
+
+        .roadmap-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .roadmap-item p {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Responsive ────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .value-grid { grid-template-columns: 1fr; }
+            .signup-form { flex-direction: column; }
+            .signup-form input, .signup-form button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <span class="logo-rn">RN</span>
+            <span class="logo-divider"></span>
+            <span class="logo-iii">III</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Experience</a></li>
+            <li><a href="datasets.html" class="active">Datasets</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+                <svg class="icon-sun"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </button>
+            <a href="index.html#contact" class="btn nav-cta">Say Hello</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="ds-hero">
+        <div class="ds-hero-inner">
+            <div class="cs-badge">
+                <span class="cs-badge-dot"></span>
+                Coming Soon
+            </div>
+            <h1>Real-world datasets.<br><span>Built by a BI architect.</span></h1>
+            <p>
+                Free downloadable datasets — CSV and Excel — designed for building POC analytics models,
+                practicing data modeling, testing dashboard skills, and exploring messy real-world scenarios.
+                No Kaggle toy sets. Data that actually looks like what you'd find at work.
+            </p>
+            <form class="signup-form" id="signupForm">
+                <input type="email" placeholder="your@email.com" required>
+                <button type="submit">Notify Me</button>
+            </form>
+            <p class="signup-note">No spam. One email when datasets drop. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Why These Are Different -->
+    <section class="section value-section">
+        <div class="container">
+            <div class="section-header" style="max-width:600px">
+                <p class="section-label reveal">Why It's Different</p>
+                <h2 class="section-title reveal">Datasets built for<br>how analysts actually work.</h2>
+            </div>
+            <div class="value-grid stagger-group">
+                <div class="value-card">
+                    <div class="value-icon">🏗️</div>
+                    <h3>Realistic Business Context</h3>
+                    <p>Structured around real business domains — Sales pipelines, Finance P&Ls, HR headcount — not abstract arrays. The kind of data you'd actually find after a CRM export.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🧹</div>
+                    <h3>Clean &amp; Dirty Variants</h3>
+                    <p>Each dataset comes in a clean version (model-ready) and a dirty version (duplicates, nulls, formatting inconsistencies, broken relationships) so you can practice the full workflow.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📐</div>
+                    <h3>Modeling-Ready Structure</h3>
+                    <p>Fact and dimension tables separated, with a data dictionary included. Built specifically for practicing star schemas, DAX measures, and semantic layer design — not just pivot tables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Preview -->
+    <section class="section categories-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label reveal">What's Coming</p>
+                <h2 class="section-title reveal">Dataset Categories</h2>
+                <p class="section-subtitle reveal">Six domain categories, each with multiple datasets in both clean and dirty variants, available as CSV and Excel.</p>
+            </div>
+
+            <div class="categories-grid">
+
+                <div class="category-card sales reveal">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">💼</span>
+                        <h3>Sales &amp; Revenue</h3>
+                    </div>
+                    <p>Opportunity pipeline data, closed-won/lost deals, rep performance, quota attainment, and ARR/MRR breakdowns. Great for building CRM-style dashboards.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Sales Pipeline</span>
+                        <span class="category-example">Rep Leaderboard</span>
+                        <span class="category-example">Revenue by Product</span>
+                        <span class="category-example">Win/Loss Analysis</span>
+                    </div>
+                </div>
+
+                <div class="category-card finance reveal" data-delay="60">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">📈</span>
+                        <h3>Finance &amp; FP&amp;A</h3>
+                    </div>
+                    <p>General ledger transactions, budget vs. actuals, department spend, and multi-period P&L data. Modeled to mirror real ERP exports from NetSuite, SAP, or QuickBooks.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Budget vs. Actuals</span>
+                        <span class="category-example">GL Transactions</span>
+                        <span class="category-example">Department Spend</span>
+                        <span class="category-example">P&amp;L Reports</span>
+                    </div>
+                </div>
+
+                <div class="category-card marketing reveal" data-delay="120">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">📣</span>
+                        <h3>Marketing &amp; Demand Gen</h3>
+                    </div>
+                    <p>Campaign performance, lead generation funnels, MQL/SQL conversion rates, and channel attribution data. Structured for multi-touch attribution modeling.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Campaign ROI</span>
+                        <span class="category-example">Lead Funnel</span>
+                        <span class="category-example">Channel Attribution</span>
+                        <span class="category-example">Email Performance</span>
+                    </div>
+                </div>
+
+                <div class="category-card hr reveal" data-delay="60">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">👥</span>
+                        <h3>HR &amp; People Analytics</h3>
+                    </div>
+                    <p>Headcount, turnover, time-to-hire, compensation bands, performance ratings, and DEI metrics. Built around real HRIS data structures like Workday or BambooHR.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Headcount Trends</span>
+                        <span class="category-example">Attrition Analysis</span>
+                        <span class="category-example">Hire Pipeline</span>
+                        <span class="category-example">Comp Bands</span>
+                    </div>
+                </div>
+
+                <div class="category-card dirty reveal" data-delay="120">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">🧩</span>
+                        <h3>Dirty Data Challenge Sets</h3>
+                    </div>
+                    <p>Datasets intentionally loaded with real-world data quality issues: duplicate keys, inconsistent casing, broken date formats, orphaned foreign keys, and null-heavy columns.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Duplicate Records</span>
+                        <span class="category-example">Broken Joins</span>
+                        <span class="category-example">Mixed Date Formats</span>
+                        <span class="category-example">Null Patterns</span>
+                    </div>
+                </div>
+
+                <div class="category-card modelling reveal" data-delay="180">
+                    <span class="coming-soon-chip">Soon</span>
+                    <div class="category-header">
+                        <span class="category-emoji">⭐</span>
+                        <h3>Star Schema Kits</h3>
+                    </div>
+                    <p>Pre-separated fact and dimension tables designed for star schema modeling practice. Includes a data dictionary and suggested relationships — ideal for Power BI and Fabric model building.</p>
+                    <div class="category-examples">
+                        <span class="category-example">Fact + Dim Tables</span>
+                        <span class="category-example">Data Dictionary</span>
+                        <span class="category-example">Relationship Map</span>
+                        <span class="category-example">Sample Measures</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section roadmap-section">
+        <div class="container">
+            <div class="section-header" style="max-width:600px">
+                <p class="section-label reveal">Roadmap</p>
+                <h2 class="section-title reveal">Release Timeline</h2>
+            </div>
+            <div class="roadmap-list">
+                <div class="roadmap-item reveal">
+                    <div class="roadmap-q">Q2 2026</div>
+                    <div>
+                        <h4>Initial Launch — Sales &amp; Finance</h4>
+                        <p>First two categories drop: Sales &amp; Revenue and Finance &amp; FP&amp;A. Clean + dirty variants, CSV and Excel, with data dictionaries.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item reveal" data-delay="80">
+                    <div class="roadmap-q">Q3 2026</div>
+                    <div>
+                        <h4>Marketing, HR, and Dirty Sets</h4>
+                        <p>Rounds out the business domain coverage with Marketing demand gen data, HR people analytics, and the Dirty Data Challenge collection.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item reveal" data-delay="160">
+                    <div class="roadmap-q">Q4 2026</div>
+                    <div>
+                        <h4>Star Schema Kits + Download Hub</h4>
+                        <p>Full modeling kit launch alongside a searchable download hub — filter by domain, type (clean/dirty), and format (CSV/XLSX).</p>
+                    </div>
+                </div>
+                <div class="roadmap-item reveal" data-delay="240">
+                    <div class="roadmap-q">2027</div>
+                    <div>
+                        <h4>Community Submissions &amp; API Access</h4>
+                        <p>Community-contributed datasets, automated dataset generators, and a lightweight API for programmatic access — because analysts should be able to script their setups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <span>RN</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:var(--accent);display:inline-block;margin:0 4px;"></span>
+            <span style="color:var(--accent);font-weight:300;letter-spacing:3px;font-size:1rem;line-height:1;">III</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Experience</a></li>
+            <li><a href="datasets.html">Datasets</a></li>
+            <li><a href="mailto:rnewby3@gmail.com">Email</a></li>
+        </ul>
+        <p class="footer-copy">&copy; 2026 Richard Newby III. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const { animate } = anime;
+
+            // Hero entrance
+            animate(['.cs-badge', '.ds-hero h1', '.ds-hero p', '.signup-form', '.signup-note'], {
+                opacity: [0, 1], translateY: [28, 0],
+                delay: anime.stagger(110), duration: 800, ease: 'outExpo'
+            });
+
+            // Notify form (frontend-only, just a success state)
+            const form = document.getElementById('signupForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('button');
+                    btn.textContent = '✓ You\'re on the list!';
+                    btn.style.background = 'var(--green)';
+                    btn.disabled = true;
+                    form.querySelector('input').disabled = true;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
