@@ -198,16 +198,17 @@
             margin-bottom: 1.5rem;
             color: var(--primary);
             letter-spacing: -2px;
-            min-height: 3.9em;
             text-align: left;
         }
 
-        .hero-content .subtitle {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
+        .hero-static-line {
+            display: block;
+        }
+
+        .hero-rotating-line {
+            display: block;
+            height: 1.3em; /* matches line-height, reserves space so layout never shifts */
+            overflow: hidden;
         }
 
         .accent-text {
@@ -603,10 +604,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm Richard and I'm a <span class="accent-text rotating-text" data-text="Data & Analytics Leader">Data & Analytics Leader</span></h1>
+            <h1>
+                <span class="hero-static-line">Hi, I'm Richard and I'm a</span>
+                <span class="hero-rotating-line"><span class="accent-text rotating-text" data-text="Data & Analytics Leader">Data & Analytics Leader</span></span>
+            </h1>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
-                <a href="#contact" class="btn btn-secondary"><span>Get In Touch</span></a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -768,9 +772,9 @@
                 const currentTitle = titles[currentIndex];
                 
                 if (isPaused) {
-                    setTimeout(typeWriter, 2000); // Pause for 2 seconds at full text
                     isPaused = false;
                     isDeleting = true;
+                    setTimeout(typeWriter, 2000); // Pause for 2 seconds at full text
                     return;
                 }
 
