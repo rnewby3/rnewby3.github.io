@@ -236,6 +236,7 @@ nav {
     background: none;
     border: none;
     padding: 6px;
+    margin-left: 0.25rem;
 }
 
 .nav-hamburger span {
@@ -244,6 +245,34 @@ nav {
     background: var(--text);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger → X when menu is open */
+nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile dropdown */
+.nav-links.open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: color-mix(in srgb, var(--bg-elev) 95%, transparent);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    padding: 0.75rem 5% 1rem;
+    border-bottom: 1px solid var(--border);
+    gap: 0.15rem;
+    z-index: 999;
+    animation: menuSlide 0.2s ease forwards;
+}
+
+@keyframes menuSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Buttons ----------------------------------------------- */
@@ -451,11 +480,26 @@ body.js-ready .reveal-scale {
 @media (max-width: 900px) {
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
-    .nav-cta { display: none; }
 }
 
 @media (max-width: 768px) {
     .section { padding: 5rem 5%; }
     footer { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .section { padding: 3.5rem 5%; }
+    .section-header { margin-bottom: 2.5rem; }
+    .section-title {
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+        letter-spacing: -0.5px;
+    }
+    .section-subtitle { font-size: 0.95rem; }
+    .btn {
+        font-size: 0.88rem;
+        padding: 0.7rem 1.4rem;
+    }
+    footer { padding: 2.5rem 5%; gap: 1rem; }
+    .footer-links { flex-wrap: wrap; gap: 1rem; }
 }

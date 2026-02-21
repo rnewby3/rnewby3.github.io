@@ -41,23 +41,34 @@
 
     // ── Mobile nav ───────────────────────────────────────────
     function initMobileNav() {
+        const nav = document.querySelector('nav');
         const hamburger = document.querySelector('.nav-hamburger');
         const navLinks = document.querySelector('.nav-links');
         if (!hamburger || !navLinks) return;
 
-        hamburger.addEventListener('click', () => {
-            const open = navLinks.style.display === 'flex';
-            navLinks.style.display = open ? '' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '68px';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'var(--bg-elev)';
-            navLinks.style.padding = '1rem 5%';
-            navLinks.style.borderBottom = '1px solid var(--border)';
-            navLinks.style.gap = '0.25rem';
-            if (open) navLinks.style.display = 'none';
+        function closeMenu() {
+            nav.classList.remove('nav-open');
+            navLinks.classList.remove('open');
+        }
+
+        function openMenu() {
+            nav.classList.add('nav-open');
+            navLinks.classList.add('open');
+        }
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nav.classList.contains('nav-open') ? closeMenu() : openMenu();
+        });
+
+        // Close on nav link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target)) closeMenu();
         });
     }
 
