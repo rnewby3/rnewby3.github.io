@@ -1,0 +1,9 @@
+region_id,region_name,territory,country
+R01,Northeast,East,USA
+R02,Southeast,East,USA
+R03,Midwest,Central,USA
+R04,Southwest,West,USA
+R05,Northwest,West,USA
+R06,Canada,International,Canada
+R07,EMEA,International,Multiple
+R08,APAC,International,Multiple

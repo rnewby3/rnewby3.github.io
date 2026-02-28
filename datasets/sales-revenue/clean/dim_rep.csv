@@ -1,0 +1,13 @@
+rep_id,rep_name,team,hire_date,quota_annual_usd,manager_name
+REP01,Sarah Chen,Mid-Market,2022-03-14,450000,James Okafor
+REP02,Marcus Webb,Mid-Market,2021-07-05,450000,James Okafor
+REP03,Priya Patel,Enterprise,2020-01-20,800000,Linda Torres
+REP04,Derek Holloway,Enterprise,2019-11-08,800000,Linda Torres
+REP05,Aaliyah Johnson,SMB,2023-02-28,250000,James Okafor
+REP06,Tyler Brooks,SMB,2023-06-12,250000,James Okafor
+REP07,Keiko Yamamoto,Enterprise,2021-04-19,800000,Linda Torres
+REP08,Carlos Reyes,Mid-Market,2022-09-01,450000,James Okafor
+REP09,Nadia Okonkwo,SMB,2022-12-05,250000,James Okafor
+REP10,Jordan Blake,Enterprise,2020-06-30,800000,Linda Torres
+REP11,Simone Lefebvre,International,2021-08-23,600000,Linda Torres
+REP12,Ethan Morrison,International,2022-03-07,600000,Linda Torres

@@ -1,0 +1,8 @@
+stage_id,stage_name,stage_order,probability_pct
+S01,Prospecting,1,10
+S02,Qualification,2,20
+S03,Needs Analysis,3,40
+S04,Proposal / Price Quote,4,60
+S05,Negotiation / Review,5,80
+S06,Closed Won,6,100
+S07,Closed Lost,7,0
