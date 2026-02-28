@@ -1,0 +1,11 @@
+channel_id,channel_name,channel_type,paid_flag
+CH01,Google Search,Paid Search,1
+CH02,Google Display,Paid Display,1
+CH03,LinkedIn Ads,Paid Social,1
+CH04,Facebook / Instagram,Paid Social,1
+CH05,Organic Search,Organic,0
+CH06,Direct,Direct,0
+CH07,Email Newsletter,Email,0
+CH08,Webinar,Event,0
+CH09,Content / Blog,Organic,0
+CH10,Partner Referral,Referral,0

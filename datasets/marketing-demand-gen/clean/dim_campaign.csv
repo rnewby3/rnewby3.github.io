@@ -1,0 +1,25 @@
+campaign_id,campaign_name,channel_id,campaign_type,start_date,end_date,budget_usd,target_segment
+CAM001,Q1 Brand Awareness - LinkedIn,CH03,Brand,2024-01-08,2024-03-29,18000,Enterprise
+CAM002,Q1 Demand Gen - Google Search,CH01,Demand Gen,2024-01-08,2024-03-29,22000,Mid-Market
+CAM003,Analytics Core Launch - Display,CH02,Product Launch,2024-02-05,2024-04-26,12000,SMB
+CAM004,Q2 Webinar Series,CH08,Webinar,2024-04-01,2024-06-28,8000,Enterprise
+CAM005,Spring Nurture Email,CH07,Nurture,2024-04-01,2024-06-28,3500,Mid-Market
+CAM006,Q2 Paid Social - FB/IG,CH04,Demand Gen,2024-04-01,2024-06-28,15000,SMB
+CAM007,Partner Co-Marketing Q2,CH10,Partner,2024-05-06,2024-07-26,6000,Enterprise
+CAM008,Q3 Google Search,CH01,Demand Gen,2024-07-01,2024-09-27,25000,Mid-Market
+CAM009,Summer Content Push,CH09,Content,2024-07-01,2024-09-27,4000,All
+CAM010,Q3 LinkedIn Sponsored,CH03,Brand,2024-07-01,2024-09-27,20000,Enterprise
+CAM011,Back-to-Business Email,CH07,Nurture,2024-08-05,2024-09-27,3000,Mid-Market
+CAM012,Q4 Demand Gen - Search,CH01,Demand Gen,2024-10-01,2024-12-20,28000,Mid-Market
+CAM013,Q4 Enterprise LinkedIn,CH03,Brand,2024-10-01,2024-12-20,22000,Enterprise
+CAM014,Year-End Webinar,CH08,Webinar,2024-11-04,2024-12-20,7000,All
+CAM015,Q1 2025 Google Search,CH01,Demand Gen,2025-01-06,2025-03-28,30000,Mid-Market
+CAM016,Q1 2025 LinkedIn,CH03,Brand,2025-01-06,2025-03-28,24000,Enterprise
+CAM017,Partner Spring Push,CH10,Partner,2025-02-03,2025-04-25,8000,Enterprise
+CAM018,Q2 2025 Demand Gen,CH01,Demand Gen,2025-04-01,2025-06-27,32000,All
+CAM019,Q2 2025 Webinar,CH08,Webinar,2025-04-01,2025-06-27,9000,Enterprise
+CAM020,Q3 2025 Paid Social,CH04,Demand Gen,2025-07-01,2025-09-26,18000,SMB
+CAM021,Q3 2025 Google Search,CH01,Demand Gen,2025-07-01,2025-09-26,35000,Mid-Market
+CAM022,Content SEO Push Q3,CH09,Content,2025-07-01,2025-09-26,5000,All
+CAM023,Q4 2025 LinkedIn,CH03,Brand,2025-10-01,2025-12-19,26000,Enterprise
+CAM024,Q4 2025 Demand Gen,CH01,Demand Gen,2025-10-01,2025-12-19,38000,All

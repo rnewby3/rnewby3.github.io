@@ -1,0 +1,8 @@
+stage_id,stage_name,stage_order,description
+LS01,Visitor,1,Anonymous site visit
+LS02,Lead,2,Form fill or content download — contact info captured
+LS03,MQL,3,Marketing Qualified Lead — meets scoring threshold
+LS04,SQL,4,Sales Qualified Lead — accepted by sales team
+LS05,Opportunity,5,Active deal created in CRM
+LS06,Closed Won,6,Deal closed and won
+LS07,Disqualified,7,Lead did not meet criteria or opted out

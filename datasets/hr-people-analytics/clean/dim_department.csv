@@ -1,0 +1,14 @@
+dept_id,dept_name,division,cost_center
+D01,Analytics & BI,Data,CC-410
+D02,Data Engineering,Data,CC-411
+D03,Finance,Finance & Admin,CC-200
+D04,Accounting,Finance & Admin,CC-201
+D05,Sales - Mid-Market,Revenue,CC-301
+D06,Sales - Enterprise,Revenue,CC-302
+D07,Sales - SMB,Revenue,CC-303
+D08,Marketing,Revenue,CC-310
+D09,Customer Success,Revenue,CC-320
+D10,Product,Product & Engineering,CC-500
+D11,Engineering,Product & Engineering,CC-510
+D12,HR & People Ops,G&A,CC-100
+D13,Legal & Compliance,G&A,CC-110

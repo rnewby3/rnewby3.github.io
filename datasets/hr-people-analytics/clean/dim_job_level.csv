@@ -1,0 +1,10 @@
+level_id,level_name,level_band,individual_contributor_flag
+L1,Associate,Entry,1
+L2,Analyst,Junior,1
+L3,Senior,Mid,1
+L4,Lead / Staff,Senior,1
+L5,Manager,Manager,0
+L6,Sr Manager,Sr Mgr,0
+L7,Director,Director,0
+L8,VP,VP,0
+L9,C-Suite,Exec,0
