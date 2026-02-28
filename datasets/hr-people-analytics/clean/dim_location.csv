@@ -1,0 +1,10 @@
+location_id,city,state_province,country,remote_flag
+LOC01,Austin,TX,USA,0
+LOC02,New York,NY,USA,0
+LOC03,Chicago,IL,USA,0
+LOC04,San Francisco,CA,USA,0
+LOC05,Remote - USA,,USA,1
+LOC06,Toronto,ON,Canada,0
+LOC07,Remote - Canada,,Canada,1
+LOC08,London,,UK,0
+LOC09,Remote - EMEA,,Multiple,1

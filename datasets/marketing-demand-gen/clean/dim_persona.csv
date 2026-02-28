@@ -1,0 +1,8 @@
+persona_id,persona_name,seniority,function,company_size
+PER01,Director of Analytics,Director,Analytics / BI,Enterprise (1000+)
+PER02,VP of Finance,VP,Finance,Enterprise (1000+)
+PER03,BI Manager,Manager,Analytics / BI,Mid-Market (100-999)
+PER04,Data Analyst,Individual Contributor,Analytics / BI,Mid-Market (100-999)
+PER05,CFO,C-Suite,Finance,SMB (<100)
+PER06,IT Director,Director,IT / Engineering,Enterprise (1000+)
+PER07,Operations Manager,Manager,Operations,Mid-Market (100-999)
