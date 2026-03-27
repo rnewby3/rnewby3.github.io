@@ -486,7 +486,7 @@
     <section class="section categories-section">
         <div class="container">
             <div class="section-header">
-                <p class="section-label reveal">What's Coming</p>
+                <p class="section-label reveal">What's Available</p>
                 <h2 class="section-title reveal">Dataset Categories</h2>
                 <p class="section-subtitle reveal">Six domain categories, each with multiple datasets in both clean and dirty variants, available as CSV and Excel.</p>
             </div>
@@ -645,7 +645,10 @@
                 </div>
 
                 <div class="category-card modelling reveal" data-delay="180">
-                    <span class="coming-soon-chip">Soon</span>
+                    <span class="available-chip">
+                        <span class="available-chip-dot"></span>
+                        Available
+                    </span>
                     <div class="category-header">
                         <span class="category-emoji">⭐</span>
                         <h3>Star Schema Kits</h3>
@@ -656,6 +659,15 @@
                         <span class="category-example">Data Dictionary</span>
                         <span class="category-example">Relationship Map</span>
                         <span class="category-example">Sample Measures</span>
+                    </div>
+                    <div class="download-section">
+                        <p class="download-label">Download</p>
+                        <div class="download-links">
+                            <a class="download-link" href="/datasets/star-schema-kits/retail-ecommerce-kit.zip" download>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                Retail & E-Commerce Kit — ZIP (6 CSVs + relationship map + sample measures)
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -699,11 +711,11 @@
                         <p>Five standalone challenge files now live — duplicates, orphaned keys, date format chaos, null patterns (MCAR/MAR/MNAR), and type chaos — each with a documented answer key and challenge guide.</p>
                     </div>
                 </div>
-                <div class="roadmap-item reveal" data-delay="320">
-                    <div class="roadmap-q">Q4 2026</div>
+                <div class="roadmap-item reveal" data-delay="320" style="border-color: color-mix(in srgb, var(--green) 35%, transparent);">
+                    <div class="roadmap-q" style="color: var(--green);">Live ✓</div>
                     <div>
-                        <h4>Star Schema Kits + Download Hub</h4>
-                        <p>Full modeling kit launch alongside a searchable download hub — filter by domain, type (clean/dirty), and format (CSV/XLSX).</p>
+                        <h4>Star Schema Kits</h4>
+                        <p>Retail & E-Commerce kit now live: 2,000-row fact_sales, proper date dimension with 18 attributes (fiscal calendar, retail seasons, holiday flags), 5 dimension tables, relationship map, and ready-to-paste DAX and SQL measures.</p>
                     </div>
                 </div>
                 <div class="roadmap-item reveal" data-delay="400">

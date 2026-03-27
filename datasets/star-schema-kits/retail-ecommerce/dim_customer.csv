@@ -1,0 +1,501 @@
+customer_id,first_name,last_name,email,state,customer_segment,preferred_channel,signup_date,loyalty_tier,total_orders_lifetime,is_active
+CUST00001,Amanda,Miller,amanda.miller78@yahoo.com,TX,Premium,Online,2021-11-01,Platinum,48,TRUE
+CUST00002,Emily,Brown,emily.brown76@gmail.com,WA,Value,Online,2024-09-04,Gold,56,TRUE
+CUST00003,John,Williams,john.williams85@yahoo.com,FL,Luxury,Online,2021-10-18,Bronze,23,TRUE
+CUST00004,Amanda,Johnson,amanda.johnson63@yahoo.com,VA,Premium,Mobile App,2024-11-14,Silver,14,TRUE
+CUST00005,Kevin,Williams,kevin.williams62@gmail.com,MI,Luxury,In-Store,2021-06-11,Bronze,60,TRUE
+CUST00006,Sarah,Miller,sarah.miller60@yahoo.com,IL,Premium,Mobile App,2020-05-08,Gold,47,TRUE
+CUST00007,Matthew,Jackson,matthew.jackson57@gmail.com,IL,Luxury,Marketplace,2022-12-19,Silver,56,TRUE
+CUST00008,Ashley,Jones,ashley.jones42@yahoo.com,PA,Premium,In-Store,2022-08-27,Platinum,74,TRUE
+CUST00009,Anthony,Smith,anthony.smith81@yahoo.com,NC,Premium,In-Store,2024-05-10,Silver,55,TRUE
+CUST00010,George,Allen,george.allen21@yahoo.com,NC,Value,Online,2022-09-04,Gold,30,TRUE
+CUST00011,Matthew,White,matthew.white22@gmail.com,OH,Luxury,In-Store,2021-11-08,Platinum,58,TRUE
+CUST00012,James,Young,james.young75@gmail.com,FL,Premium,Marketplace,2020-01-28,Gold,34,TRUE
+CUST00013,Jessica,Martin,jessica.martin9@yahoo.com,WA,Premium,In-Store,2022-05-25,Bronze,65,TRUE
+CUST00014,Maria,Davis,maria.davis36@yahoo.com,TX,Budget,Catalog,2020-04-06,Bronze,54,FALSE
+CUST00015,Anthony,Wilson,anthony.wilson16@yahoo.com,CO,Mainstream,Catalog,2021-12-14,Silver,78,TRUE
+CUST00016,John,Anderson,john.anderson56@gmail.com,MI,Premium,Online,2020-02-17,Gold,54,FALSE
+CUST00017,Ashley,Thompson,ashley.thompson65@gmail.com,NY,Mainstream,Online,2023-02-05,Silver,2,TRUE
+CUST00018,Robert,Johnson,robert.johnson95@gmail.com,MI,Premium,Catalog,2023-10-16,Gold,58,TRUE
+CUST00019,Sarah,Taylor,sarah.taylor44@gmail.com,MI,Value,Mobile App,2022-07-18,Silver,37,TRUE
+CUST00020,Sarah,Jones,sarah.jones55@yahoo.com,TX,Mainstream,Catalog,2023-07-01,Platinum,29,TRUE
+CUST00021,Michael,Moore,michael.moore38@gmail.com,WA,Budget,Marketplace,2024-08-25,Gold,79,FALSE
+CUST00022,Ashley,Johnson,ashley.johnson24@gmail.com,MI,Value,In-Store,2020-03-31,Silver,10,TRUE
+CUST00023,David,Smith,david.smith38@yahoo.com,CO,Premium,Mobile App,2023-08-31,Gold,29,TRUE
+CUST00024,James,Garcia,james.garcia13@yahoo.com,CA,Value,Marketplace,2024-08-29,Silver,32,FALSE
+CUST00025,Emily,Davis,emily.davis8@yahoo.com,TX,Premium,In-Store,2023-02-23,Gold,46,TRUE
+CUST00026,Sarah,Harris,sarah.harris73@yahoo.com,NY,Budget,Mobile App,2024-03-25,Platinum,2,TRUE
+CUST00027,Amanda,Jackson,amanda.jackson55@gmail.com,MA,Premium,Online,2021-07-22,Bronze,70,TRUE
+CUST00028,Kevin,Smith,kevin.smith4@yahoo.com,IL,Budget,In-Store,2024-03-20,Platinum,67,TRUE
+CUST00029,Maria,Garcia,maria.garcia62@yahoo.com,MI,Budget,Mobile App,2021-03-02,Silver,34,TRUE
+CUST00030,Matthew,Harris,matthew.harris5@gmail.com,PA,Budget,Marketplace,2023-11-29,Silver,10,TRUE
+CUST00031,John,Williams,john.williams80@yahoo.com,MI,Budget,Online,2022-11-04,Silver,4,TRUE
+CUST00032,George,Wilson,george.wilson48@gmail.com,NY,Luxury,Marketplace,2022-06-25,Bronze,6,TRUE
+CUST00033,David,Jones,david.jones65@gmail.com,NC,Value,Catalog,2024-04-04,Gold,37,TRUE
+CUST00034,Mark,Harris,mark.harris33@gmail.com,OH,Budget,Mobile App,2022-04-01,Platinum,1,FALSE
+CUST00035,Robert,White,robert.white79@gmail.com,NY,Budget,Mobile App,2022-01-15,Gold,75,TRUE
+CUST00036,William,Anderson,william.anderson58@gmail.com,OH,Mainstream,Marketplace,2020-12-07,Silver,58,TRUE
+CUST00037,Daniel,Thomas,daniel.thomas1@yahoo.com,AZ,Mainstream,Online,2023-06-17,Bronze,65,TRUE
+CUST00038,Christopher,Johnson,christopher.johnson91@yahoo.com,VA,Mainstream,Mobile App,2021-08-17,Gold,37,TRUE
+CUST00039,James,Brown,james.brown16@yahoo.com,GA,Mainstream,In-Store,2023-01-30,Bronze,48,TRUE
+CUST00040,Amanda,Wilson,amanda.wilson72@yahoo.com,TX,Luxury,Mobile App,2022-04-03,Gold,50,TRUE
+CUST00041,Anthony,Anderson,anthony.anderson81@gmail.com,MI,Premium,Online,2024-01-29,Bronze,20,TRUE
+CUST00042,David,Young,david.young47@gmail.com,WA,Mainstream,Online,2021-07-04,Platinum,29,TRUE
+CUST00043,Sarah,Allen,sarah.allen90@yahoo.com,PA,Premium,Catalog,2022-07-04,Bronze,67,TRUE
+CUST00044,Sarah,Wilson,sarah.wilson94@gmail.com,TX,Premium,Online,2023-09-03,Bronze,78,TRUE
+CUST00045,Anthony,Taylor,anthony.taylor8@yahoo.com,IL,Mainstream,Mobile App,2022-05-09,Silver,27,TRUE
+CUST00046,David,Garcia,david.garcia98@yahoo.com,CA,Value,Online,2022-04-21,Gold,49,TRUE
+CUST00047,John,Anderson,john.anderson64@yahoo.com,GA,Luxury,Catalog,2023-10-13,Gold,36,TRUE
+CUST00048,Daniel,Miller,daniel.miller32@gmail.com,WA,Budget,Mobile App,2023-11-05,Gold,34,TRUE
+CUST00049,Kevin,Garcia,kevin.garcia17@gmail.com,VA,Mainstream,Catalog,2020-01-13,Gold,27,TRUE
+CUST00050,Sarah,Martin,sarah.martin8@yahoo.com,TX,Premium,Mobile App,2022-03-24,Silver,1,TRUE
+CUST00051,Matthew,Davis,matthew.davis21@yahoo.com,WA,Value,Catalog,2023-08-05,Gold,11,TRUE
+CUST00052,Brian,Garcia,brian.garcia45@yahoo.com,GA,Premium,Marketplace,2023-07-10,Silver,76,TRUE
+CUST00053,Mark,Brown,mark.brown49@gmail.com,OH,Mainstream,Online,2023-05-31,Gold,56,FALSE
+CUST00054,Brian,Brown,brian.brown77@yahoo.com,FL,Value,In-Store,2020-01-25,Platinum,52,TRUE
+CUST00055,George,Moore,george.moore11@yahoo.com,VA,Mainstream,Catalog,2020-04-03,Gold,60,FALSE
+CUST00056,Jessica,Thompson,jessica.thompson23@yahoo.com,NY,Mainstream,Mobile App,2024-06-22,Gold,32,TRUE
+CUST00057,Christopher,Davis,christopher.davis83@yahoo.com,FL,Budget,Online,2020-05-28,Silver,26,FALSE
+CUST00058,Michael,Harris,michael.harris76@gmail.com,FL,Budget,Mobile App,2021-11-21,Gold,18,TRUE
+CUST00059,Maria,White,maria.white34@yahoo.com,NC,Value,In-Store,2024-02-10,Platinum,38,TRUE
+CUST00060,William,Garcia,william.garcia96@gmail.com,GA,Value,Mobile App,2022-08-10,Bronze,48,TRUE
+CUST00061,Ashley,Allen,ashley.allen38@gmail.com,AZ,Luxury,Catalog,2021-11-13,Bronze,48,TRUE
+CUST00062,Sarah,Anderson,sarah.anderson32@yahoo.com,FL,Budget,Mobile App,2024-08-04,Bronze,3,TRUE
+CUST00063,Sarah,Moore,sarah.moore50@gmail.com,GA,Mainstream,Marketplace,2022-09-22,Bronze,60,TRUE
+CUST00064,George,Harris,george.harris63@gmail.com,PA,Budget,Online,2020-07-30,Platinum,37,FALSE
+CUST00065,Sarah,Brown,sarah.brown23@gmail.com,WA,Luxury,In-Store,2020-11-28,Platinum,75,TRUE
+CUST00066,Sarah,Miller,sarah.miller22@gmail.com,NY,Value,In-Store,2022-04-29,Gold,4,TRUE
+CUST00067,Kevin,Smith,kevin.smith91@gmail.com,WA,Luxury,Mobile App,2024-10-19,Gold,19,TRUE
+CUST00068,Daniel,Martin,daniel.martin87@yahoo.com,WA,Luxury,In-Store,2020-05-01,Silver,71,TRUE
+CUST00069,David,Harris,david.harris27@yahoo.com,MA,Mainstream,Marketplace,2021-09-04,Bronze,69,FALSE
+CUST00070,Brian,Thompson,brian.thompson1@yahoo.com,AZ,Premium,Mobile App,2024-02-22,Platinum,52,FALSE
+CUST00071,Michael,Young,michael.young11@yahoo.com,TX,Luxury,Mobile App,2023-02-25,Gold,51,TRUE
+CUST00072,George,Martin,george.martin35@yahoo.com,VA,Budget,Mobile App,2021-09-10,Silver,54,FALSE
+CUST00073,Anthony,Martin,anthony.martin75@gmail.com,MI,Budget,In-Store,2022-07-05,Bronze,46,TRUE
+CUST00074,Maria,Moore,maria.moore42@yahoo.com,OH,Mainstream,Marketplace,2024-05-25,Silver,29,TRUE
+CUST00075,Daniel,Davis,daniel.davis40@yahoo.com,VA,Value,Mobile App,2020-11-19,Silver,26,TRUE
+CUST00076,Amanda,Davis,amanda.davis61@gmail.com,VA,Budget,Mobile App,2022-02-17,Bronze,65,TRUE
+CUST00077,Amanda,Miller,amanda.miller16@gmail.com,MI,Luxury,Catalog,2020-05-03,Silver,21,TRUE
+CUST00078,Michael,Martin,michael.martin72@gmail.com,PA,Mainstream,Online,2021-08-05,Gold,38,TRUE
+CUST00079,William,Jackson,william.jackson29@yahoo.com,WA,Value,In-Store,2024-01-26,Bronze,1,TRUE
+CUST00080,Ashley,Martin,ashley.martin22@gmail.com,CO,Luxury,Marketplace,2021-12-12,Gold,34,TRUE
+CUST00081,James,Williams,james.williams24@gmail.com,CO,Value,In-Store,2020-09-22,Gold,58,TRUE
+CUST00082,Brian,Moore,brian.moore21@yahoo.com,WA,Premium,Mobile App,2022-09-27,Platinum,62,TRUE
+CUST00083,Michael,Brown,michael.brown77@yahoo.com,CA,Luxury,Marketplace,2020-02-16,Platinum,35,TRUE
+CUST00084,Amanda,Moore,amanda.moore68@yahoo.com,MI,Value,Mobile App,2024-07-05,Gold,60,TRUE
+CUST00085,Matthew,Martin,matthew.martin55@yahoo.com,TX,Mainstream,Marketplace,2022-08-25,Gold,29,TRUE
+CUST00086,Maria,Anderson,maria.anderson30@yahoo.com,WA,Mainstream,Online,2023-10-06,Silver,35,TRUE
+CUST00087,Brian,Allen,brian.allen92@yahoo.com,OH,Value,Mobile App,2020-03-18,Bronze,59,TRUE
+CUST00088,James,Jackson,james.jackson29@yahoo.com,PA,Budget,Catalog,2022-09-02,Silver,48,FALSE
+CUST00089,David,Moore,david.moore14@yahoo.com,MA,Premium,Catalog,2023-01-31,Gold,58,TRUE
+CUST00090,Anthony,Smith,anthony.smith60@yahoo.com,MA,Premium,In-Store,2021-07-27,Gold,48,TRUE
+CUST00091,Anthony,Moore,anthony.moore33@gmail.com,FL,Mainstream,Marketplace,2022-01-10,Bronze,6,TRUE
+CUST00092,Sarah,Anderson,sarah.anderson33@gmail.com,FL,Luxury,Marketplace,2024-02-28,Platinum,27,TRUE
+CUST00093,Emily,Young,emily.young57@gmail.com,WA,Value,Mobile App,2023-06-19,Silver,16,FALSE
+CUST00094,Michael,Moore,michael.moore87@yahoo.com,PA,Premium,Catalog,2023-03-09,Platinum,47,TRUE
+CUST00095,James,White,james.white58@gmail.com,MA,Premium,In-Store,2020-06-27,Gold,73,TRUE
+CUST00096,David,White,david.white52@yahoo.com,VA,Mainstream,Marketplace,2020-01-04,Platinum,55,TRUE
+CUST00097,Michael,White,michael.white37@yahoo.com,NY,Mainstream,In-Store,2024-10-22,Bronze,63,TRUE
+CUST00098,Sarah,Harris,sarah.harris36@yahoo.com,GA,Value,Marketplace,2021-08-29,Silver,45,TRUE
+CUST00099,Kevin,Allen,kevin.allen72@gmail.com,TX,Budget,Mobile App,2021-10-13,Platinum,49,TRUE
+CUST00100,Michael,Anderson,michael.anderson66@gmail.com,NC,Premium,Marketplace,2022-08-17,Bronze,46,TRUE
+CUST00101,Daniel,Martin,daniel.martin53@gmail.com,OH,Mainstream,Catalog,2021-02-05,Silver,35,TRUE
+CUST00102,Christopher,White,christopher.white28@yahoo.com,AZ,Premium,Mobile App,2022-07-03,Bronze,80,TRUE
+CUST00103,Michael,Taylor,michael.taylor17@yahoo.com,FL,Premium,Marketplace,2024-04-03,Silver,72,TRUE
+CUST00104,Daniel,Taylor,daniel.taylor4@yahoo.com,VA,Value,In-Store,2021-01-10,Platinum,6,FALSE
+CUST00105,James,Anderson,james.anderson95@gmail.com,CO,Mainstream,Online,2024-09-05,Silver,34,TRUE
+CUST00106,Emily,Thompson,emily.thompson23@gmail.com,CO,Budget,Online,2020-05-01,Bronze,61,TRUE
+CUST00107,Emily,Wilson,emily.wilson62@yahoo.com,PA,Budget,Marketplace,2020-10-05,Gold,41,TRUE
+CUST00108,Anthony,Anderson,anthony.anderson23@yahoo.com,AZ,Premium,Catalog,2022-11-17,Gold,64,TRUE
+CUST00109,Maria,Brown,maria.brown79@gmail.com,GA,Mainstream,Catalog,2021-07-13,Gold,5,TRUE
+CUST00110,Christopher,Anderson,christopher.anderson88@gmail.com,FL,Premium,In-Store,2024-02-14,Silver,44,TRUE
+CUST00111,Robert,Jones,robert.jones6@gmail.com,MA,Premium,Mobile App,2023-03-20,Platinum,30,TRUE
+CUST00112,David,Johnson,david.johnson79@gmail.com,TX,Mainstream,Catalog,2024-06-26,Gold,77,TRUE
+CUST00113,Brian,Johnson,brian.johnson76@gmail.com,VA,Luxury,In-Store,2023-04-19,Bronze,79,TRUE
+CUST00114,Michael,Martin,michael.martin15@gmail.com,OH,Mainstream,Mobile App,2020-11-27,Platinum,9,TRUE
+CUST00115,Robert,Williams,robert.williams67@gmail.com,NY,Value,Online,2022-07-29,Platinum,78,TRUE
+CUST00116,Anthony,Thompson,anthony.thompson26@yahoo.com,FL,Mainstream,In-Store,2021-01-13,Silver,52,TRUE
+CUST00117,Daniel,Moore,daniel.moore48@gmail.com,CO,Premium,In-Store,2022-01-20,Platinum,19,FALSE
+CUST00118,Christopher,Allen,christopher.allen12@yahoo.com,VA,Value,Catalog,2023-11-14,Bronze,1,TRUE
+CUST00119,James,Davis,james.davis15@gmail.com,OH,Budget,Marketplace,2021-12-01,Gold,42,TRUE
+CUST00120,Maria,Garcia,maria.garcia23@gmail.com,VA,Mainstream,Mobile App,2020-03-19,Platinum,57,TRUE
+CUST00121,Mark,Allen,mark.allen89@yahoo.com,MI,Budget,Online,2024-05-22,Silver,18,TRUE
+CUST00122,Kevin,Moore,kevin.moore65@gmail.com,MA,Mainstream,Catalog,2024-10-20,Gold,80,FALSE
+CUST00123,Sarah,Taylor,sarah.taylor94@gmail.com,TX,Budget,Mobile App,2020-06-06,Gold,54,TRUE
+CUST00124,William,Harris,william.harris20@yahoo.com,PA,Budget,Marketplace,2022-08-11,Gold,15,FALSE
+CUST00125,Michael,Moore,michael.moore8@gmail.com,NY,Budget,Catalog,2022-10-03,Platinum,12,TRUE
+CUST00126,George,Wilson,george.wilson70@gmail.com,CO,Premium,Marketplace,2021-01-24,Gold,71,TRUE
+CUST00127,Emily,Harris,emily.harris12@yahoo.com,PA,Luxury,Catalog,2024-08-14,Silver,5,TRUE
+CUST00128,James,Smith,james.smith91@yahoo.com,FL,Premium,Marketplace,2020-01-15,Silver,31,TRUE
+CUST00129,James,Young,james.young36@yahoo.com,CO,Value,Marketplace,2020-01-12,Platinum,43,TRUE
+CUST00130,Maria,Taylor,maria.taylor60@gmail.com,MA,Premium,Marketplace,2022-02-10,Bronze,40,TRUE
+CUST00131,Michael,Brown,michael.brown17@gmail.com,CO,Value,Catalog,2020-07-10,Silver,42,TRUE
+CUST00132,Amanda,Moore,amanda.moore5@yahoo.com,OH,Value,Marketplace,2021-08-29,Gold,21,FALSE
+CUST00133,Mark,Johnson,mark.johnson87@gmail.com,NC,Premium,Mobile App,2023-01-16,Gold,46,TRUE
+CUST00134,Maria,Harris,maria.harris82@yahoo.com,MA,Luxury,In-Store,2020-11-11,Platinum,19,TRUE
+CUST00135,Amanda,Smith,amanda.smith18@gmail.com,PA,Premium,Marketplace,2024-01-19,Bronze,78,FALSE
+CUST00136,Kevin,Jones,kevin.jones67@gmail.com,MI,Value,Catalog,2021-03-31,Platinum,2,TRUE
+CUST00137,Brian,Davis,brian.davis93@gmail.com,PA,Premium,Marketplace,2023-02-06,Silver,63,FALSE
+CUST00138,Michael,Moore,michael.moore18@gmail.com,MA,Value,Catalog,2022-04-17,Bronze,60,FALSE
+CUST00139,Amanda,Anderson,amanda.anderson60@yahoo.com,FL,Value,Catalog,2023-06-17,Gold,18,TRUE
+CUST00140,Sarah,Jones,sarah.jones5@yahoo.com,OH,Budget,Online,2021-11-14,Bronze,37,TRUE
+CUST00141,Sarah,Harris,sarah.harris73@gmail.com,TX,Value,Catalog,2020-05-20,Gold,55,TRUE
+CUST00142,Mark,Thomas,mark.thomas81@gmail.com,OH,Value,In-Store,2021-09-20,Silver,25,TRUE
+CUST00143,Emily,Davis,emily.davis40@yahoo.com,WA,Budget,In-Store,2023-03-09,Silver,75,TRUE
+CUST00144,Brian,Miller,brian.miller75@yahoo.com,TX,Value,In-Store,2021-10-23,Silver,18,TRUE
+CUST00145,Robert,Thompson,robert.thompson97@gmail.com,GA,Mainstream,Catalog,2024-01-22,Gold,52,TRUE
+CUST00146,Robert,Thompson,robert.thompson81@yahoo.com,TX,Budget,In-Store,2024-08-24,Platinum,79,TRUE
+CUST00147,Emily,Martin,emily.martin54@yahoo.com,WA,Mainstream,In-Store,2020-07-27,Gold,17,TRUE
+CUST00148,Emily,Moore,emily.moore23@gmail.com,TX,Budget,Catalog,2024-02-17,Bronze,79,TRUE
+CUST00149,William,Harris,william.harris14@yahoo.com,NC,Luxury,Marketplace,2023-04-26,Gold,59,TRUE
+CUST00150,Ashley,Brown,ashley.brown27@yahoo.com,PA,Premium,In-Store,2021-03-15,Platinum,54,TRUE
+CUST00151,Robert,Martin,robert.martin43@gmail.com,IL,Value,In-Store,2022-07-06,Bronze,4,FALSE
+CUST00152,Emily,Johnson,emily.johnson35@gmail.com,PA,Premium,In-Store,2022-07-05,Silver,47,FALSE
+CUST00153,Christopher,Jones,christopher.jones13@yahoo.com,AZ,Value,Marketplace,2022-10-09,Bronze,73,TRUE
+CUST00154,Matthew,Williams,matthew.williams24@gmail.com,TX,Premium,Catalog,2022-06-16,Silver,65,TRUE
+CUST00155,Michael,Martin,michael.martin21@yahoo.com,OH,Mainstream,Mobile App,2021-03-08,Platinum,56,TRUE
+CUST00156,William,Martin,william.martin47@gmail.com,MI,Luxury,In-Store,2020-03-09,Silver,60,TRUE
+CUST00157,Matthew,Garcia,matthew.garcia22@gmail.com,TX,Mainstream,Mobile App,2023-04-07,Gold,42,TRUE
+CUST00158,William,Smith,william.smith96@yahoo.com,VA,Mainstream,Online,2023-08-19,Gold,17,TRUE
+CUST00159,Emily,Jackson,emily.jackson62@gmail.com,IL,Mainstream,Online,2020-02-03,Gold,27,TRUE
+CUST00160,Christopher,White,christopher.white10@gmail.com,WA,Luxury,Mobile App,2022-10-22,Bronze,23,TRUE
+CUST00161,Emily,Davis,emily.davis71@gmail.com,IL,Premium,Catalog,2022-02-26,Gold,24,TRUE
+CUST00162,Mark,Taylor,mark.taylor37@gmail.com,IL,Premium,Online,2021-03-30,Platinum,25,FALSE
+CUST00163,Matthew,Harris,matthew.harris63@yahoo.com,IL,Value,Marketplace,2024-02-14,Platinum,65,FALSE
+CUST00164,Christopher,Jackson,christopher.jackson7@yahoo.com,IL,Mainstream,Online,2020-06-18,Gold,55,TRUE
+CUST00165,Ashley,Davis,ashley.davis15@yahoo.com,TX,Value,In-Store,2020-01-21,Silver,10,TRUE
+CUST00166,James,Taylor,james.taylor97@gmail.com,OH,Mainstream,Marketplace,2024-01-16,Gold,6,TRUE
+CUST00167,Jessica,Brown,jessica.brown33@yahoo.com,NY,Premium,In-Store,2021-10-13,Silver,54,TRUE
+CUST00168,Sarah,Brown,sarah.brown90@gmail.com,CA,Premium,Online,2022-04-03,Gold,61,TRUE
+CUST00169,Amanda,Thomas,amanda.thomas85@gmail.com,AZ,Budget,In-Store,2024-03-14,Platinum,69,TRUE
+CUST00170,William,Jackson,william.jackson6@gmail.com,IL,Premium,Online,2021-04-20,Bronze,23,TRUE
+CUST00171,Maria,Anderson,maria.anderson55@gmail.com,OH,Value,Mobile App,2023-05-07,Gold,46,TRUE
+CUST00172,Robert,Young,robert.young2@gmail.com,CO,Value,Catalog,2024-05-03,Bronze,19,TRUE
+CUST00173,Matthew,Moore,matthew.moore48@yahoo.com,GA,Premium,Catalog,2021-07-04,Gold,34,TRUE
+CUST00174,Anthony,Young,anthony.young5@gmail.com,AZ,Budget,Online,2024-01-07,Gold,76,TRUE
+CUST00175,Matthew,Miller,matthew.miller53@yahoo.com,CO,Value,Marketplace,2020-06-14,Platinum,42,TRUE
+CUST00176,James,Brown,james.brown48@gmail.com,AZ,Value,Catalog,2020-04-01,Bronze,77,FALSE
+CUST00177,David,Davis,david.davis9@gmail.com,WA,Value,Mobile App,2024-05-28,Bronze,37,TRUE
+CUST00178,Ashley,Thomas,ashley.thomas11@gmail.com,MI,Value,Catalog,2020-12-05,Gold,6,TRUE
+CUST00179,Ashley,Brown,ashley.brown75@yahoo.com,NY,Premium,Catalog,2022-05-11,Platinum,40,TRUE
+CUST00180,Kevin,Young,kevin.young18@yahoo.com,OH,Value,Marketplace,2020-08-07,Silver,53,TRUE
+CUST00181,George,Moore,george.moore85@yahoo.com,WA,Mainstream,In-Store,2020-06-19,Gold,31,TRUE
+CUST00182,William,Thomas,william.thomas73@yahoo.com,GA,Premium,Mobile App,2021-05-17,Silver,48,TRUE
+CUST00183,Anthony,Anderson,anthony.anderson72@yahoo.com,FL,Mainstream,Marketplace,2024-09-18,Gold,33,TRUE
+CUST00184,Daniel,White,daniel.white65@yahoo.com,GA,Luxury,Online,2021-04-26,Silver,65,TRUE
+CUST00185,Daniel,Young,daniel.young77@yahoo.com,IL,Mainstream,Online,2024-06-26,Gold,31,FALSE
+CUST00186,George,Taylor,george.taylor73@gmail.com,IL,Value,Marketplace,2020-12-01,Silver,32,TRUE
+CUST00187,Christopher,Anderson,christopher.anderson98@yahoo.com,OH,Luxury,In-Store,2022-06-20,Gold,49,TRUE
+CUST00188,William,White,william.white86@yahoo.com,NY,Budget,Catalog,2021-11-30,Gold,46,FALSE
+CUST00189,Kevin,Garcia,kevin.garcia87@yahoo.com,WA,Budget,In-Store,2022-08-02,Silver,8,TRUE
+CUST00190,George,Young,george.young29@yahoo.com,VA,Mainstream,Online,2023-08-31,Bronze,23,FALSE
+CUST00191,Christopher,Anderson,christopher.anderson21@yahoo.com,OH,Premium,Mobile App,2022-05-06,Bronze,42,FALSE
+CUST00192,Amanda,Thompson,amanda.thompson57@yahoo.com,OH,Luxury,Mobile App,2020-07-01,Gold,11,TRUE
+CUST00193,Kevin,Miller,kevin.miller33@yahoo.com,CO,Premium,Marketplace,2024-03-14,Gold,20,TRUE
+CUST00194,James,Young,james.young30@yahoo.com,MA,Luxury,Catalog,2020-03-05,Silver,72,TRUE
+CUST00195,Matthew,Moore,matthew.moore74@yahoo.com,FL,Luxury,Online,2024-11-01,Silver,76,TRUE
+CUST00196,James,Williams,james.williams42@gmail.com,MA,Mainstream,Marketplace,2023-12-17,Silver,70,TRUE
+CUST00197,Christopher,Brown,christopher.brown51@gmail.com,TX,Mainstream,Online,2024-05-12,Bronze,46,TRUE
+CUST00198,Anthony,Allen,anthony.allen54@gmail.com,NY,Luxury,Marketplace,2021-08-18,Platinum,69,FALSE
+CUST00199,Michael,Garcia,michael.garcia68@gmail.com,OH,Luxury,Catalog,2023-01-31,Bronze,68,TRUE
+CUST00200,Brian,Thomas,brian.thomas82@gmail.com,MA,Budget,In-Store,2021-12-01,Gold,37,TRUE
+CUST00201,Christopher,Martin,christopher.martin59@yahoo.com,MA,Premium,Mobile App,2021-12-10,Platinum,1,TRUE
+CUST00202,Daniel,Anderson,daniel.anderson53@gmail.com,MA,Budget,In-Store,2020-06-09,Silver,61,FALSE
+CUST00203,Emily,Young,emily.young44@yahoo.com,FL,Luxury,Online,2020-11-26,Gold,78,FALSE
+CUST00204,Maria,Johnson,maria.johnson33@gmail.com,GA,Luxury,Online,2024-05-17,Platinum,36,FALSE
+CUST00205,Ashley,Wilson,ashley.wilson4@gmail.com,AZ,Budget,Mobile App,2021-05-26,Platinum,56,TRUE
+CUST00206,Maria,Davis,maria.davis66@gmail.com,PA,Budget,Online,2020-03-24,Silver,27,FALSE
+CUST00207,George,Harris,george.harris82@yahoo.com,FL,Value,Marketplace,2023-06-08,Platinum,16,TRUE
+CUST00208,Michael,Thompson,michael.thompson56@gmail.com,FL,Value,Online,2022-12-22,Gold,28,TRUE
+CUST00209,James,Taylor,james.taylor16@gmail.com,NY,Value,Mobile App,2022-10-06,Silver,8,TRUE
+CUST00210,Kevin,Jackson,kevin.jackson95@yahoo.com,IL,Premium,Catalog,2022-11-26,Gold,62,TRUE
+CUST00211,George,Allen,george.allen69@yahoo.com,TX,Premium,Online,2023-11-26,Gold,32,TRUE
+CUST00212,Daniel,Johnson,daniel.johnson97@gmail.com,OH,Luxury,In-Store,2022-04-17,Silver,40,TRUE
+CUST00213,Robert,Thomas,robert.thomas42@gmail.com,CO,Budget,Online,2020-07-18,Gold,44,TRUE
+CUST00214,James,Williams,james.williams21@gmail.com,AZ,Budget,In-Store,2021-11-12,Bronze,28,TRUE
+CUST00215,David,Garcia,david.garcia25@gmail.com,NC,Value,Online,2023-07-20,Silver,42,TRUE
+CUST00216,James,Taylor,james.taylor28@yahoo.com,TX,Budget,Catalog,2020-04-21,Silver,63,TRUE
+CUST00217,Matthew,Taylor,matthew.taylor23@gmail.com,VA,Value,Mobile App,2024-07-04,Gold,68,FALSE
+CUST00218,John,Martin,john.martin93@yahoo.com,CO,Mainstream,In-Store,2022-10-16,Gold,45,TRUE
+CUST00219,Anthony,Thomas,anthony.thomas59@yahoo.com,VA,Premium,Marketplace,2021-05-08,Gold,45,TRUE
+CUST00220,Christopher,Miller,christopher.miller76@gmail.com,NC,Premium,Mobile App,2023-03-05,Bronze,32,TRUE
+CUST00221,James,Miller,james.miller54@gmail.com,WA,Premium,Online,2020-11-12,Platinum,21,TRUE
+CUST00222,John,Martin,john.martin45@yahoo.com,IL,Budget,Catalog,2021-08-10,Silver,69,TRUE
+CUST00223,Sarah,Johnson,sarah.johnson88@gmail.com,NC,Value,Catalog,2021-07-19,Gold,57,TRUE
+CUST00224,Daniel,Thomas,daniel.thomas16@gmail.com,WA,Luxury,Mobile App,2024-02-10,Bronze,70,TRUE
+CUST00225,Matthew,Young,matthew.young22@yahoo.com,WA,Budget,In-Store,2022-11-11,Bronze,16,TRUE
+CUST00226,Robert,Thomas,robert.thomas20@yahoo.com,CO,Mainstream,Mobile App,2020-07-30,Platinum,59,FALSE
+CUST00227,Anthony,Thompson,anthony.thompson69@yahoo.com,WA,Premium,Catalog,2022-09-22,Silver,27,TRUE
+CUST00228,Daniel,Miller,daniel.miller89@gmail.com,GA,Luxury,Mobile App,2020-04-17,Gold,46,TRUE
+CUST00229,Michael,Garcia,michael.garcia39@yahoo.com,OH,Luxury,Catalog,2023-07-24,Gold,73,TRUE
+CUST00230,William,Miller,william.miller29@yahoo.com,MA,Value,Mobile App,2023-02-18,Silver,22,TRUE
+CUST00231,Robert,Miller,robert.miller84@gmail.com,VA,Budget,Catalog,2023-12-06,Gold,68,TRUE
+CUST00232,Amanda,Thompson,amanda.thompson54@gmail.com,CO,Budget,In-Store,2023-08-31,Platinum,53,FALSE
+CUST00233,Robert,Moore,robert.moore14@yahoo.com,CA,Luxury,In-Store,2020-08-01,Platinum,63,TRUE
+CUST00234,Daniel,Williams,daniel.williams60@gmail.com,WA,Value,Mobile App,2020-06-25,Gold,68,FALSE
+CUST00235,James,Allen,james.allen1@gmail.com,MI,Value,Online,2023-10-17,Silver,61,TRUE
+CUST00236,Brian,Thomas,brian.thomas64@yahoo.com,NC,Value,Marketplace,2022-03-21,Gold,47,TRUE
+CUST00237,Amanda,White,amanda.white91@yahoo.com,AZ,Value,Online,2024-07-31,Gold,71,TRUE
+CUST00238,Brian,Smith,brian.smith34@yahoo.com,GA,Luxury,Online,2022-06-28,Silver,31,TRUE
+CUST00239,William,Williams,william.williams45@gmail.com,AZ,Premium,Catalog,2020-02-15,Bronze,10,TRUE
+CUST00240,George,Miller,george.miller71@gmail.com,FL,Value,Marketplace,2021-05-25,Platinum,48,TRUE
+CUST00241,Ashley,Garcia,ashley.garcia2@gmail.com,GA,Value,Marketplace,2023-07-01,Bronze,38,TRUE
+CUST00242,Michael,Moore,michael.moore79@yahoo.com,CA,Luxury,Marketplace,2021-03-14,Platinum,58,TRUE
+CUST00243,Kevin,Young,kevin.young55@gmail.com,MA,Budget,Mobile App,2023-07-17,Bronze,31,TRUE
+CUST00244,Mark,Wilson,mark.wilson80@gmail.com,GA,Value,Mobile App,2022-03-19,Gold,17,TRUE
+CUST00245,Brian,Moore,brian.moore96@yahoo.com,PA,Budget,Online,2021-10-22,Gold,48,TRUE
+CUST00246,Daniel,Thompson,daniel.thompson70@yahoo.com,NY,Mainstream,In-Store,2024-06-02,Bronze,22,TRUE
+CUST00247,Emily,Miller,emily.miller1@yahoo.com,CO,Premium,Marketplace,2024-10-02,Gold,43,TRUE
+CUST00248,Brian,Smith,brian.smith12@gmail.com,NC,Budget,Online,2022-03-09,Platinum,18,TRUE
+CUST00249,William,Davis,william.davis86@gmail.com,PA,Premium,Online,2021-02-11,Platinum,14,TRUE
+CUST00250,James,Harris,james.harris83@gmail.com,PA,Luxury,Mobile App,2022-01-29,Bronze,78,TRUE
+CUST00251,Ashley,Thomas,ashley.thomas28@gmail.com,MI,Mainstream,Marketplace,2022-06-11,Bronze,25,TRUE
+CUST00252,Brian,Miller,brian.miller95@gmail.com,WA,Mainstream,Catalog,2021-12-09,Silver,34,TRUE
+CUST00253,Jessica,Williams,jessica.williams19@gmail.com,IL,Premium,In-Store,2021-01-21,Bronze,2,TRUE
+CUST00254,Anthony,Jackson,anthony.jackson67@gmail.com,TX,Mainstream,Mobile App,2022-03-21,Gold,29,TRUE
+CUST00255,Michael,Jackson,michael.jackson17@yahoo.com,IL,Mainstream,In-Store,2023-05-28,Platinum,69,TRUE
+CUST00256,Robert,Allen,robert.allen36@gmail.com,IL,Mainstream,Online,2023-11-28,Gold,46,TRUE
+CUST00257,William,Thompson,william.thompson6@gmail.com,VA,Budget,In-Store,2024-02-09,Bronze,33,FALSE
+CUST00258,Christopher,Thompson,christopher.thompson2@gmail.com,FL,Mainstream,In-Store,2021-10-11,Bronze,68,TRUE
+CUST00259,David,Thompson,david.thompson13@yahoo.com,MA,Premium,In-Store,2023-01-07,Platinum,34,FALSE
+CUST00260,Kevin,Harris,kevin.harris29@gmail.com,CA,Luxury,Online,2024-07-12,Gold,28,TRUE
+CUST00261,Michael,Martin,michael.martin88@gmail.com,AZ,Premium,Catalog,2020-12-21,Bronze,78,TRUE
+CUST00262,Ashley,Anderson,ashley.anderson75@yahoo.com,TX,Value,Online,2020-05-13,Bronze,37,TRUE
+CUST00263,Jessica,Young,jessica.young28@gmail.com,MA,Luxury,In-Store,2022-10-23,Bronze,50,TRUE
+CUST00264,Mark,Thomas,mark.thomas63@yahoo.com,CA,Value,Marketplace,2023-05-05,Bronze,46,TRUE
+CUST00265,Ashley,Harris,ashley.harris78@yahoo.com,MI,Value,Catalog,2021-01-14,Silver,78,FALSE
+CUST00266,Kevin,White,kevin.white60@yahoo.com,NY,Premium,Mobile App,2022-12-02,Platinum,6,TRUE
+CUST00267,Kevin,Taylor,kevin.taylor98@yahoo.com,WA,Premium,Online,2022-05-03,Silver,14,TRUE
+CUST00268,James,Williams,james.williams42@gmail.com,WA,Value,Online,2024-11-19,Platinum,51,TRUE
+CUST00269,Michael,Thomas,michael.thomas81@yahoo.com,IL,Luxury,Online,2022-12-29,Bronze,80,TRUE
+CUST00270,John,Jones,john.jones54@yahoo.com,OH,Premium,Catalog,2023-06-30,Platinum,30,TRUE
+CUST00271,Maria,Smith,maria.smith57@gmail.com,OH,Budget,Catalog,2023-07-19,Platinum,52,TRUE
+CUST00272,James,Smith,james.smith24@yahoo.com,OH,Budget,Online,2024-02-14,Bronze,80,TRUE
+CUST00273,Matthew,Smith,matthew.smith43@gmail.com,GA,Value,Online,2024-05-18,Bronze,34,TRUE
+CUST00274,John,Harris,john.harris65@yahoo.com,NY,Luxury,Marketplace,2020-04-02,Gold,1,TRUE
+CUST00275,Anthony,Martin,anthony.martin42@yahoo.com,CO,Premium,Catalog,2023-04-17,Platinum,31,TRUE
+CUST00276,Daniel,Davis,daniel.davis72@yahoo.com,GA,Premium,Online,2021-06-28,Bronze,76,TRUE
+CUST00277,Amanda,Garcia,amanda.garcia22@yahoo.com,AZ,Budget,In-Store,2024-07-31,Silver,19,TRUE
+CUST00278,Christopher,Taylor,christopher.taylor66@gmail.com,MA,Mainstream,Mobile App,2022-12-06,Bronze,72,FALSE
+CUST00279,Kevin,Davis,kevin.davis21@yahoo.com,MI,Budget,Marketplace,2020-10-20,Silver,54,TRUE
+CUST00280,Robert,Martin,robert.martin79@yahoo.com,CA,Mainstream,Marketplace,2021-10-18,Bronze,66,TRUE
+CUST00281,Ashley,Allen,ashley.allen33@gmail.com,MA,Premium,Mobile App,2024-08-09,Bronze,41,TRUE
+CUST00282,Maria,Johnson,maria.johnson11@yahoo.com,VA,Premium,Mobile App,2023-12-27,Silver,66,TRUE
+CUST00283,Michael,Anderson,michael.anderson38@gmail.com,OH,Premium,Online,2023-06-03,Silver,74,TRUE
+CUST00284,Ashley,Johnson,ashley.johnson32@yahoo.com,GA,Luxury,In-Store,2020-09-24,Gold,50,TRUE
+CUST00285,Jessica,Wilson,jessica.wilson11@yahoo.com,MI,Value,Marketplace,2022-07-16,Gold,9,TRUE
+CUST00286,Mark,Young,mark.young71@gmail.com,MA,Luxury,Mobile App,2023-03-29,Silver,38,TRUE
+CUST00287,Daniel,Miller,daniel.miller80@gmail.com,VA,Mainstream,In-Store,2020-04-09,Platinum,41,FALSE
+CUST00288,Robert,Williams,robert.williams35@gmail.com,OH,Budget,Mobile App,2024-08-30,Silver,11,TRUE
+CUST00289,Emily,Miller,emily.miller96@gmail.com,VA,Value,Mobile App,2023-05-22,Bronze,46,FALSE
+CUST00290,Kevin,White,kevin.white29@yahoo.com,CA,Mainstream,Marketplace,2020-02-21,Silver,80,TRUE
+CUST00291,Ashley,Martin,ashley.martin59@gmail.com,WA,Value,Online,2023-10-18,Platinum,8,TRUE
+CUST00292,Robert,Moore,robert.moore81@yahoo.com,OH,Luxury,Mobile App,2020-08-05,Silver,25,TRUE
+CUST00293,Maria,Taylor,maria.taylor67@yahoo.com,NY,Mainstream,In-Store,2023-12-01,Bronze,70,TRUE
+CUST00294,Matthew,Wilson,matthew.wilson50@yahoo.com,MI,Mainstream,Catalog,2023-12-22,Bronze,59,TRUE
+CUST00295,Amanda,Moore,amanda.moore80@yahoo.com,TX,Mainstream,Online,2020-08-23,Platinum,78,TRUE
+CUST00296,Daniel,Thomas,daniel.thomas16@yahoo.com,IL,Value,In-Store,2022-08-01,Silver,31,TRUE
+CUST00297,Ashley,Harris,ashley.harris75@gmail.com,WA,Budget,In-Store,2022-09-12,Silver,74,FALSE
+CUST00298,Brian,Taylor,brian.taylor81@yahoo.com,MI,Value,Marketplace,2023-02-07,Gold,42,FALSE
+CUST00299,Sarah,Moore,sarah.moore18@yahoo.com,TX,Budget,In-Store,2022-06-17,Gold,19,TRUE
+CUST00300,Sarah,White,sarah.white54@yahoo.com,PA,Luxury,Mobile App,2021-12-25,Bronze,46,TRUE
+CUST00301,Kevin,Davis,kevin.davis93@yahoo.com,FL,Mainstream,Catalog,2020-01-03,Gold,69,TRUE
+CUST00302,Amanda,Martin,amanda.martin70@yahoo.com,OH,Premium,In-Store,2022-07-14,Gold,6,TRUE
+CUST00303,Maria,Jones,maria.jones74@gmail.com,NC,Mainstream,Mobile App,2022-11-07,Bronze,67,TRUE
+CUST00304,Brian,Allen,brian.allen7@gmail.com,IL,Value,In-Store,2020-06-16,Silver,16,TRUE
+CUST00305,Amanda,Young,amanda.young43@gmail.com,TX,Value,Marketplace,2021-06-14,Silver,43,TRUE
+CUST00306,Robert,Jones,robert.jones53@yahoo.com,OH,Premium,Mobile App,2021-02-28,Gold,70,TRUE
+CUST00307,William,Allen,william.allen69@yahoo.com,CA,Value,Marketplace,2024-01-09,Silver,72,TRUE
+CUST00308,Christopher,Jones,christopher.jones79@gmail.com,MA,Budget,Marketplace,2020-05-04,Silver,27,TRUE
+CUST00309,Ashley,Brown,ashley.brown51@yahoo.com,CA,Premium,Catalog,2023-02-06,Bronze,4,TRUE
+CUST00310,William,Allen,william.allen70@yahoo.com,WA,Mainstream,Catalog,2022-08-06,Platinum,6,TRUE
+CUST00311,Christopher,Taylor,christopher.taylor63@yahoo.com,OH,Mainstream,Marketplace,2024-08-05,Gold,36,TRUE
+CUST00312,Emily,Thomas,emily.thomas47@yahoo.com,TX,Luxury,Marketplace,2020-03-27,Bronze,22,TRUE
+CUST00313,Ashley,Martin,ashley.martin60@yahoo.com,OH,Value,Mobile App,2023-05-23,Silver,79,TRUE
+CUST00314,Brian,Williams,brian.williams61@yahoo.com,NC,Value,Marketplace,2024-06-04,Bronze,17,TRUE
+CUST00315,Jessica,Thomas,jessica.thomas75@gmail.com,MI,Value,Marketplace,2024-08-08,Platinum,51,FALSE
+CUST00316,Ashley,Harris,ashley.harris77@yahoo.com,GA,Budget,Mobile App,2022-07-22,Bronze,64,TRUE
+CUST00317,William,Jones,william.jones74@yahoo.com,MI,Value,In-Store,2020-03-23,Bronze,25,FALSE
+CUST00318,Matthew,Miller,matthew.miller45@gmail.com,MI,Premium,Online,2024-03-24,Bronze,39,FALSE
+CUST00319,William,Davis,william.davis78@gmail.com,FL,Luxury,Mobile App,2024-06-08,Platinum,71,TRUE
+CUST00320,Ashley,Williams,ashley.williams57@gmail.com,NY,Value,Mobile App,2020-12-25,Gold,35,TRUE
+CUST00321,Michael,White,michael.white20@gmail.com,NY,Budget,Catalog,2020-12-30,Bronze,10,TRUE
+CUST00322,Maria,Wilson,maria.wilson78@gmail.com,GA,Budget,In-Store,2024-10-04,Bronze,51,TRUE
+CUST00323,Amanda,Davis,amanda.davis64@yahoo.com,PA,Value,In-Store,2021-06-10,Silver,1,TRUE
+CUST00324,Matthew,Johnson,matthew.johnson36@yahoo.com,AZ,Mainstream,In-Store,2022-11-11,Gold,19,TRUE
+CUST00325,Brian,Thomas,brian.thomas95@gmail.com,OH,Budget,In-Store,2024-10-03,Platinum,79,FALSE
+CUST00326,Kevin,Davis,kevin.davis67@yahoo.com,MI,Value,Marketplace,2022-10-21,Silver,77,TRUE
+CUST00327,Anthony,Thompson,anthony.thompson92@gmail.com,NC,Premium,Mobile App,2021-01-28,Bronze,46,TRUE
+CUST00328,Kevin,Jackson,kevin.jackson42@gmail.com,WA,Budget,Marketplace,2024-05-08,Gold,30,FALSE
+CUST00329,Jessica,Young,jessica.young21@gmail.com,GA,Luxury,Mobile App,2021-09-28,Gold,18,FALSE
+CUST00330,Brian,White,brian.white82@gmail.com,WA,Mainstream,In-Store,2020-04-06,Platinum,17,TRUE
+CUST00331,Christopher,Martin,christopher.martin33@yahoo.com,OH,Value,Marketplace,2021-04-21,Bronze,55,TRUE
+CUST00332,William,Anderson,william.anderson49@gmail.com,MA,Luxury,Online,2021-10-24,Bronze,59,TRUE
+CUST00333,Emily,Moore,emily.moore3@yahoo.com,VA,Luxury,Catalog,2021-01-02,Silver,53,TRUE
+CUST00334,Christopher,Moore,christopher.moore1@yahoo.com,MI,Budget,Marketplace,2023-04-24,Silver,54,FALSE
+CUST00335,Michael,Jones,michael.jones27@gmail.com,MA,Budget,Catalog,2023-12-04,Gold,17,TRUE
+CUST00336,Maria,Allen,maria.allen20@yahoo.com,NY,Luxury,Online,2023-05-22,Silver,60,TRUE
+CUST00337,Matthew,Anderson,matthew.anderson32@yahoo.com,NY,Budget,In-Store,2022-10-31,Silver,15,TRUE
+CUST00338,Christopher,Miller,christopher.miller20@gmail.com,VA,Mainstream,Catalog,2020-12-13,Platinum,31,TRUE
+CUST00339,Christopher,Garcia,christopher.garcia40@yahoo.com,IL,Value,Mobile App,2023-12-05,Silver,9,TRUE
+CUST00340,William,Miller,william.miller8@gmail.com,PA,Budget,Online,2020-09-23,Platinum,73,TRUE
+CUST00341,Amanda,Moore,amanda.moore4@yahoo.com,NC,Luxury,Online,2024-03-13,Platinum,24,TRUE
+CUST00342,Christopher,Moore,christopher.moore37@yahoo.com,OH,Value,Mobile App,2020-12-29,Bronze,80,TRUE
+CUST00343,David,Young,david.young33@gmail.com,IL,Premium,In-Store,2020-02-27,Gold,24,TRUE
+CUST00344,Sarah,Smith,sarah.smith32@yahoo.com,MA,Premium,Online,2024-11-26,Silver,74,FALSE
+CUST00345,Robert,Moore,robert.moore34@gmail.com,OH,Budget,In-Store,2023-09-18,Gold,71,TRUE
+CUST00346,Jessica,White,jessica.white20@gmail.com,FL,Luxury,Marketplace,2021-07-09,Silver,7,FALSE
+CUST00347,Anthony,Davis,anthony.davis52@gmail.com,CA,Luxury,Marketplace,2023-11-28,Gold,37,FALSE
+CUST00348,Robert,Williams,robert.williams74@yahoo.com,AZ,Premium,In-Store,2023-04-29,Bronze,29,TRUE
+CUST00349,Kevin,White,kevin.white69@yahoo.com,MI,Mainstream,Catalog,2021-03-15,Bronze,3,FALSE
+CUST00350,Robert,Johnson,robert.johnson61@gmail.com,AZ,Premium,Mobile App,2023-06-28,Bronze,4,TRUE
+CUST00351,George,White,george.white23@yahoo.com,CA,Value,Catalog,2024-09-20,Bronze,2,TRUE
+CUST00352,Kevin,Allen,kevin.allen8@gmail.com,GA,Budget,In-Store,2022-09-11,Gold,54,TRUE
+CUST00353,Brian,Taylor,brian.taylor65@yahoo.com,IL,Mainstream,Marketplace,2020-05-05,Silver,51,TRUE
+CUST00354,William,Williams,william.williams94@yahoo.com,PA,Mainstream,Catalog,2023-10-05,Gold,64,FALSE
+CUST00355,Robert,Smith,robert.smith15@yahoo.com,MA,Mainstream,Mobile App,2022-12-12,Gold,31,TRUE
+CUST00356,George,Smith,george.smith17@yahoo.com,GA,Premium,Catalog,2022-03-07,Silver,73,TRUE
+CUST00357,Kevin,Williams,kevin.williams77@gmail.com,FL,Mainstream,Marketplace,2021-03-20,Silver,42,TRUE
+CUST00358,Matthew,Smith,matthew.smith16@gmail.com,IL,Luxury,In-Store,2021-03-09,Gold,37,TRUE
+CUST00359,Amanda,Thomas,amanda.thomas14@gmail.com,CO,Value,Online,2020-06-11,Gold,19,TRUE
+CUST00360,George,Smith,george.smith20@gmail.com,CA,Premium,Online,2022-08-26,Bronze,3,FALSE
+CUST00361,Mark,Thomas,mark.thomas67@gmail.com,GA,Budget,In-Store,2024-06-11,Silver,55,FALSE
+CUST00362,John,Taylor,john.taylor68@yahoo.com,NY,Premium,Catalog,2021-05-31,Gold,64,TRUE
+CUST00363,Robert,Miller,robert.miller60@yahoo.com,NC,Mainstream,Marketplace,2023-09-18,Platinum,54,TRUE
+CUST00364,Daniel,Thompson,daniel.thompson4@gmail.com,NC,Premium,Mobile App,2021-01-11,Bronze,14,FALSE
+CUST00365,Brian,Jackson,brian.jackson70@yahoo.com,IL,Premium,Online,2023-10-24,Platinum,45,FALSE
+CUST00366,Michael,Davis,michael.davis54@gmail.com,MA,Budget,Catalog,2021-01-04,Gold,8,FALSE
+CUST00367,John,Thompson,john.thompson41@gmail.com,AZ,Value,Catalog,2022-04-11,Bronze,75,TRUE
+CUST00368,Emily,Jones,emily.jones90@gmail.com,CO,Luxury,Online,2021-12-13,Platinum,8,TRUE
+CUST00369,Matthew,Young,matthew.young89@yahoo.com,NY,Premium,In-Store,2021-12-15,Gold,37,TRUE
+CUST00370,Brian,Harris,brian.harris80@yahoo.com,TX,Mainstream,Mobile App,2020-01-12,Platinum,14,TRUE
+CUST00371,Amanda,Johnson,amanda.johnson76@gmail.com,AZ,Mainstream,Marketplace,2024-01-26,Platinum,28,TRUE
+CUST00372,Matthew,Thompson,matthew.thompson34@gmail.com,TX,Luxury,Online,2023-03-15,Bronze,3,TRUE
+CUST00373,Sarah,Anderson,sarah.anderson78@yahoo.com,PA,Premium,Catalog,2021-09-07,Silver,18,TRUE
+CUST00374,Emily,Young,emily.young55@yahoo.com,TX,Value,Marketplace,2021-01-13,Gold,30,FALSE
+CUST00375,Brian,Williams,brian.williams36@yahoo.com,CO,Premium,In-Store,2022-11-30,Silver,1,TRUE
+CUST00376,Anthony,White,anthony.white39@yahoo.com,FL,Luxury,Catalog,2022-12-06,Silver,14,TRUE
+CUST00377,Brian,Harris,brian.harris60@gmail.com,TX,Luxury,In-Store,2023-06-12,Silver,27,TRUE
+CUST00378,Brian,Martin,brian.martin92@gmail.com,PA,Luxury,Mobile App,2021-09-22,Gold,29,TRUE
+CUST00379,Mark,Williams,mark.williams9@yahoo.com,FL,Value,Mobile App,2020-10-22,Silver,37,TRUE
+CUST00380,Sarah,Johnson,sarah.johnson7@yahoo.com,OH,Premium,Marketplace,2021-03-04,Gold,44,TRUE
+CUST00381,Anthony,Anderson,anthony.anderson36@gmail.com,AZ,Budget,Online,2023-05-17,Bronze,21,TRUE
+CUST00382,Anthony,Garcia,anthony.garcia11@yahoo.com,WA,Budget,Online,2020-02-03,Bronze,73,TRUE
+CUST00383,Emily,Johnson,emily.johnson73@yahoo.com,VA,Mainstream,Catalog,2024-01-11,Platinum,79,FALSE
+CUST00384,Amanda,Anderson,amanda.anderson12@yahoo.com,NC,Mainstream,In-Store,2020-01-28,Platinum,44,TRUE
+CUST00385,Jessica,Jackson,jessica.jackson14@gmail.com,AZ,Budget,Marketplace,2022-01-24,Bronze,55,TRUE
+CUST00386,Mark,Moore,mark.moore68@gmail.com,FL,Mainstream,Online,2024-05-10,Silver,27,TRUE
+CUST00387,George,Wilson,george.wilson1@yahoo.com,MI,Premium,In-Store,2021-03-02,Platinum,29,TRUE
+CUST00388,Michael,Anderson,michael.anderson41@yahoo.com,PA,Mainstream,Online,2024-01-10,Platinum,33,TRUE
+CUST00389,James,Brown,james.brown30@gmail.com,MI,Budget,Catalog,2021-09-03,Silver,3,FALSE
+CUST00390,James,Thompson,james.thompson26@yahoo.com,VA,Value,Online,2022-03-20,Bronze,32,TRUE
+CUST00391,William,Allen,william.allen58@gmail.com,NC,Mainstream,Catalog,2023-04-10,Bronze,35,FALSE
+CUST00392,Daniel,Thomas,daniel.thomas16@gmail.com,VA,Mainstream,Catalog,2020-07-02,Silver,24,TRUE
+CUST00393,Maria,Brown,maria.brown46@gmail.com,MI,Luxury,Online,2023-09-25,Gold,40,TRUE
+CUST00394,William,Wilson,william.wilson49@yahoo.com,WA,Budget,Catalog,2021-11-09,Bronze,30,TRUE
+CUST00395,Emily,Garcia,emily.garcia30@yahoo.com,FL,Luxury,In-Store,2021-09-26,Bronze,34,TRUE
+CUST00396,John,Jackson,john.jackson38@gmail.com,FL,Premium,Mobile App,2020-12-24,Platinum,64,TRUE
+CUST00397,Daniel,Young,daniel.young27@yahoo.com,CO,Budget,Mobile App,2022-01-03,Gold,70,FALSE
+CUST00398,Emily,Thomas,emily.thomas5@gmail.com,NC,Value,Catalog,2023-01-28,Bronze,27,TRUE
+CUST00399,James,Thompson,james.thompson27@gmail.com,IL,Premium,In-Store,2023-05-28,Platinum,12,FALSE
+CUST00400,George,Garcia,george.garcia5@yahoo.com,WA,Mainstream,In-Store,2021-01-16,Silver,46,TRUE
+CUST00401,Christopher,Martin,christopher.martin47@gmail.com,MI,Premium,Marketplace,2023-11-10,Silver,12,TRUE
+CUST00402,David,Brown,david.brown14@gmail.com,MA,Premium,Marketplace,2021-12-25,Gold,67,FALSE
+CUST00403,Matthew,Garcia,matthew.garcia79@yahoo.com,GA,Mainstream,Mobile App,2023-09-24,Platinum,13,TRUE
+CUST00404,Ashley,Williams,ashley.williams57@yahoo.com,WA,Value,Catalog,2021-08-06,Gold,3,TRUE
+CUST00405,Anthony,Harris,anthony.harris45@gmail.com,FL,Budget,Mobile App,2024-11-30,Bronze,4,FALSE
+CUST00406,Sarah,Thomas,sarah.thomas50@gmail.com,TX,Value,Mobile App,2023-01-12,Gold,10,TRUE
+CUST00407,Christopher,Martin,christopher.martin71@yahoo.com,FL,Luxury,Online,2024-10-01,Gold,57,TRUE
+CUST00408,David,Harris,david.harris87@yahoo.com,VA,Premium,Online,2021-12-06,Gold,15,TRUE
+CUST00409,Maria,Jones,maria.jones40@yahoo.com,VA,Budget,Marketplace,2022-03-30,Platinum,74,TRUE
+CUST00410,Sarah,Wilson,sarah.wilson66@yahoo.com,VA,Budget,Catalog,2021-05-06,Silver,53,TRUE
+CUST00411,Maria,Anderson,maria.anderson40@yahoo.com,NY,Value,Catalog,2022-04-22,Gold,26,TRUE
+CUST00412,Kevin,Miller,kevin.miller63@yahoo.com,AZ,Mainstream,Mobile App,2021-04-29,Bronze,12,TRUE
+CUST00413,Anthony,Miller,anthony.miller79@yahoo.com,TX,Luxury,Marketplace,2022-10-28,Silver,13,TRUE
+CUST00414,Jessica,Allen,jessica.allen64@gmail.com,WA,Mainstream,Mobile App,2022-03-16,Platinum,12,TRUE
+CUST00415,Brian,Jones,brian.jones20@yahoo.com,MA,Mainstream,Marketplace,2021-03-07,Bronze,58,TRUE
+CUST00416,Sarah,Johnson,sarah.johnson5@gmail.com,NY,Value,Online,2024-09-02,Platinum,35,TRUE
+CUST00417,Jessica,Johnson,jessica.johnson5@yahoo.com,OH,Value,Mobile App,2021-12-15,Gold,41,FALSE
+CUST00418,Kevin,Brown,kevin.brown97@yahoo.com,NC,Budget,Marketplace,2022-11-18,Gold,18,TRUE
+CUST00419,David,Garcia,david.garcia38@yahoo.com,NC,Luxury,Mobile App,2023-09-21,Platinum,4,TRUE
+CUST00420,Maria,White,maria.white1@yahoo.com,VA,Mainstream,In-Store,2021-03-12,Platinum,31,TRUE
+CUST00421,Mark,Davis,mark.davis43@yahoo.com,PA,Value,Catalog,2021-01-29,Gold,5,FALSE
+CUST00422,John,Miller,john.miller75@gmail.com,NY,Mainstream,Online,2020-06-13,Gold,55,FALSE
+CUST00423,Sarah,White,sarah.white25@gmail.com,NY,Value,Online,2024-05-21,Platinum,36,TRUE
+CUST00424,Amanda,White,amanda.white29@yahoo.com,GA,Mainstream,Marketplace,2022-01-07,Gold,20,TRUE
+CUST00425,Matthew,Williams,matthew.williams34@yahoo.com,VA,Premium,Catalog,2021-10-21,Gold,80,TRUE
+CUST00426,Sarah,Thompson,sarah.thompson69@gmail.com,PA,Mainstream,In-Store,2021-12-22,Platinum,28,TRUE
+CUST00427,Maria,Allen,maria.allen95@gmail.com,PA,Budget,Online,2023-05-17,Gold,68,TRUE
+CUST00428,Mark,Davis,mark.davis63@gmail.com,NY,Premium,In-Store,2023-01-18,Bronze,6,TRUE
+CUST00429,William,Wilson,william.wilson8@yahoo.com,NC,Mainstream,Marketplace,2024-10-31,Bronze,7,FALSE
+CUST00430,John,Allen,john.allen61@gmail.com,GA,Luxury,In-Store,2024-07-09,Platinum,58,TRUE
+CUST00431,Sarah,Martin,sarah.martin59@gmail.com,PA,Premium,Catalog,2020-04-03,Bronze,57,TRUE
+CUST00432,Maria,Thomas,maria.thomas17@gmail.com,NY,Mainstream,Marketplace,2024-09-17,Gold,53,TRUE
+CUST00433,Anthony,Williams,anthony.williams76@gmail.com,MA,Mainstream,Catalog,2022-10-16,Platinum,36,TRUE
+CUST00434,Mark,Smith,mark.smith38@gmail.com,FL,Premium,Catalog,2020-01-14,Platinum,20,TRUE
+CUST00435,Emily,Moore,emily.moore96@gmail.com,GA,Budget,Mobile App,2021-07-02,Bronze,19,TRUE
+CUST00436,Christopher,Miller,christopher.miller54@gmail.com,IL,Premium,Catalog,2024-11-17,Gold,62,TRUE
+CUST00437,Amanda,Harris,amanda.harris66@gmail.com,VA,Budget,In-Store,2023-03-12,Gold,5,TRUE
+CUST00438,Brian,Martin,brian.martin27@yahoo.com,VA,Luxury,Catalog,2020-04-04,Gold,31,FALSE
+CUST00439,Mark,Davis,mark.davis12@gmail.com,CA,Budget,Mobile App,2023-04-19,Platinum,61,TRUE
+CUST00440,Christopher,White,christopher.white57@yahoo.com,PA,Mainstream,Mobile App,2023-12-10,Bronze,3,TRUE
+CUST00441,Mark,Jackson,mark.jackson30@yahoo.com,VA,Luxury,Catalog,2023-07-29,Gold,69,TRUE
+CUST00442,Michael,Miller,michael.miller57@yahoo.com,OH,Budget,Marketplace,2024-11-08,Silver,71,TRUE
+CUST00443,James,Wilson,james.wilson40@yahoo.com,WA,Budget,In-Store,2021-01-07,Platinum,29,TRUE
+CUST00444,David,Garcia,david.garcia70@gmail.com,OH,Luxury,In-Store,2023-06-08,Bronze,50,FALSE
+CUST00445,Michael,Jones,michael.jones78@yahoo.com,FL,Mainstream,Marketplace,2020-12-11,Bronze,27,TRUE
+CUST00446,Mark,Thomas,mark.thomas94@yahoo.com,MA,Value,Marketplace,2021-03-03,Bronze,44,TRUE
+CUST00447,Robert,Anderson,robert.anderson28@gmail.com,WA,Budget,Marketplace,2024-11-26,Platinum,57,TRUE
+CUST00448,Robert,Davis,robert.davis82@yahoo.com,IL,Value,Marketplace,2020-11-07,Bronze,39,TRUE
+CUST00449,David,Anderson,david.anderson45@gmail.com,NC,Budget,Marketplace,2020-06-16,Silver,63,TRUE
+CUST00450,Matthew,Moore,matthew.moore28@yahoo.com,GA,Premium,Mobile App,2024-10-30,Silver,17,TRUE
+CUST00451,James,Smith,james.smith42@yahoo.com,GA,Luxury,In-Store,2024-05-15,Bronze,51,TRUE
+CUST00452,James,Moore,james.moore47@yahoo.com,CA,Mainstream,Marketplace,2022-10-28,Gold,12,TRUE
+CUST00453,James,Johnson,james.johnson69@yahoo.com,OH,Premium,Mobile App,2021-05-02,Platinum,56,TRUE
+CUST00454,Mark,Johnson,mark.johnson89@gmail.com,GA,Budget,Online,2024-09-20,Bronze,8,TRUE
+CUST00455,Kevin,Thomas,kevin.thomas98@gmail.com,IL,Budget,In-Store,2024-11-27,Gold,60,TRUE
+CUST00456,Sarah,Taylor,sarah.taylor64@gmail.com,IL,Luxury,Mobile App,2021-03-09,Bronze,3,TRUE
+CUST00457,Amanda,Johnson,amanda.johnson34@gmail.com,NY,Mainstream,Online,2023-03-24,Platinum,29,TRUE
+CUST00458,John,Garcia,john.garcia99@gmail.com,IL,Mainstream,In-Store,2023-07-24,Platinum,54,TRUE
+CUST00459,Michael,Taylor,michael.taylor54@gmail.com,PA,Value,Mobile App,2021-02-18,Silver,70,FALSE
+CUST00460,Maria,Jones,maria.jones3@yahoo.com,PA,Premium,Online,2020-10-09,Gold,5,TRUE
+CUST00461,Amanda,Smith,amanda.smith36@yahoo.com,NC,Luxury,Online,2024-07-12,Platinum,21,TRUE
+CUST00462,George,Williams,george.williams47@yahoo.com,NY,Premium,Marketplace,2023-06-26,Silver,54,FALSE
+CUST00463,Daniel,Jackson,daniel.jackson85@yahoo.com,MA,Budget,Catalog,2024-06-05,Gold,62,TRUE
+CUST00464,Michael,Taylor,michael.taylor51@yahoo.com,CA,Luxury,Mobile App,2020-09-12,Silver,50,TRUE
+CUST00465,Daniel,Martin,daniel.martin28@gmail.com,CA,Mainstream,In-Store,2020-09-12,Platinum,43,TRUE
+CUST00466,William,Brown,william.brown84@yahoo.com,AZ,Budget,In-Store,2023-10-11,Bronze,41,TRUE
+CUST00467,George,Allen,george.allen97@yahoo.com,GA,Value,In-Store,2021-11-09,Platinum,75,TRUE
+CUST00468,William,Jones,william.jones41@yahoo.com,FL,Mainstream,In-Store,2022-07-29,Bronze,43,TRUE
+CUST00469,David,Anderson,david.anderson40@yahoo.com,MA,Value,Mobile App,2022-11-24,Platinum,66,TRUE
+CUST00470,Emily,Allen,emily.allen89@gmail.com,VA,Mainstream,Online,2020-05-15,Platinum,56,TRUE
+CUST00471,Michael,Taylor,michael.taylor37@yahoo.com,IL,Mainstream,Marketplace,2024-01-14,Bronze,4,TRUE
+CUST00472,Brian,Miller,brian.miller21@yahoo.com,NC,Premium,Marketplace,2021-02-06,Gold,42,TRUE
+CUST00473,Matthew,Williams,matthew.williams12@gmail.com,VA,Budget,Online,2023-03-20,Silver,59,TRUE
+CUST00474,George,Young,george.young75@yahoo.com,VA,Value,Catalog,2020-10-24,Platinum,36,TRUE
+CUST00475,Daniel,Davis,daniel.davis28@yahoo.com,VA,Mainstream,Catalog,2022-02-04,Silver,7,FALSE
+CUST00476,George,Brown,george.brown85@gmail.com,CA,Luxury,Marketplace,2022-07-12,Gold,18,FALSE
+CUST00477,Amanda,Thompson,amanda.thompson70@yahoo.com,VA,Luxury,Marketplace,2022-09-24,Platinum,77,TRUE
+CUST00478,Ashley,Jackson,ashley.jackson30@gmail.com,PA,Mainstream,Marketplace,2022-05-29,Platinum,49,TRUE
+CUST00479,Anthony,Young,anthony.young56@yahoo.com,MI,Luxury,Mobile App,2021-10-21,Platinum,58,TRUE
+CUST00480,Ashley,Harris,ashley.harris18@yahoo.com,OH,Mainstream,Catalog,2021-08-08,Silver,79,TRUE
+CUST00481,Christopher,Jones,christopher.jones12@yahoo.com,MA,Value,In-Store,2023-09-22,Silver,31,TRUE
+CUST00482,David,Thompson,david.thompson47@yahoo.com,MI,Value,Marketplace,2021-08-17,Platinum,46,TRUE
+CUST00483,Ashley,White,ashley.white9@yahoo.com,VA,Premium,In-Store,2022-06-14,Platinum,49,FALSE
+CUST00484,Jessica,Taylor,jessica.taylor56@yahoo.com,IL,Luxury,Mobile App,2020-06-28,Bronze,15,TRUE
+CUST00485,Mark,Davis,mark.davis30@gmail.com,TX,Value,Mobile App,2024-10-19,Bronze,63,TRUE
+CUST00486,James,Allen,james.allen13@gmail.com,AZ,Luxury,Online,2021-04-20,Bronze,50,TRUE
+CUST00487,David,Smith,david.smith49@yahoo.com,TX,Mainstream,Mobile App,2024-04-26,Platinum,42,TRUE
+CUST00488,Mark,Taylor,mark.taylor59@gmail.com,VA,Value,In-Store,2020-10-17,Platinum,48,TRUE
+CUST00489,Daniel,Garcia,daniel.garcia58@gmail.com,IL,Value,Mobile App,2023-03-04,Bronze,45,TRUE
+CUST00490,Maria,Garcia,maria.garcia82@gmail.com,PA,Premium,Catalog,2022-11-29,Bronze,7,TRUE
+CUST00491,Anthony,Johnson,anthony.johnson26@yahoo.com,IL,Value,Catalog,2024-11-08,Platinum,48,TRUE
+CUST00492,Robert,Thomas,robert.thomas3@gmail.com,IL,Value,Catalog,2023-07-20,Gold,54,TRUE
+CUST00493,Sarah,Martin,sarah.martin10@gmail.com,OH,Luxury,Catalog,2023-07-13,Platinum,75,TRUE
+CUST00494,Sarah,Wilson,sarah.wilson43@yahoo.com,NY,Luxury,Catalog,2022-04-14,Silver,24,TRUE
+CUST00495,David,Jackson,david.jackson67@gmail.com,GA,Budget,Online,2024-06-19,Gold,29,FALSE
+CUST00496,James,Anderson,james.anderson23@yahoo.com,NC,Mainstream,Marketplace,2023-07-08,Gold,42,TRUE
+CUST00497,Amanda,Thompson,amanda.thompson53@gmail.com,OH,Budget,Online,2023-11-05,Gold,52,TRUE
+CUST00498,William,Thompson,william.thompson24@yahoo.com,AZ,Value,Online,2024-12-01,Platinum,49,TRUE
+CUST00499,Sarah,Anderson,sarah.anderson39@yahoo.com,IL,Budget,Mobile App,2021-10-16,Platinum,54,TRUE
+CUST00500,Matthew,Anderson,matthew.anderson15@yahoo.com,NC,Budget,Online,2022-05-26,Bronze,16,TRUE

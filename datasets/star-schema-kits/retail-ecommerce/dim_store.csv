@@ -1,0 +1,11 @@
+store_id,store_name,store_type,address,region,channel,state
+STR001,Online Store,Online,,National,Online,All
+STR002,Mobile App,Online,,National,Mobile,All
+STR003,Marketplace,Online,,National,Marketplace,All
+STR004,Richmond VA - Main,Physical,501 W Broad St,Mid-Atlantic,In-Store,VA
+STR005,Charlotte NC - Uptown,Physical,210 Trade St,Southeast,In-Store,NC
+STR006,Austin TX - Domain,Physical,11401 Domain Dr,Southwest,In-Store,TX
+STR007,Los Angeles CA - Beverly,Physical,9454 Wilshire Blvd,West,In-Store,CA
+STR008,Chicago IL - Michigan Ave,Physical,830 N Michigan Ave,Midwest,In-Store,IL
+STR009,New York NY - Midtown,Physical,350 5th Ave,Northeast,In-Store,NY
+STR010,Atlanta GA - Lenox,Physical,3393 Peachtree Rd,Southeast,In-Store,GA
