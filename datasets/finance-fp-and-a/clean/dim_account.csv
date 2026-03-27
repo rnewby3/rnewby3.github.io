@@ -1,0 +1,21 @@
+account_id,account_code,account_name,account_type,account_category,is_pl_account
+ACC001,4000,Software Subscriptions,Revenue,ARR,TRUE
+ACC002,4100,Professional Services Revenue,Revenue,Services,TRUE
+ACC003,4200,Support & Maintenance Revenue,Revenue,ARR,TRUE
+ACC004,4300,Training & Certification Revenue,Revenue,Services,TRUE
+ACC005,5000,Cloud Infrastructure,COGS,Infrastructure,TRUE
+ACC006,5100,Third-Party Software Licenses,COGS,Software,TRUE
+ACC007,5200,Professional Services Delivery,COGS,Services,TRUE
+ACC008,6000,Salaries & Benefits,Operating Expense,Personnel,TRUE
+ACC009,6100,Marketing & Advertising,Operating Expense,Marketing,TRUE
+ACC010,6200,Travel & Entertainment,Operating Expense,G&A,TRUE
+ACC011,6300,Rent & Facilities,Operating Expense,G&A,TRUE
+ACC012,6400,Software & SaaS Tools,Operating Expense,Software,TRUE
+ACC013,6500,Legal & Professional Fees,Operating Expense,G&A,TRUE
+ACC014,6600,Depreciation & Amortization,Operating Expense,G&A,TRUE
+ACC015,1000,Cash & Cash Equivalents,Asset,Current Asset,FALSE
+ACC016,1100,Accounts Receivable,Asset,Current Asset,FALSE
+ACC017,1200,Prepaid Expenses,Asset,Current Asset,FALSE
+ACC018,2000,Accounts Payable,Liability,Current Liability,FALSE
+ACC019,2100,Accrued Liabilities,Liability,Current Liability,FALSE
+ACC020,3000,Common Stock,Equity,Equity,FALSE

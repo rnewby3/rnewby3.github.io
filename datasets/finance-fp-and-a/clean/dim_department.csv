@@ -1,0 +1,11 @@
+department_id,department_name,department_code,cost_center_code,parent_department_id
+DEPT01,Engineering,ENG,CC-100,
+DEPT02,Sales,SLS,CC-200,
+DEPT03,Marketing,MKT,CC-300,
+DEPT04,Finance,FIN,CC-400,DEPT08
+DEPT05,Human Resources,HR,CC-500,DEPT08
+DEPT06,Customer Success,CS,CC-600,
+DEPT07,Product,PRD,CC-700,
+DEPT08,General & Administrative,GA,CC-800,
+DEPT09,Legal,LGL,CC-900,DEPT08
+DEPT10,Executive,EXEC,CC-000,
