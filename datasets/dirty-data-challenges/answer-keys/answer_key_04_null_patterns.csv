@@ -1,0 +1,251 @@
+employee_id,department,job_level,tenure_band,base_salary,satisfaction_score,nps_score,bonus_pct,remote_days_wk,flight_risk,gender,ethnicity
+EMP0001,HR,IC1,2-5yr,95787.58,9,12,7.1,5,Medium,Non-binary,Black
+EMP0002,Marketing,IC3,10+yr,175357.38,3,92,2.4,3,Medium,Non-binary,Prefer not to say
+EMP0003,Sales,Senior,5-10yr,60669.66,2,34,7.6,4,High,Non-binary,Other
+EMP0004,Product,Manager,1-2yr,206100.11,7,-42,19.2,1,Low,Male,Black
+EMP0005,Sales,Senior,<1yr,158444.51,5,17,11.7,3,Low,Prefer not to say,Other
+EMP0006,HR,Staff,2-5yr,131166.49,9,-36,15.0,1,Medium,Female,Other
+EMP0007,Sales,Manager,5-10yr,97231.11,6,83,11.2,5,Low,Prefer not to say,Prefer not to say
+EMP0008,Finance,Manager,<1yr,112151.55,9,87,8.7,3,Medium,Non-binary,White
+EMP0009,Engineering,IC2,5-10yr,101831.6,3,83,14.5,4,High,Male,Prefer not to say
+EMP0010,Engineering,Director,1-2yr,171497.48,9,-21,16.3,1,Medium,Non-binary,Other
+EMP0011,Customer Success,IC2,10+yr,151970.06,3,40,21.1,3,Low,Male,Asian
+EMP0012,HR,IC1,<1yr,103433.05,3,-93,15.4,4,Medium,Female,Black
+EMP0013,Engineering,Director,5-10yr,91800.64,8,98,5.9,0,Low,Prefer not to say,Asian
+EMP0014,Customer Success,Senior,5-10yr,76150.1,5,-18,14.6,4,Low,Female,White
+EMP0015,Customer Success,Senior,10+yr,120363.34,3,72,5.2,4,High,Male,Asian
+EMP0016,Finance,Principal,<1yr,125442.57,10,-53,19.3,5,High,Non-binary,Prefer not to say
+EMP0017,Finance,Principal,2-5yr,149284.57,8,-51,25.0,2,Medium,Female,White
+EMP0018,HR,Senior,10+yr,63910.84,3,97,12.9,4,High,Prefer not to say,Other
+EMP0019,Product,Senior,<1yr,179737.02,8,22,5.1,3,Medium,Male,Other
+EMP0020,Sales,IC3,10+yr,132121.8,5,72,19.4,1,Low,Prefer not to say,Other
+EMP0021,Marketing,Senior,1-2yr,85772.93,1,-14,20.8,1,Low,Female,Asian
+EMP0022,Marketing,Principal,<1yr,193089.06,7,38,12.6,5,Medium,Female,Other
+EMP0023,Marketing,Senior,1-2yr,135530.2,8,20,15.0,5,Low,Male,Black
+EMP0024,Product,IC3,10+yr,111750.05,5,5,15.3,4,Low,Male,Black
+EMP0025,Engineering,IC3,5-10yr,116166.58,2,-96,16.5,2,High,Male,Prefer not to say
+EMP0026,Sales,Senior,<1yr,100316.39,4,57,14.9,0,Medium,Non-binary,Hispanic
+EMP0027,Engineering,Senior,2-5yr,161961.53,2,-24,3.0,2,Low,Female,Other
+EMP0028,Sales,IC2,10+yr,76918.17,9,-85,23.3,5,Low,Male,Other
+EMP0029,Sales,Staff,5-10yr,92737.31,4,-33,20.5,2,Medium,Non-binary,Other
+EMP0030,Finance,Principal,5-10yr,140243.47,7,68,1.5,3,Medium,Non-binary,Other
+EMP0031,Marketing,Director,1-2yr,145950.43,4,-44,18.2,4,Low,Female,Black
+EMP0032,HR,IC2,<1yr,133115.33,6,-97,14.1,5,Medium,Non-binary,Hispanic
+EMP0033,Finance,IC1,1-2yr,140769.68,3,0,2.3,2,High,Female,Prefer not to say
+EMP0034,Finance,IC3,1-2yr,169967.92,7,43,11.7,0,Medium,Male,Other
+EMP0035,Product,IC3,10+yr,158541.88,7,100,5.9,3,Low,Prefer not to say,Other
+EMP0036,Marketing,Staff,1-2yr,124092.71,5,-24,9.6,5,High,Male,White
+EMP0037,Engineering,IC3,5-10yr,65771.94,2,-24,16.2,5,Low,Non-binary,Hispanic
+EMP0038,Marketing,IC1,5-10yr,187847.62,6,-67,13.7,0,High,Prefer not to say,Asian
+EMP0039,Sales,Senior,<1yr,70787.89,7,66,12.5,1,Low,Male,Asian
+EMP0040,HR,IC2,10+yr,155010.79,8,54,20.7,3,High,Male,White
+EMP0041,Product,Senior,5-10yr,190671.59,5,72,8.0,4,Low,Male,Hispanic
+EMP0042,Engineering,Senior,5-10yr,109217.65,8,56,13.6,4,High,Male,Asian
+EMP0043,Sales,Staff,1-2yr,116311.87,4,-7,6.0,0,Low,Non-binary,Hispanic
+EMP0044,Marketing,Senior,1-2yr,132901.49,9,19,7.9,1,High,Prefer not to say,Asian
+EMP0045,Engineering,IC2,<1yr,163945.73,5,-47,0.1,0,High,Prefer not to say,Other
+EMP0046,Finance,IC2,1-2yr,83683.66,6,-94,1.8,2,Medium,Female,Prefer not to say
+EMP0047,Sales,Staff,<1yr,79956.06,2,76,21.2,1,Medium,Non-binary,Prefer not to say
+EMP0048,Customer Success,Staff,1-2yr,122566.79,2,-38,13.8,4,Low,Non-binary,White
+EMP0049,HR,Staff,<1yr,204182.52,5,-14,18.9,0,High,Prefer not to say,Asian
+EMP0050,Sales,IC2,1-2yr,151182.24,4,78,13.2,1,Medium,Prefer not to say,White
+EMP0051,Product,IC1,5-10yr,175004.04,9,-91,19.8,5,Low,Male,Other
+EMP0052,Marketing,Director,10+yr,139959.1,6,-87,13.2,5,Low,Female,Asian
+EMP0053,Sales,Staff,5-10yr,202864.98,3,-85,21.9,2,Medium,Non-binary,Black
+EMP0054,HR,IC2,2-5yr,154529.74,1,83,14.1,2,Medium,Female,Black
+EMP0055,Customer Success,IC3,2-5yr,178060.19,9,78,15.4,4,Medium,Non-binary,Other
+EMP0056,Sales,IC3,1-2yr,179467.98,6,-58,0.6,3,Low,Prefer not to say,Prefer not to say
+EMP0057,Engineering,IC2,1-2yr,85990.1,1,89,18.6,2,Medium,Female,Prefer not to say
+EMP0058,Finance,Staff,<1yr,188298.96,1,55,9.7,0,Medium,Non-binary,Other
+EMP0059,Marketing,Principal,2-5yr,180412.51,6,87,19.5,1,High,Non-binary,Hispanic
+EMP0060,HR,Director,5-10yr,201434.38,9,-22,19.5,0,High,Non-binary,Other
+EMP0061,Engineering,IC1,10+yr,102890.42,2,91,10.4,3,Low,Male,Prefer not to say
+EMP0062,Customer Success,Director,2-5yr,127604.61,8,-68,12.8,0,Medium,Female,Prefer not to say
+EMP0063,Finance,Senior,<1yr,142623.54,4,26,3.4,5,Low,Prefer not to say,Prefer not to say
+EMP0064,Finance,IC1,10+yr,203454.23,3,-60,23.7,0,Medium,Female,Other
+EMP0065,Customer Success,IC3,2-5yr,96252.89,10,-75,2.3,0,Low,Non-binary,Hispanic
+EMP0066,Customer Success,Manager,10+yr,102987.46,10,68,15.3,0,Low,Prefer not to say,Prefer not to say
+EMP0067,Customer Success,Senior,10+yr,156394.53,3,90,8.0,1,High,Prefer not to say,Black
+EMP0068,Customer Success,IC1,1-2yr,106147.43,4,-1,21.2,4,Low,Female,Asian
+EMP0069,Sales,Director,2-5yr,158603.25,10,-91,24.9,4,High,Female,Asian
+EMP0070,Finance,IC2,<1yr,209901.51,3,71,7.8,1,High,Non-binary,White
+EMP0071,Product,Principal,1-2yr,106309.0,2,47,23.8,4,High,Prefer not to say,White
+EMP0072,Product,Senior,<1yr,142517.64,6,-12,24.1,3,Low,Male,Hispanic
+EMP0073,Engineering,IC3,<1yr,116072.75,7,98,10.5,2,Low,Male,Other
+EMP0074,Sales,Principal,10+yr,131302.09,6,-9,18.7,0,High,Non-binary,Asian
+EMP0075,Customer Success,IC2,<1yr,128071.18,8,-55,4.1,1,Medium,Non-binary,White
+EMP0076,Product,IC3,2-5yr,208964.08,5,75,0.7,0,High,Prefer not to say,White
+EMP0077,Sales,Principal,1-2yr,184128.62,1,-67,17.0,3,High,Prefer not to say,Other
+EMP0078,Marketing,IC1,<1yr,127554.35,9,-83,17.6,5,Low,Female,Asian
+EMP0079,Customer Success,Manager,<1yr,182970.44,6,100,13.7,5,Low,Prefer not to say,Hispanic
+EMP0080,Finance,Manager,10+yr,156615.49,10,-65,11.7,1,Medium,Prefer not to say,Prefer not to say
+EMP0081,Product,IC1,2-5yr,189155.9,10,-97,14.0,1,High,Prefer not to say,White
+EMP0082,Customer Success,Senior,5-10yr,194555.05,8,97,17.2,2,Medium,Male,Other
+EMP0083,Sales,IC3,10+yr,191525.65,2,-4,8.1,5,Low,Non-binary,White
+EMP0084,Sales,Director,<1yr,56716.62,8,28,12.3,1,High,Prefer not to say,Prefer not to say
+EMP0085,Product,Staff,<1yr,80475.53,3,39,18.3,2,High,Male,Other
+EMP0086,Product,IC3,2-5yr,110495.54,8,32,15.5,4,High,Non-binary,Asian
+EMP0087,Product,IC1,10+yr,154948.6,4,55,1.3,1,Low,Female,Prefer not to say
+EMP0088,Product,Director,5-10yr,144882.92,10,31,2.2,4,High,Female,White
+EMP0089,Marketing,Senior,5-10yr,125978.03,2,-26,0.1,4,Low,Non-binary,White
+EMP0090,Customer Success,Manager,<1yr,167609.24,4,86,23.1,4,High,Male,White
+EMP0091,Sales,Director,5-10yr,200322.01,2,-15,17.9,5,Medium,Male,White
+EMP0092,Marketing,IC2,1-2yr,87589.38,2,-40,20.3,1,Low,Prefer not to say,Other
+EMP0093,Engineering,Staff,2-5yr,139163.26,6,75,4.2,0,Medium,Prefer not to say,Hispanic
+EMP0094,Marketing,IC2,1-2yr,67687.43,6,-37,18.0,3,Low,Prefer not to say,Asian
+EMP0095,Product,Senior,10+yr,188987.09,5,86,10.4,1,Low,Non-binary,Black
+EMP0096,Marketing,Senior,10+yr,107621.13,10,-27,15.2,1,Medium,Male,Hispanic
+EMP0097,Sales,Director,<1yr,197699.55,4,-16,17.4,1,Low,Non-binary,White
+EMP0098,Customer Success,Senior,1-2yr,164241.45,3,43,10.3,0,Medium,Male,Asian
+EMP0099,Product,IC3,<1yr,80625.4,10,-100,10.6,3,High,Prefer not to say,Other
+EMP0100,Finance,Staff,<1yr,63185.27,2,81,3.2,3,Medium,Female,Other
+EMP0101,Customer Success,Manager,1-2yr,187296.31,7,10,20.6,5,High,Non-binary,White
+EMP0102,Marketing,Staff,10+yr,93441.88,3,-4,6.3,1,High,Male,Black
+EMP0103,HR,IC1,2-5yr,110838.13,3,18,14.9,1,High,Prefer not to say,Prefer not to say
+EMP0104,Finance,Senior,2-5yr,151773.78,3,-1,14.4,1,High,Prefer not to say,Other
+EMP0105,Product,Manager,1-2yr,55137.21,8,-83,10.2,1,Low,Female,White
+EMP0106,Marketing,IC3,10+yr,168916.2,2,88,18.8,5,Medium,Prefer not to say,White
+EMP0107,Customer Success,Principal,10+yr,81579.42,8,-10,21.8,0,Low,Prefer not to say,Prefer not to say
+EMP0108,Marketing,IC1,10+yr,79933.28,7,-15,13.7,3,High,Female,Black
+EMP0109,Engineering,Staff,<1yr,129292.65,10,-25,3.8,5,Medium,Male,Other
+EMP0110,Engineering,Senior,5-10yr,64431.47,4,33,1.8,2,High,Non-binary,White
+EMP0111,HR,IC2,10+yr,152996.65,6,-90,10.5,4,Low,Non-binary,Asian
+EMP0112,Customer Success,Director,10+yr,100476.28,4,21,17.9,5,Low,Prefer not to say,Prefer not to say
+EMP0113,Sales,Staff,2-5yr,125669.44,2,-40,14.6,1,Low,Female,Asian
+EMP0114,Customer Success,Director,10+yr,162310.91,3,71,12.2,0,Medium,Non-binary,Prefer not to say
+EMP0115,Product,Manager,<1yr,154111.31,6,93,8.9,2,Low,Non-binary,Prefer not to say
+EMP0116,Customer Success,Senior,1-2yr,102845.97,9,89,3.7,1,High,Non-binary,Prefer not to say
+EMP0117,Product,Manager,10+yr,113312.99,4,-4,18.9,4,High,Prefer not to say,Hispanic
+EMP0118,Product,Principal,5-10yr,160646.25,3,10,18.0,5,Medium,Prefer not to say,Hispanic
+EMP0119,Customer Success,IC1,2-5yr,142357.69,10,-65,13.8,5,Medium,Female,Prefer not to say
+EMP0120,Product,IC3,10+yr,82805.33,4,-90,16.8,0,High,Male,Hispanic
+EMP0121,Marketing,Principal,1-2yr,133156.21,7,73,14.7,1,Low,Female,Other
+EMP0122,Sales,Manager,<1yr,78974.32,3,100,6.6,0,Medium,Non-binary,Prefer not to say
+EMP0123,Customer Success,IC3,1-2yr,104772.14,1,-39,8.3,1,Medium,Prefer not to say,Hispanic
+EMP0124,HR,IC1,<1yr,94345.69,3,-44,15.0,4,Low,Female,Prefer not to say
+EMP0125,Finance,IC2,1-2yr,131519.26,2,-42,12.6,5,High,Male,White
+EMP0126,Product,Director,2-5yr,147604.7,8,100,6.8,0,Medium,Female,Asian
+EMP0127,Marketing,Principal,1-2yr,55698.98,4,51,4.5,5,Low,Prefer not to say,Black
+EMP0128,Marketing,Principal,5-10yr,75299.56,4,-61,15.5,0,Low,Non-binary,Black
+EMP0129,Finance,Staff,10+yr,154477.13,1,-69,16.7,5,Low,Female,Hispanic
+EMP0130,Finance,Staff,2-5yr,95724.12,9,22,9.2,3,Medium,Non-binary,Asian
+EMP0131,Engineering,Staff,5-10yr,181795.32,2,87,19.2,2,Low,Prefer not to say,Prefer not to say
+EMP0132,HR,Principal,10+yr,191996.6,6,68,17.4,2,Low,Prefer not to say,Hispanic
+EMP0133,Marketing,Manager,<1yr,152972.01,7,-38,15.1,3,Low,Male,White
+EMP0134,Customer Success,Manager,10+yr,134943.35,3,75,4.8,5,Medium,Non-binary,Black
+EMP0135,Sales,Director,1-2yr,107986.99,1,77,9.5,2,Low,Male,Black
+EMP0136,Engineering,Principal,5-10yr,146560.89,10,71,5.5,1,High,Prefer not to say,Other
+EMP0137,Sales,Manager,<1yr,81214.02,9,16,7.7,4,High,Prefer not to say,Black
+EMP0138,HR,IC3,2-5yr,74316.67,7,-80,8.4,0,Medium,Non-binary,White
+EMP0139,Marketing,Principal,10+yr,192454.34,8,-29,6.7,2,Low,Prefer not to say,Other
+EMP0140,Product,IC2,10+yr,153183.65,1,65,0.4,5,High,Female,Prefer not to say
+EMP0141,Engineering,Staff,2-5yr,121318.85,2,74,20.7,3,High,Female,White
+EMP0142,Product,Manager,2-5yr,61382.28,5,-52,18.7,1,High,Non-binary,Prefer not to say
+EMP0143,Customer Success,IC3,1-2yr,138690.04,9,22,12.7,3,Medium,Prefer not to say,Black
+EMP0144,Customer Success,Principal,<1yr,179738.99,9,-12,21.2,0,High,Male,Other
+EMP0145,Engineering,Principal,<1yr,136086.39,10,92,17.8,3,Medium,Female,Other
+EMP0146,Engineering,Staff,1-2yr,145830.49,5,51,10.3,3,Low,Male,Hispanic
+EMP0147,Engineering,IC2,10+yr,83550.28,3,83,7.1,5,Medium,Female,Prefer not to say
+EMP0148,Sales,IC2,5-10yr,66881.01,6,7,14.8,4,High,Non-binary,Other
+EMP0149,Marketing,IC1,<1yr,138004.26,8,-99,16.2,1,Medium,Prefer not to say,White
+EMP0150,Customer Success,Staff,2-5yr,136110.47,9,97,6.2,2,Medium,Prefer not to say,Black
+EMP0151,HR,Staff,5-10yr,113447.91,6,-89,18.0,4,Medium,Prefer not to say,Other
+EMP0152,Sales,Staff,10+yr,74785.16,5,-76,11.1,5,Medium,Male,Prefer not to say
+EMP0153,Finance,Senior,1-2yr,58272.58,4,-85,15.1,1,Medium,Non-binary,Asian
+EMP0154,Finance,IC2,1-2yr,88586.08,7,-100,12.8,2,Low,Male,Asian
+EMP0155,Sales,IC3,<1yr,161771.54,1,-84,22.2,0,Low,Male,White
+EMP0156,HR,Manager,<1yr,95176.2,10,-29,21.2,1,Medium,Female,Hispanic
+EMP0157,Sales,IC3,2-5yr,92273.09,7,65,16.5,5,High,Prefer not to say,Hispanic
+EMP0158,Engineering,IC1,<1yr,101108.24,10,-26,1.5,5,Low,Male,Black
+EMP0159,Marketing,Senior,5-10yr,82057.39,8,41,16.2,2,High,Female,Asian
+EMP0160,Marketing,IC3,1-2yr,106130.34,9,-61,16.4,4,Medium,Male,Other
+EMP0161,Product,Director,10+yr,195223.82,5,25,8.5,4,Medium,Female,Other
+EMP0162,HR,IC3,2-5yr,125288.65,10,-23,13.5,3,High,Non-binary,Black
+EMP0163,Product,IC3,1-2yr,180135.58,10,27,24.3,4,Low,Prefer not to say,White
+EMP0164,Engineering,Principal,10+yr,60310.19,8,83,8.6,4,Medium,Male,Asian
+EMP0165,Sales,IC1,<1yr,91282.78,7,63,23.2,4,High,Female,Asian
+EMP0166,Customer Success,Director,<1yr,61498.8,6,36,22.9,1,High,Non-binary,Other
+EMP0167,Product,Manager,2-5yr,197603.78,7,-60,5.1,3,Medium,Male,Hispanic
+EMP0168,Customer Success,Director,10+yr,117593.06,5,-84,14.2,2,Medium,Non-binary,Hispanic
+EMP0169,Sales,IC2,2-5yr,181901.75,8,-44,0.0,4,Low,Female,Other
+EMP0170,Sales,IC1,<1yr,68781.47,6,-15,2.1,2,High,Male,Hispanic
+EMP0171,Finance,Director,5-10yr,84376.74,4,37,11.3,5,Medium,Prefer not to say,Other
+EMP0172,Marketing,Senior,1-2yr,139496.78,2,-76,22.6,5,Medium,Non-binary,Hispanic
+EMP0173,Customer Success,Director,10+yr,169288.16,8,100,17.1,0,Low,Non-binary,Black
+EMP0174,Engineering,Senior,<1yr,105450.56,1,-78,6.8,3,High,Non-binary,Prefer not to say
+EMP0175,HR,IC1,1-2yr,134423.77,3,0,19.1,3,Medium,Female,Asian
+EMP0176,Product,IC2,2-5yr,178549.38,3,1,9.6,1,Medium,Non-binary,Prefer not to say
+EMP0177,Engineering,Manager,<1yr,93881.68,8,-22,8.5,3,Medium,Male,Prefer not to say
+EMP0178,Sales,Staff,1-2yr,139106.07,1,-9,24.3,0,Low,Prefer not to say,Asian
+EMP0179,HR,IC2,1-2yr,104605.3,2,-54,2.1,4,High,Non-binary,White
+EMP0180,Product,IC3,<1yr,155646.53,7,56,15.6,0,High,Female,Prefer not to say
+EMP0181,Customer Success,IC1,5-10yr,83256.15,1,-10,4.3,1,Medium,Prefer not to say,White
+EMP0182,Marketing,Manager,2-5yr,176137.0,7,-21,21.9,0,High,Non-binary,White
+EMP0183,Marketing,Director,2-5yr,150836.88,3,-49,7.9,2,Medium,Non-binary,White
+EMP0184,Product,Director,1-2yr,77465.26,7,-29,1.8,4,Medium,Female,Asian
+EMP0185,Finance,Staff,5-10yr,208271.83,4,-22,5.4,3,Low,Non-binary,Black
+EMP0186,Sales,Senior,1-2yr,100992.03,4,33,19.5,5,Medium,Female,White
+EMP0187,Marketing,Staff,10+yr,172840.61,2,79,8.1,5,Medium,Female,Prefer not to say
+EMP0188,Finance,Director,<1yr,172398.83,1,-44,20.7,3,Medium,Non-binary,White
+EMP0189,Engineering,IC2,1-2yr,96565.78,7,-48,11.1,4,High,Female,Hispanic
+EMP0190,Finance,Principal,1-2yr,69563.4,10,-58,17.0,5,Low,Non-binary,Other
+EMP0191,Finance,IC1,2-5yr,105570.19,5,-65,15.5,1,High,Male,Hispanic
+EMP0192,Finance,Staff,5-10yr,82781.93,4,-2,23.6,1,High,Male,Asian
+EMP0193,Sales,IC1,10+yr,86764.37,5,-97,9.5,2,Medium,Female,Other
+EMP0194,Customer Success,IC2,<1yr,178610.3,9,-6,4.2,2,Medium,Non-binary,Hispanic
+EMP0195,Marketing,Principal,5-10yr,68957.05,4,-88,6.8,3,Medium,Non-binary,Black
+EMP0196,Product,IC2,2-5yr,115302.57,9,-20,9.2,4,High,Prefer not to say,Prefer not to say
+EMP0197,Engineering,Manager,10+yr,168356.22,3,-40,12.6,0,Low,Prefer not to say,Hispanic
+EMP0198,Marketing,IC2,5-10yr,180036.26,8,-2,13.8,2,Medium,Male,Hispanic
+EMP0199,HR,Senior,10+yr,206984.99,1,48,8.2,1,Medium,Non-binary,Prefer not to say
+EMP0200,Customer Success,Staff,<1yr,128689.75,7,-27,5.1,0,Low,Non-binary,Black
+EMP0201,Engineering,IC2,1-2yr,121925.84,8,88,20.6,2,Medium,Prefer not to say,Prefer not to say
+EMP0202,Product,IC1,2-5yr,72709.16,10,-26,17.8,3,High,Female,Prefer not to say
+EMP0203,Marketing,Manager,<1yr,65168.71,4,32,19.6,2,Low,Non-binary,Other
+EMP0204,Customer Success,Manager,2-5yr,75080.51,10,-94,9.5,5,Low,Non-binary,Prefer not to say
+EMP0205,Customer Success,IC3,<1yr,75338.98,4,-90,8.3,5,Low,Female,Black
+EMP0206,Marketing,Senior,10+yr,145848.01,6,-65,4.4,0,Low,Non-binary,Other
+EMP0207,Customer Success,Senior,1-2yr,193752.41,5,-89,0.4,2,Medium,Female,Hispanic
+EMP0208,Engineering,Principal,5-10yr,61533.0,1,-58,17.4,4,High,Non-binary,Black
+EMP0209,Product,Manager,1-2yr,64151.58,1,96,15.2,5,Low,Non-binary,Other
+EMP0210,HR,Senior,1-2yr,131954.98,9,36,17.5,2,Medium,Female,Hispanic
+EMP0211,Finance,Senior,10+yr,99905.48,7,92,14.2,5,High,Male,Black
+EMP0212,Marketing,IC3,2-5yr,62256.92,7,48,2.9,2,Low,Female,Other
+EMP0213,Customer Success,Senior,10+yr,194935.71,10,66,20.8,3,Medium,Female,Other
+EMP0214,Engineering,Staff,<1yr,162082.35,4,79,15.5,0,Medium,Male,Prefer not to say
+EMP0215,Finance,Senior,2-5yr,84855.07,7,-85,23.5,0,Medium,Female,Hispanic
+EMP0216,Finance,IC2,1-2yr,138179.68,8,36,2.5,4,High,Non-binary,Asian
+EMP0217,Marketing,Manager,10+yr,200347.3,10,-97,3.0,2,Medium,Male,Other
+EMP0218,Marketing,Senior,10+yr,181447.08,6,-95,21.6,3,High,Non-binary,Other
+EMP0219,Product,Principal,<1yr,123944.93,4,66,0.5,2,Medium,Prefer not to say,White
+EMP0220,HR,IC2,5-10yr,171318.47,2,-84,5.0,5,High,Non-binary,Black
+EMP0221,Engineering,Manager,1-2yr,107042.48,5,90,1.9,1,High,Prefer not to say,Asian
+EMP0222,Finance,IC2,<1yr,80092.66,4,22,13.1,5,Medium,Female,White
+EMP0223,Marketing,Manager,2-5yr,56761.06,7,37,1.3,0,High,Female,Black
+EMP0224,Sales,Director,10+yr,110395.88,1,-71,11.7,4,High,Prefer not to say,Black
+EMP0225,Engineering,Principal,5-10yr,200022.28,9,46,20.6,4,High,Prefer not to say,Asian
+EMP0226,Customer Success,Senior,5-10yr,56787.14,10,40,5.1,0,Medium,Non-binary,Asian
+EMP0227,Sales,IC3,2-5yr,115262.74,8,-24,19.1,3,Medium,Male,Other
+EMP0228,Engineering,Staff,10+yr,174374.84,3,90,12.9,2,High,Non-binary,White
+EMP0229,HR,Senior,<1yr,98991.96,7,-85,15.1,3,Low,Prefer not to say,Other
+EMP0230,Marketing,IC3,5-10yr,80489.47,10,97,23.0,3,High,Male,Asian
+EMP0231,HR,Staff,10+yr,191401.01,6,-6,3.4,3,Low,Non-binary,Black
+EMP0232,Product,IC1,1-2yr,185425.36,9,-95,6.2,0,High,Non-binary,Asian
+EMP0233,Marketing,IC1,1-2yr,55743.14,7,35,23.5,0,High,Prefer not to say,Prefer not to say
+EMP0234,Engineering,Principal,1-2yr,79473.26,9,-36,22.0,2,High,Male,Black
+EMP0235,Product,IC3,5-10yr,76262.57,6,55,24.9,2,High,Prefer not to say,White
+EMP0236,Engineering,Staff,2-5yr,201455.79,5,42,23.6,2,High,Female,Black
+EMP0237,HR,IC3,10+yr,179148.96,5,69,5.3,5,High,Male,Prefer not to say
+EMP0238,Product,Staff,<1yr,186783.27,3,58,17.8,1,High,Prefer not to say,Other
+EMP0239,Marketing,Staff,2-5yr,97718.23,5,28,1.2,2,Medium,Male,Prefer not to say
+EMP0240,Finance,Senior,10+yr,187397.69,2,64,7.3,1,High,Non-binary,Prefer not to say
+EMP0241,Engineering,Manager,<1yr,189281.38,4,83,11.0,0,Medium,Non-binary,Asian
+EMP0242,Customer Success,IC3,10+yr,74531.33,8,-27,3.3,2,High,Non-binary,Hispanic
+EMP0243,HR,Principal,10+yr,174739.61,9,33,13.0,2,Medium,Female,Asian
+EMP0244,Engineering,Staff,2-5yr,63587.99,3,19,24.0,0,High,Non-binary,Black
+EMP0245,Sales,Manager,<1yr,153459.8,9,-48,19.8,0,Low,Non-binary,Hispanic
+EMP0246,Marketing,Senior,5-10yr,204824.22,7,-8,24.6,1,Medium,Male,White
+EMP0247,Product,IC3,5-10yr,133114.43,9,52,11.9,4,Medium,Prefer not to say,Other
+EMP0248,HR,Senior,10+yr,166887.09,3,2,21.2,4,Medium,Prefer not to say,Other
+EMP0249,Engineering,IC2,10+yr,155360.57,4,-73,16.2,4,Low,Female,Black
+EMP0250,Customer Success,Staff,10+yr,169040.5,4,58,5.6,5,Medium,Female,Prefer not to say

@@ -618,7 +618,10 @@
                 </div>
 
                 <div class="category-card dirty reveal" data-delay="120">
-                    <span class="coming-soon-chip">Soon</span>
+                    <span class="available-chip">
+                        <span class="available-chip-dot"></span>
+                        Available
+                    </span>
                     <div class="category-header">
                         <span class="category-emoji">🧩</span>
                         <h3>Dirty Data Challenge Sets</h3>
@@ -629,6 +632,15 @@
                         <span class="category-example">Broken Joins</span>
                         <span class="category-example">Mixed Date Formats</span>
                         <span class="category-example">Null Patterns</span>
+                    </div>
+                    <div class="download-section">
+                        <p class="download-label">Download</p>
+                        <div class="download-links">
+                            <a class="download-link" href="/datasets/dirty-data-challenges/dirty-data-challenges.zip" download>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                Full Bundle — ZIP (5 challenges + answer keys)
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -680,14 +692,21 @@
                         <p>Now live: 336-row GL transaction fact table, quarterly budget entries, 5 dimension tables covering accounts, departments, and fiscal periods — clean + dirty variants with full data dictionary.</p>
                     </div>
                 </div>
-                <div class="roadmap-item reveal" data-delay="240">
+                <div class="roadmap-item reveal" data-delay="240" style="border-color: color-mix(in srgb, var(--green) 35%, transparent);">
+                    <div class="roadmap-q" style="color: var(--green);">Live ✓</div>
+                    <div>
+                        <h4>Dirty Data Challenge Sets</h4>
+                        <p>Five standalone challenge files now live — duplicates, orphaned keys, date format chaos, null patterns (MCAR/MAR/MNAR), and type chaos — each with a documented answer key and challenge guide.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item reveal" data-delay="320">
                     <div class="roadmap-q">Q4 2026</div>
                     <div>
                         <h4>Star Schema Kits + Download Hub</h4>
                         <p>Full modeling kit launch alongside a searchable download hub — filter by domain, type (clean/dirty), and format (CSV/XLSX).</p>
                     </div>
                 </div>
-                <div class="roadmap-item reveal" data-delay="320">
+                <div class="roadmap-item reveal" data-delay="400">
                     <div class="roadmap-q">2027</div>
                     <div>
                         <h4>Community Submissions &amp; API Access</h4>

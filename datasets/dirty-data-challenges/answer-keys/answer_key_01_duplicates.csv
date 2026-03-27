@@ -1,0 +1,151 @@
+customer_id,first_name,last_name,email,phone,state,city,signup_date,customer_tier,is_active
+CUST0001,Christopher,Jackson,christopher-jackson137@gmail.com,(457) 846-7276,CA,Los Angeles,2024-12-23,Bronze,FALSE
+CUST0002,Robert,White,robert-white@outlook.com,(597) 982-4483,PA,Philadelphia,2022-11-08,Platinum,TRUE
+CUST0003,Sharon,Young,sharon.young@icloud.com,(893) 893-2438,FL,Miami,2024-08-18,Gold,FALSE
+CUST0004,Maria,Wilson,maria.wilson@outlook.com,(747) 182-8570,GA,Atlanta,2024-11-28,Silver,FALSE
+CUST0005,Maria,Thomas,maria-thomas@yahoo.com,(965) 910-8237,TX,Austin,2025-05-04,Silver,TRUE
+CUST0006,Maria,Brown,maria-brown@hotmail.com,(283) 535-2409,VA,Richmond,2022-10-20,Gold,TRUE
+CUST0007,Christopher,Anderson,christopheranderson807@gmail.com,(855) 316-8257,TX,Austin,2023-06-12,Platinum,TRUE
+CUST0008,Amanda,Adams,amanda.adams885@icloud.com,(997) 865-3464,IL,Chicago,2025-05-30,Platinum,TRUE
+CUST0009,Sarah,Brown,sarah_brown182@hotmail.com,(349) 312-6228,TX,Austin,2024-10-19,Silver,FALSE
+CUST0010,Sarah,Roberts,sarah-roberts@icloud.com,(494) 111-1781,FL,Miami,2023-11-23,Silver,FALSE
+CUST0011,Christopher,Anderson,christopheranderson@outlook.com,(747) 194-3969,OH,Columbus,2022-03-18,Gold,FALSE
+CUST0012,Brian,Harris,brian_harris@yahoo.com,(869) 837-6089,CA,Los Angeles,2022-08-05,Gold,TRUE
+CUST0013,Brian,Carter,briancarter770@gmail.com,(648) 531-5197,CA,Los Angeles,2022-05-23,Gold,FALSE
+CUST0014,Rebecca,Martin,rebecca-martin@outlook.com,(641) 397-7706,GA,Atlanta,2025-09-10,Silver,FALSE
+CUST0015,Christopher,Hall,christopherhall345@yahoo.com,(553) 104-6821,PA,Philadelphia,2025-11-23,Gold,TRUE
+CUST0016,Edward,Hall,edward_hall@yahoo.com,(618) 981-6661,TX,Austin,2025-09-06,Platinum,TRUE
+CUST0017,Sarah,Thompson,sarah-thompson318@yahoo.com,(723) 903-8276,GA,Atlanta,2023-02-25,Gold,FALSE
+CUST0018,Daniel,Moore,daniel_moore22@gmail.com,(514) 177-1523,GA,Atlanta,2022-04-30,Platinum,FALSE
+CUST0019,Amanda,Moore,amanda_moore103@hotmail.com,(608) 908-3822,PA,Philadelphia,2023-06-27,Platinum,FALSE
+CUST0020,Michael,Campbell,michaelcampbell@hotmail.com,(628) 675-3930,TX,Austin,2024-01-07,Gold,TRUE
+CUST0021,William,Harris,williamharris935@hotmail.com,(786) 740-8804,PA,Philadelphia,2025-09-23,Silver,TRUE
+CUST0022,Elizabeth,Davis,elizabeth.davis816@hotmail.com,(273) 443-1064,IL,Chicago,2025-03-12,Gold,TRUE
+CUST0023,Anthony,Anderson,anthony_anderson603@gmail.com,(606) 137-1782,OH,Columbus,2023-12-03,Silver,FALSE
+CUST0024,Emily,Mitchell,emily.mitchell@hotmail.com,(435) 924-4088,IL,Chicago,2022-08-28,Platinum,TRUE
+CUST0025,William,Wilson,william.wilson@yahoo.com,(994) 672-3844,FL,Miami,2025-12-08,Gold,TRUE
+CUST0026,Laura,Hall,laura-hall@yahoo.com,(758) 188-1542,NC,Charlotte,2024-11-16,Platinum,TRUE
+CUST0027,Amanda,Roberts,amanda-roberts55@outlook.com,(840) 546-4080,CA,Los Angeles,2023-09-22,Silver,TRUE
+CUST0028,Michael,Martin,michael.martin939@gmail.com,(441) 680-8272,GA,Atlanta,2025-05-18,Bronze,TRUE
+CUST0029,Edward,Campbell,edwardcampbell321@icloud.com,(246) 698-7496,TX,Austin,2022-02-11,Gold,TRUE
+CUST0030,Michael,Smith,michael_smith505@hotmail.com,(274) 141-6795,NY,New York,2022-12-02,Gold,FALSE
+CUST0031,Michelle,Anderson,michelleanderson@icloud.com,(432) 661-3469,VA,Richmond,2025-11-21,Bronze,FALSE
+CUST0032,Laura,Jackson,laura-jackson417@gmail.com,(417) 347-5256,OH,Columbus,2022-12-02,Bronze,FALSE
+CUST0033,James,Young,james-young977@yahoo.com,(844) 407-2003,VA,Richmond,2023-06-06,Silver,FALSE
+CUST0034,Michael,Smith,michaelsmith@hotmail.com,(275) 269-4822,VA,Richmond,2023-12-01,Platinum,TRUE
+CUST0035,Nicole,Phillips,nicole.phillips164@yahoo.com,(951) 686-8940,PA,Philadelphia,2023-03-03,Bronze,FALSE
+CUST0036,Jennifer,Miller,jennifer-miller@yahoo.com,(376) 961-5202,TX,Austin,2022-12-10,Bronze,TRUE
+CUST0037,Jessica,Thompson,jessicathompson575@gmail.com,(447) 356-6309,CA,Los Angeles,2025-03-02,Gold,FALSE
+CUST0038,Robert,Brown,robert.brown@outlook.com,(394) 151-5798,VA,Richmond,2023-01-15,Gold,FALSE
+CUST0039,James,Young,james_young374@gmail.com,(363) 452-7377,GA,Atlanta,2022-10-19,Gold,FALSE
+CUST0040,Robert,Harris,robert.harris145@icloud.com,(280) 954-7219,VA,Richmond,2022-02-06,Gold,FALSE
+CUST0041,Edward,Jackson,edward-jackson@gmail.com,(229) 280-4471,CA,Los Angeles,2023-03-31,Gold,FALSE
+CUST0042,Brian,Williams,brianwilliams447@gmail.com,(908) 964-7058,VA,Richmond,2024-10-15,Platinum,FALSE
+CUST0043,Brian,Moore,brian_moore@gmail.com,(479) 643-4989,NY,New York,2022-05-12,Bronze,TRUE
+CUST0044,William,Anderson,william.anderson315@icloud.com,(839) 348-4483,PA,Philadelphia,2024-06-24,Platinum,TRUE
+CUST0045,Jennifer,Baker,jennifer.baker@gmail.com,(955) 118-5625,NY,New York,2024-10-09,Platinum,FALSE
+CUST0046,Rebecca,Phillips,rebecca-phillips@icloud.com,(308) 393-7526,FL,Miami,2023-03-03,Bronze,FALSE
+CUST0047,Daniel,Baker,daniel_baker@gmail.com,(913) 120-1779,IL,Chicago,2025-02-27,Bronze,TRUE
+CUST0048,Sharon,White,sharonwhite@icloud.com,(792) 118-1320,CA,Los Angeles,2022-09-06,Gold,TRUE
+CUST0049,Robert,Hall,robert.hall@outlook.com,(387) 958-3209,NC,Charlotte,2025-11-15,Gold,TRUE
+CUST0050,Kevin,White,kevin_white@hotmail.com,(595) 746-2577,NC,Charlotte,2022-06-09,Gold,FALSE
+CUST0051,William,Roberts,william_roberts@gmail.com,(966) 719-2144,TX,Austin,2023-05-29,Platinum,FALSE
+CUST0052,Michael,Campbell,michaelcampbell883@icloud.com,(513) 948-8338,NY,New York,2023-06-01,Gold,TRUE
+CUST0053,Daniel,Taylor,daniel-taylor132@icloud.com,(435) 728-6817,TX,Austin,2025-05-17,Bronze,TRUE
+CUST0054,Elizabeth,White,elizabeth.white805@hotmail.com,(794) 912-2349,TX,Austin,2022-01-22,Platinum,TRUE
+CUST0055,Stephanie,Harris,stephanie.harris891@gmail.com,(995) 347-5894,NC,Charlotte,2023-01-28,Bronze,TRUE
+CUST0056,Laura,Wilson,laura-wilson@yahoo.com,(291) 731-2827,NY,New York,2023-10-25,Bronze,TRUE
+CUST0057,Ashley,Jackson,ashley.jackson@outlook.com,(691) 655-6725,FL,Miami,2023-03-23,Gold,TRUE
+CUST0058,Maria,Adams,maria-adams@icloud.com,(819) 534-8802,FL,Miami,2022-12-02,Gold,TRUE
+CUST0059,Laura,Thompson,laura_thompson621@icloud.com,(552) 256-3102,GA,Atlanta,2024-06-12,Bronze,TRUE
+CUST0060,Elizabeth,Anderson,elizabeth_anderson@yahoo.com,(766) 436-2646,GA,Atlanta,2025-01-29,Gold,TRUE
+CUST0061,Michelle,Phillips,michellephillips162@gmail.com,(379) 743-2515,FL,Miami,2024-08-30,Platinum,FALSE
+CUST0062,Sharon,Moore,sharonmoore657@hotmail.com,(465) 207-4338,GA,Atlanta,2023-12-22,Silver,TRUE
+CUST0063,William,Hall,william.hall321@icloud.com,(442) 707-3035,NC,Charlotte,2025-05-22,Gold,FALSE
+CUST0064,Stephanie,Campbell,stephanie-campbell@yahoo.com,(494) 818-1443,TX,Austin,2025-01-27,Gold,TRUE
+CUST0065,Jessica,White,jessica-white445@hotmail.com,(294) 957-6662,GA,Atlanta,2022-03-02,Platinum,TRUE
+CUST0066,Nicole,Scott,nicolescott@yahoo.com,(998) 619-1620,NC,Charlotte,2022-09-17,Platinum,TRUE
+CUST0067,Lisa,Thomas,lisa-thomas@outlook.com,(994) 858-9775,GA,Atlanta,2022-03-24,Bronze,TRUE
+CUST0068,George,Miller,georgemiller538@hotmail.com,(708) 750-1051,VA,Richmond,2023-03-20,Bronze,TRUE
+CUST0069,Michael,Scott,michael-scott@icloud.com,(668) 395-1341,OH,Columbus,2022-03-08,Gold,TRUE
+CUST0070,Mark,Johnson,markjohnson@hotmail.com,(982) 239-5656,CA,Los Angeles,2025-03-21,Gold,TRUE
+CUST0071,Kevin,Phillips,kevin_phillips@outlook.com,(749) 961-4291,VA,Richmond,2025-09-26,Platinum,FALSE
+CUST0072,Emily,Thompson,emilythompson@hotmail.com,(924) 522-5264,NY,New York,2025-05-26,Gold,FALSE
+CUST0073,James,Moore,james.moore@yahoo.com,(377) 790-1291,TX,Austin,2022-11-23,Silver,FALSE
+CUST0074,William,Anderson,william_anderson@outlook.com,(583) 901-3718,OH,Columbus,2022-01-13,Silver,FALSE
+CUST0075,Daniel,Wilson,daniel_wilson@yahoo.com,(535) 680-3311,IL,Chicago,2025-11-15,Bronze,FALSE
+CUST0076,Elizabeth,Hall,elizabeth-hall@hotmail.com,(417) 612-2928,PA,Philadelphia,2025-11-09,Platinum,FALSE
+CUST0077,Brian,White,brian_white221@gmail.com,(291) 329-5052,GA,Atlanta,2024-03-02,Silver,TRUE
+CUST0078,Kevin,White,kevin_white61@gmail.com,(288) 745-8712,CA,Los Angeles,2024-02-17,Silver,FALSE
+CUST0079,Daniel,Anderson,daniel.anderson@icloud.com,(852) 538-8119,GA,Atlanta,2023-10-16,Gold,TRUE
+CUST0080,Jennifer,Phillips,jenniferphillips@yahoo.com,(695) 554-8603,TX,Austin,2023-01-11,Platinum,FALSE
+CUST0081,Jennifer,Allen,jenniferallen@gmail.com,(695) 134-8446,NY,New York,2023-01-30,Bronze,FALSE
+CUST0082,Nicole,Smith,nicolesmith@outlook.com,(261) 846-4200,OH,Columbus,2022-09-16,Bronze,FALSE
+CUST0083,Elizabeth,Phillips,elizabeth.phillips763@yahoo.com,(337) 325-5158,VA,Richmond,2022-02-11,Gold,TRUE
+CUST0084,Maria,Nelson,maria.nelson963@icloud.com,(411) 318-9471,CA,Los Angeles,2022-01-14,Silver,FALSE
+CUST0085,William,Martin,william_martin922@outlook.com,(449) 399-1284,FL,Miami,2025-08-15,Platinum,TRUE
+CUST0086,Emily,Young,emily-young@hotmail.com,(489) 890-7042,VA,Richmond,2023-11-28,Silver,FALSE
+CUST0087,John,Scott,johnscott@gmail.com,(680) 129-5177,NY,New York,2025-01-02,Bronze,FALSE
+CUST0088,Sarah,Phillips,sarahphillips@outlook.com,(906) 821-1057,VA,Richmond,2022-12-25,Gold,FALSE
+CUST0089,Amanda,Young,amanda_young@outlook.com,(599) 271-4781,FL,Miami,2025-09-24,Gold,TRUE
+CUST0090,David,Hall,david.hall@yahoo.com,(314) 452-7369,IL,Chicago,2023-10-20,Silver,TRUE
+CUST0091,Maria,Mitchell,maria_mitchell@hotmail.com,(371) 962-1118,TX,Austin,2023-11-30,Gold,TRUE
+CUST0092,Christopher,Wilson,christopher-wilson728@icloud.com,(886) 123-2012,IL,Chicago,2022-11-14,Bronze,FALSE
+CUST0093,Amanda,Martin,amanda.martin667@outlook.com,(792) 365-5050,TX,Austin,2023-10-08,Silver,TRUE
+CUST0094,Jessica,Wilson,jessica.wilson@gmail.com,(773) 280-1016,OH,Columbus,2025-07-28,Silver,FALSE
+CUST0095,Nicole,Jackson,nicole-jackson@yahoo.com,(419) 538-9349,FL,Miami,2024-07-18,Gold,FALSE
+CUST0096,Sharon,Campbell,sharoncampbell@outlook.com,(731) 138-4582,CA,Los Angeles,2023-11-28,Platinum,TRUE
+CUST0097,Sarah,Moore,sarah-moore203@outlook.com,(647) 115-2158,VA,Richmond,2022-06-28,Silver,TRUE
+CUST0098,Jessica,Williams,jessica.williams20@outlook.com,(580) 897-7138,NC,Charlotte,2022-12-23,Platinum,FALSE
+CUST0099,Jennifer,Johnson,jennifer-johnson@icloud.com,(674) 428-2248,OH,Columbus,2023-12-27,Silver,FALSE
+CUST0100,Michelle,Mitchell,michelle.mitchell@yahoo.com,(245) 627-6180,NY,New York,2025-08-27,Silver,FALSE
+CUST0101,Sarah,Wilson,sarahwilson@gmail.com,(234) 267-8872,GA,Atlanta,2022-09-02,Silver,TRUE
+CUST0102,Michael,Garcia,michael.garcia@outlook.com,(282) 902-4967,OH,Columbus,2023-03-04,Bronze,FALSE
+CUST0103,Michelle,Allen,michelle_allen@outlook.com,(731) 551-3128,IL,Chicago,2025-02-20,Platinum,FALSE
+CUST0104,Lisa,Nelson,lisa-nelson@icloud.com,(311) 999-3214,IL,Chicago,2022-05-20,Bronze,TRUE
+CUST0105,Jennifer,Davis,jennifer-davis@hotmail.com,(978) 775-5769,GA,Atlanta,2022-02-03,Gold,FALSE
+CUST0106,Emily,Hall,emily.hall203@icloud.com,(964) 358-6918,FL,Miami,2022-09-29,Silver,FALSE
+CUST0107,Amanda,Young,amanda-young690@yahoo.com,(414) 784-5557,IL,Chicago,2023-07-24,Silver,TRUE
+CUST0108,Laura,Carter,laura-carter@outlook.com,(670) 984-3834,IL,Chicago,2023-03-17,Gold,TRUE
+CUST0109,Matthew,Harris,matthew.harris@gmail.com,(989) 487-3088,NY,New York,2025-06-27,Gold,TRUE
+CUST0110,Michael,Jackson,michael-jackson@yahoo.com,(359) 947-1397,GA,Atlanta,2024-11-14,Bronze,FALSE
+CUST0111,Sarah,Allen,sarah_allen@hotmail.com,(995) 698-9514,OH,Columbus,2024-09-23,Bronze,TRUE
+CUST0112,Daniel,Young,daniel_young332@gmail.com,(906) 793-1405,PA,Philadelphia,2025-08-10,Bronze,TRUE
+CUST0113,Laura,Davis,laura-davis@icloud.com,(688) 908-1727,NY,New York,2023-09-25,Silver,FALSE
+CUST0114,George,Hall,george_hall@gmail.com,(380) 311-2420,IL,Chicago,2022-06-21,Platinum,TRUE
+CUST0115,Elizabeth,White,elizabeth-white438@outlook.com,(308) 185-2122,PA,Philadelphia,2023-11-10,Platinum,TRUE
+CUST0116,Jessica,Mitchell,jessica.mitchell253@icloud.com,(499) 584-4263,GA,Atlanta,2025-02-21,Gold,FALSE
+CUST0117,Edward,Young,edward_young@hotmail.com,(339) 861-4779,PA,Philadelphia,2022-10-18,Platinum,FALSE
+CUST0118,Nicole,Wilson,nicolewilson636@icloud.com,(247) 318-9040,FL,Miami,2024-11-30,Bronze,FALSE
+CUST0119,Michelle,Campbell,michelle.campbell@gmail.com,(652) 704-7723,OH,Columbus,2024-09-09,Bronze,TRUE
+CUST0120,Jessica,Williams,jessicawilliams665@yahoo.com,(520) 492-6851,CA,Los Angeles,2025-11-28,Bronze,FALSE
+CUST0121,Maria,Nelson,marianelson@yahoo.com,(210) 422-9793,CA,Los Angeles,2023-10-20,Silver,FALSE
+CUST0122,Amanda,Brown,amandabrown379@icloud.com,(600) 905-3576,CA,Los Angeles,2022-02-27,Bronze,TRUE
+CUST0123,Matthew,Phillips,matthew_phillips@gmail.com,(683) 290-3567,FL,Miami,2023-08-13,Platinum,FALSE
+CUST0124,Maria,Miller,mariamiller@icloud.com,(947) 505-1555,NY,New York,2023-02-18,Bronze,FALSE
+CUST0125,Matthew,Jones,matthew-jones@hotmail.com,(538) 220-8748,CA,Los Angeles,2024-10-21,Bronze,FALSE
+CUST0126,Kevin,Allen,kevin-allen542@yahoo.com,(601) 334-4700,PA,Philadelphia,2023-06-05,Silver,TRUE
+CUST0127,James,Wilson,james_wilson@yahoo.com,(591) 553-6087,NY,New York,2022-07-17,Platinum,TRUE
+CUST0128,Michelle,Thomas,michelle-thomas1@yahoo.com,(642) 625-1138,CA,Los Angeles,2023-12-02,Platinum,FALSE
+CUST0129,Laura,Campbell,laura-campbell@gmail.com,(553) 691-3688,FL,Miami,2025-06-17,Silver,TRUE
+CUST0130,Rebecca,Johnson,rebecca_johnson@outlook.com,(904) 396-5221,GA,Atlanta,2022-10-31,Bronze,TRUE
+CUST0131,Michelle,Johnson,michelle.johnson@icloud.com,(647) 634-2730,NY,New York,2023-09-09,Bronze,FALSE
+CUST0132,Jessica,Jones,jessica_jones@outlook.com,(721) 365-8043,TX,Austin,2022-05-27,Silver,FALSE
+CUST0133,Kevin,Garcia,kevin_garcia@hotmail.com,(844) 224-1234,FL,Miami,2022-11-27,Bronze,TRUE
+CUST0134,Edward,Davis,edwarddavis@icloud.com,(852) 863-7285,FL,Miami,2025-12-11,Platinum,TRUE
+CUST0135,Robert,Martin,robert_martin808@hotmail.com,(325) 100-1779,PA,Philadelphia,2023-11-26,Platinum,FALSE
+CUST0136,Edward,Davis,edward_davis@yahoo.com,(795) 152-2156,NY,New York,2023-10-31,Gold,TRUE
+CUST0137,Emily,Davis,emily-davis599@gmail.com,(943) 923-1052,OH,Columbus,2023-10-27,Bronze,FALSE
+CUST0138,Daniel,Wilson,daniel-wilson@hotmail.com,(453) 859-5487,FL,Miami,2025-09-28,Silver,TRUE
+CUST0139,John,Johnson,john.johnson695@icloud.com,(249) 959-7524,VA,Richmond,2023-01-09,Silver,TRUE
+CUST0140,George,Allen,george_allen@icloud.com,(617) 228-5192,CA,Los Angeles,2024-04-04,Silver,FALSE
+CUST0141,Ashley,Jackson,ashley_jackson874@icloud.com,(823) 632-4604,IL,Chicago,2024-09-24,Silver,FALSE
+CUST0142,Robert,Young,robertyoung@outlook.com,(650) 634-5823,GA,Atlanta,2023-09-08,Gold,FALSE
+CUST0143,Robert,Wilson,robert_wilson52@outlook.com,(638) 789-4171,TX,Austin,2024-07-07,Bronze,FALSE
+CUST0144,Emily,Jackson,emilyjackson@yahoo.com,(254) 128-9088,NC,Charlotte,2025-04-10,Silver,TRUE
+CUST0145,Sarah,Johnson,sarahjohnson@icloud.com,(514) 347-5245,FL,Miami,2025-12-09,Gold,FALSE
+CUST0146,Sarah,Brown,sarahbrown911@yahoo.com,(767) 296-1093,NC,Charlotte,2022-10-26,Silver,FALSE
+CUST0147,Michael,Taylor,michael.taylor272@gmail.com,(266) 298-9698,TX,Austin,2024-01-16,Gold,FALSE
+CUST0148,Lisa,Campbell,lisa_campbell277@icloud.com,(288) 686-7608,CA,Los Angeles,2025-08-12,Bronze,FALSE
+CUST0149,Jennifer,Smith,jennifer.smith@yahoo.com,(389) 952-8099,IL,Chicago,2024-08-12,Gold,TRUE
+CUST0150,Christopher,Garcia,christophergarcia462@icloud.com,(976) 547-4084,IL,Chicago,2025-04-17,Platinum,FALSE

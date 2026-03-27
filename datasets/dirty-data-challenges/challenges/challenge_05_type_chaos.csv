@@ -1,0 +1,201 @@
+product_id,sku,product_name,category,unit_price,is_subscription,in_stock,avg_rating,review_count,weight_kg,created_date
+PRD0001,sku-56014,Basic Training Suite 1,tRAINING,USD 3180.16,No,t,1.6,126,0.0,2024-02-06
+PRD0002,SKU72326,Pro Services Tool 6,SERVICES,"$2,681.54",T,True,2.2,406,0.0,2020-09-19
+PRD0003,SKU63299,Advanced Services Suite 8,services,9355,True,f,1.0,130,0.0,2022-09-04
+PRD0004,SKU54344,Advanced Software Tool 1,sOFTWARE,5968,f,YES,4.2/5,356,0.0,2023-04-11
+PRD0005,SKU-25469,Lite Support Tool 7,SUPPORT,"$4,524.18",F,no,3.1,154,0.0,2024-06-26
+PRD0006, SKU-10733 ,Lite Hardware Suite 5,hARDWARE,1257,t,y,3.9,194,0.29,2021-02-28
+PRD0007,sku_98901,Enterprise Consulting Tool 7,Consulting,USD 963.28,0,yes,5.0,136,0.0,2021-09-20
+PRD0008,sku-37532,Enterprise Support Tool 7,SUPPORT,"$8,021.84",1,t,3.1,96,0.0,2022-07-16
+PRD0009,SKU20840,Basic Hardware Suite 8,hardware,$1981,FALSE,False,3.7,18,13.26,2022-01-08
+PRD0010,sku-90926,Pro Support Suite 8,SUPPORT,4641.84,TRUE,Y,2.9,487,0.0,2024-11-03
+PRD0011, SKU-52690 ,Advanced Software Tool 8,sOFTWARE,6145.26,0,Yes,2.7,292,—,2024-01-31
+PRD0012, SKU-44013 ,Pro Services Suite 4,SERVICES,7605.36,true,1,3.6,136,0.0,2024-06-04
+PRD0013,SKU33574,Basic Hardware Suite 6,HARDWARE,5225,f,y,4.7,130,17.06,2021-03-10
+PRD0014,sku-77083,Enterprise Training Suite 4,TRAINING,9626.84,False,T,3.7,494,0.0,2022-09-23
+PRD0015, SKU-93754 ,Basic Hardware Tool 5,hardware,"$9,627.06",Yes,Yes,3.6,49,16.97,2022-06-13
+PRD0016,SKU57931,Basic Training Tool 2,tRAINING,9768,t,n,1.6,380,0.0,2022-09-28
+PRD0017, SKU-17777 ,Pro Services Tool 2,services,6109,Yes,t,3.7,130,0.0,2021-05-12
+PRD0018,SKU-81831,Pro Consulting Suite 5,consulting,"$1,684.70",false,YES,3.6,369,0.0,2022-04-02
+PRD0019, SKU-32291 ,Pro Consulting Suite 2,CONSULTING,4002,y,False,5.0,138,0.0,2023-10-21
+PRD0020,sku_29243,Lite Hardware Tool 5,Hardware,USD 3868.97,F,False,2.6,173,#VALUE!,2023-08-04
+PRD0021,SKU60847,Pro Consulting Tool 2,consulting,8677.59,no,TRUE,2.9/5,432,0.0,2023-12-27
+PRD0022,sku_88679,Basic Services Suite 5,SERVICES,"$8,967.35",T,TRUE,4.0,372,0.0,2021-01-31
+PRD0023, SKU-29136 ,Advanced Software Tool 5,SOFTWARE,USD 8223.33,False,T,2.3,407,0.0,2024-11-11
+PRD0024,SKU-33929,Advanced Consulting Suite 8,CONSULTING,7233.86,TRUE,false,4.4,360,0.0,2024-10-14
+PRD0025,SKU69393,Pro Services Tool 6,Services,9231.05,Yes,n,3.2,144,0.0,2020-10-17
+PRD0026,sku-67288,Advanced Hardware Tool 5,hARDWARE,677,false,NO,4.0,295,4.24,2023-01-31
+PRD0027, SKU-62190 ,Enterprise Services Tool 9,sERVICES,9700.92,F,t,1.6,86,0.0,2023-08-31
+PRD0028,sku_14834,Basic Training Suite 2,tRAINING,$735.47,1,N,2.7,146,0.0,2020-06-11
+PRD0029,sku_68531,Advanced Training Tool 2,tRAINING,5570,false,f,4.8,155,0.0,2023-04-02
+PRD0030,sku-66177,Enterprise Services Suite 1,sERVICES,$3098,False,Y,1.1,159,0.0,2020-07-23
+PRD0031, SKU-74827 ,Lite Support Tool 5,Support,8926.53,F,true,4.8/5,120,0.0,2020-11-05
+PRD0032, SKU-76906 ,Enterprise Services Suite 2,services,8859.86,n,n,4.2,280,0.0,2023-01-29
+PRD0033,sku-16174,Enterprise Consulting Suite 5,Consulting,1856,y,YES,3.0,499,0.0,2024-04-18
+PRD0034,sku-28000,Pro Consulting Suite 9,CONSULTING,USD 4823.82,y,F,4.3,64,0.0,2024-05-02
+PRD0035,sku-84781,Basic Training Suite 7,tRAINING,USD 7340.67,False,n,4.3,169,0.0,2023-10-07
+PRD0036,sku-75632,Advanced Services Tool 1,sERVICES,802,Yes,YES,1.2,227,0.0,2024-03-27
+PRD0037,sku_40781,Basic Services Suite 1,SERVICES,$1860,0,TRUE,3.7,224,0.0,2021-06-07
+PRD0038,SKU61861,Advanced Training Suite 9,TRAINING,"$5,883.32",f,n,2.1/5,330,0.0,2023-04-15
+PRD0039,SKU52043,Pro Support Suite 8,Support,5487.06,f,T,1.6,267,0.0,2021-06-29
+PRD0040,sku-17457,Lite Training Suite 7,TRAINING,2259,Y,yes,3.8,219,0.0,2022-12-31
+PRD0041,sku-18247,Pro Consulting Tool 1,cONSULTING,USD 2217.72,No,T,2.6,336,0.0,2024-11-01
+PRD0042,sku_84983,Enterprise Software Suite 2,sOFTWARE,146.98,no,False,1.2,160,0.0,2023-03-10
+PRD0043,SKU-98155,Pro Consulting Tool 2,Consulting,$970.63,Y,False,1.7,323,0.0,2023-11-18
+PRD0044,sku-64402,Basic Consulting Suite 8,consulting,4434.25,Y,N,3.1,119,0.0,2020-01-30
+PRD0045,sku_62717,Enterprise Support Tool 4,SUPPORT,"$3,480.23",t,True,4.4,188,0.0,2022-02-16
+PRD0046, SKU-39859 ,Enterprise Hardware Tool 8,Hardware,USD 7788.61,n,FALSE,2.0,369,4.07,2021-07-27
+PRD0047,sku_90119,Basic Software Tool 5,software,7783,No,true,2.7,176,0.0,2022-08-31
+PRD0048,SKU-36259,Enterprise Support Tool 9,SUPPORT,565.99,yes,True,1.4,140,0.0,2023-03-16
+PRD0049,SKU-17295,Advanced Hardware Suite 5,Hardware,USD 8759.14,t,NO,4.5,486,11.2,2020-04-19
+PRD0050,SKU-28886,Advanced Consulting Tool 8,CONSULTING,3852.4,no,TRUE,2.9,221,0.0,2021-05-22
+PRD0051,SKU-97328,Advanced Hardware Tool 8,Hardware,$521.58,1,Y,2.4,360,#VALUE!,2020-10-18
+PRD0052,SKU74781,Pro Training Tool 3,Training,$4639,y,n,3.3,56,0.0,2020-11-14
+PRD0053,sku-90377,Pro Hardware Suite 2,HARDWARE,5788,0,N,3.8,363,16.8,2022-09-23
+PRD0054, SKU-50835 ,Enterprise Software Tool 7,software,$5060,yes,NO,2.3,114,0.0,2023-10-12
+PRD0055,sku-21037,Lite Hardware Suite 9,Hardware,7131,Y,0,3.7,153,13.21,2021-01-05
+PRD0056,SKU43462,Advanced Consulting Suite 9,consulting,7019,TRUE,false,3.1,118,0.0,2021-01-05
+PRD0057,SKU93975,Enterprise Training Suite 9,tRAINING,USD 7049.67,Y,t,1.8,465,0.0,2024-02-06
+PRD0058,sku_81351,Advanced Support Tool 6,sUPPORT,1549.19,NO,false,3.2,58,0.0,2020-04-21
+PRD0059,SKU99807,Lite Support Suite 2,Support,4957,NO,y,1.9,313,0.0,2024-01-30
+PRD0060, SKU-19467 ,Basic Support Suite 6,SUPPORT,"$8,642.20",No,T,2.7,481,0.0,2024-03-26
+PRD0061,sku-69817,Advanced Hardware Suite 1,HARDWARE,7359,f,t,2.8,274,12.71,2024-11-12
+PRD0062,SKU35220,Advanced Consulting Tool 4,consulting,$6801,y,T,1.2,26,0.0,2024-11-27
+PRD0063,SKU90076,Advanced Training Suite 6,TRAINING,USD 9808.94,y,Y,4.6,120,0.0,2020-07-11
+PRD0064, SKU-17122 ,Advanced Support Tool 8,support,4400,TRUE,NO,3.3,211,0.0,2022-04-12
+PRD0065,sku-67280,Enterprise Consulting Suite 8,cONSULTING,1323,TRUE,No,2.2,411,0.0,2024-08-04
+PRD0066, SKU-91478 ,Enterprise Consulting Tool 2,CONSULTING,"$8,403.69",T,n,1.6,458,0.0,2022-09-24
+PRD0067,SKU60116,Basic Training Suite 8,TRAINING,4972.7,YES,y,4.5,151,0.0,2023-06-19
+PRD0068,SKU-13667,Pro Support Tool 6,Support,8360,N,NO,1.6/5,389,0.0,2020-04-03
+PRD0069,sku-46168,Lite Hardware Tool 4,hardware,6110.97,f,N,1.6,474,12.38,2020-06-09
+PRD0070,sku_69703,Advanced Hardware Tool 7,HARDWARE,2418,F,FALSE,1.6,407,11.44,2021-11-10
+PRD0071,sku_85475,Enterprise Software Suite 9,sOFTWARE,$5771,False,N,3.3,242,0.0,2021-12-31
+PRD0072, SKU-52213 ,Advanced Services Tool 2,SERVICES,4048.76,no,NO,2.8,186,0.0,2020-04-08
+PRD0073,SKU46057,Basic Support Suite 4,SUPPORT,8929,True,T,2.6,358,0.0,2023-01-14
+PRD0074,sku_16193,Basic Support Suite 8,SUPPORT,USD 8151.7,Y,Yes,3.0,137,0.0,2024-08-20
+PRD0075, SKU-79845 ,Enterprise Consulting Tool 8,Consulting,"$1,538.42",N,Y,2.0/5,430,0.0,2024-10-26
+PRD0076,sku-21798,Advanced Services Tool 3,sERVICES,3336.07,t,T,3.1,274,0.0,2020-08-17
+PRD0077,SKU35316,Enterprise Software Tool 2,sOFTWARE,$3320,t,True,1.4,471,0.0,2022-01-17
+PRD0078,SKU11508,Advanced Consulting Suite 2,consulting,6754,N,TRUE,4.3,279,0.0,2024-10-27
+PRD0079,SKU-53156,Advanced Training Suite 2,training,6130,Yes,no,4.8/5,291,0.0,2020-05-01
+PRD0080,sku_18521,Advanced Services Suite 4,sERVICES,718,False,1,3.0/5,350,0.0,2022-10-31
+PRD0081,sku-74816,Basic Hardware Tool 8,hARDWARE,$1436,y,no,3.8,441,—,2023-04-21
+PRD0082,SKU20208,Pro Hardware Tool 2,HARDWARE,8127.45,TRUE,FALSE,4.7,118,null,2020-09-12
+PRD0083, SKU-61938 ,Advanced Hardware Tool 6,hardware,$467.74,false,yes,2.6,223,13.14,2021-10-10
+PRD0084,sku-40925,Lite Hardware Suite 8,hardware,$8698,Y,true,2.7,457,3.03,2020-08-16
+PRD0085,SKU-63559,Enterprise Consulting Tool 8,cONSULTING,651,T,n,3.2,87,#VALUE!,2024-12-02
+PRD0086,SKU83645,Advanced Support Suite 2,SUPPORT,6416.55,n,YES,3.2/5,314,0.0,2022-01-27
+PRD0087,SKU42657,Pro Hardware Tool 2,HARDWARE,USD 5450.69,YES,0,3.7,160,5.54,2020-09-01
+PRD0088, SKU-91919 ,Pro Training Tool 5,TRAINING,$9757,n,t,4.4,431,0.0,2024-07-13
+PRD0089,sku-46035,Advanced Services Tool 4,Services,"$8,399.52",0,t,4.7,145,0.0,2023-11-03
+PRD0090,sku-20596,Enterprise Support Tool 1,sUPPORT,5796.19,TRUE,Yes,2.0,32,0.0,2023-03-25
+PRD0091,sku_47939,Basic Services Suite 5,SERVICES,USD 7997.67,False,n,4.2,349,0.0,2021-03-18
+PRD0092,sku-23266,Lite Training Suite 7,TRAINING,USD 3557.61,Y,T,3.0,32,0.0,2024-07-20
+PRD0093,SKU41815,Advanced Support Tool 1,SUPPORT,$9211,No,T,2.1,36,0.0,2021-04-03
+PRD0094,SKU-57832,Pro Services Suite 5,SERVICES,$8808,y,true,2.9,101,0.0,2022-04-26
+PRD0095,SKU88578,Pro Software Suite 4,Software,2699,FALSE,t,3.0,20,0.0,2022-01-12
+PRD0096,SKU44111,Basic Services Suite 3,sERVICES,8134,false,No,4.6,34,0.0,2021-10-09
+PRD0097,sku_75052,Enterprise Training Tool 7,TRAINING,5795,Yes,Y,3.3/5,428,0.0,2023-10-24
+PRD0098, SKU-80753 ,Lite Training Suite 2,training,3112,t,No,3.8,55,0.0,2020-03-26
+PRD0099,sku-64674,Advanced Services Tool 3,services,3658.46,F,FALSE,2.2,249,0.0,2022-10-26
+PRD0100,sku-46717,Enterprise Support Suite 9,Support,USD 9260.43,NO,F,4.6,51,0.0,2022-11-24
+PRD0101,SKU30990,Advanced Support Suite 2,Support,8497.88,y,False,1.2,323,0.0,2022-11-04
+PRD0102,SKU-73774,Enterprise Support Suite 1,sUPPORT,6940,Y,Yes,5.0,75,0.0,2023-07-27
+PRD0103,SKU59209,Pro Consulting Tool 1,CONSULTING,$6920,f,No,3.3/5,468,0.0,2020-09-01
+PRD0104,sku_17353,Lite Support Tool 5,Support,9433,false,0,3.4,405,0.0,2023-07-12
+PRD0105, SKU-26674 ,Enterprise Hardware Suite 3,Hardware,6062,Y,YES,4.8,186,19.53,2020-11-02
+PRD0106,sku_62908,Pro Consulting Tool 2,cONSULTING,USD 5266.64,TRUE,True,2.4,419,—,2021-08-12
+PRD0107,SKU-31195,Enterprise Consulting Suite 6,cONSULTING,1137,N,T,2.2,469,0.0,2023-01-23
+PRD0108, SKU-75477 ,Basic Support Suite 5,Support,"$5,759.73",FALSE,YES,3.6,473,0.0,2023-04-18
+PRD0109,sku-27107,Basic Hardware Tool 8,Hardware,"$5,310.70",False,t,3.4,392,10.21,2022-06-18
+PRD0110,SKU55050,Pro Hardware Suite 2,hARDWARE,6773,y,no,3.5,116,3.88,2024-03-08
+PRD0111, SKU-35883 ,Basic Support Tool 5,support,698,FALSE,No,4.1,180,0.0,2021-11-02
+PRD0112,SKU22508,Enterprise Support Suite 9,support,"$3,175.54",FALSE,1,2.2,328,0.0,2024-10-05
+PRD0113,sku-97452,Enterprise Consulting Tool 9,cONSULTING,9145.02,f,TRUE,4.2,393,0.0,2024-03-28
+PRD0114,SKU86852,Lite Services Suite 7,SERVICES,USD 3801.68,n,True,1.3,438,0.0,2021-07-28
+PRD0115,sku_98300,Enterprise Software Tool 8,software,"$5,515.74",n,No,4.7,47,0.0,2024-03-21
+PRD0116,sku-46662,Advanced Support Tool 6,sUPPORT,"$2,049.49",TRUE,False,2.7,354,0.0,2020-09-09
+PRD0117,SKU96817,Lite Software Tool 3,Software,1363,true,0,4.8,221,0.0,2021-12-01
+PRD0118,sku-19607,Advanced Hardware Tool 9,HARDWARE,2866,n,1,4.5,132,16.11,2021-04-08
+PRD0119,SKU65515,Enterprise Consulting Suite 5,consulting,6939.34,No,YES,2.3/5,217,0.0,2023-09-14
+PRD0120,SKU34931,Pro Services Suite 5,SERVICES,3408.4,1,n,1.6,108,0.0,2023-11-25
+PRD0121,SKU39733,Advanced Consulting Tool 3,CONSULTING,1893,YES,TRUE,4.5,176,0.0,2021-09-26
+PRD0122,sku_34646,Enterprise Hardware Tool 9,Hardware,USD 2447.74,FALSE,Yes,4.8,107,10.9,2023-03-09
+PRD0123,SKU49873,Enterprise Services Suite 7,services,3035,y,Yes,3.6,119,0.0,2020-03-19
+PRD0124,sku_69564,Advanced Training Tool 9,Training,"$8,298.76",1,no,1.2,337,0.0,2024-06-07
+PRD0125,sku_61543,Pro Support Suite 2,SUPPORT,2616.49,1,1,3.1,137,0.0,2022-11-24
+PRD0126,sku-60586,Pro Consulting Tool 1,Consulting,USD 2039.52,y,no,2.7,25,0.0,2022-08-15
+PRD0127, SKU-76178 ,Enterprise Support Suite 6,sUPPORT,9634,N,YES,2.5,456,0.0,2020-12-21
+PRD0128,sku_80239,Enterprise Hardware Tool 1,Hardware,3083,FALSE,false,3.5/5,205,2.52,2023-02-23
+PRD0129,sku_10754,Advanced Software Tool 6,SOFTWARE,USD 9443.61,true,t,1.1,98,—,2021-05-29
+PRD0130,SKU51765,Advanced Consulting Tool 2,consulting,2790,No,t,4.8,36,0.0,2024-06-26
+PRD0131,sku-12919,Enterprise Hardware Suite 7,Hardware,1472.27,true,n,4.2,234,2.21,2022-02-27
+PRD0132,sku_77814,Lite Hardware Tool 2,HARDWARE,1537,FALSE,FALSE,1.6,340,8.06,2024-11-14
+PRD0133,sku-59663,Pro Software Tool 1,software,3849.52,n,f,4.2,429,0.0,2024-12-12
+PRD0134,sku_66812,Lite Hardware Tool 9,HARDWARE,5062,t,NO,3.3,204,4.44,2020-03-30
+PRD0135,SKU-91754,Enterprise Consulting Suite 2,Consulting,3255,false,y,3.2,288,0.0,2024-01-24
+PRD0136,SKU13263,Lite Hardware Suite 2,hARDWARE,USD 7602.79,y,n,3.1,402,13.53,2024-02-06
+PRD0137,sku-60744,Lite Hardware Suite 6,hARDWARE,"$1,187.53",Yes,Y,1.9,67,18.59,2023-07-26
+PRD0138,sku_20781,Pro Training Tool 2,training,USD 4330.34,TRUE,y,1.9,211,0.0,2020-09-14
+PRD0139, SKU-92441 ,Pro Consulting Suite 2,cONSULTING,USD 8276.87,no,No,2.6,164,0.0,2023-02-15
+PRD0140, SKU-98823 ,Advanced Services Tool 1,services,USD 5770.17,N,F,3.7,303,0.0,2022-05-11
+PRD0141,sku_55990,Advanced Training Suite 1,Training,USD 247.81,Y,F,3.9,436,,2021-02-20
+PRD0142,sku_60583,Enterprise Software Tool 2,Software,"$5,452.59",yes,YES,3.7,411,0.0,2020-03-21
+PRD0143,SKU-89041,Enterprise Services Suite 8,Services,2577,t,t,2.9,363,0.0,2023-12-06
+PRD0144,SKU-34501,Basic Software Tool 6,SOFTWARE,USD 8430.74,no,Y,1.0,374,—,2020-09-23
+PRD0145,sku-96920,Enterprise Training Suite 5,tRAINING,USD 3322.09,true,TRUE,3.9,106,N/A,2024-08-18
+PRD0146,sku_11783,Enterprise Software Suite 3,SOFTWARE,9621,false,F,3.6,58,0.0,2022-02-07
+PRD0147,SKU-22908,Basic Hardware Suite 3,hARDWARE,1697.37,False,Y,2.7,166,17.74,2021-08-29
+PRD0148, SKU-85462 ,Lite Training Suite 1,TRAINING,$9211,TRUE,y,3.9,151,0.0,2022-05-05
+PRD0149,sku_71478,Advanced Software Tool 1,Software,USD 3483.71,NO,0,2.7,1,0.0,2020-07-23
+PRD0150,SKU99798,Advanced Training Suite 3,tRAINING,8055,y,T,3.5,308,0.0,2024-06-11
+PRD0151,sku-24741,Advanced Training Suite 2,training,1038.13,1,1,4.3/5,147,0.0,2021-01-28
+PRD0152,SKU33835,Advanced Services Suite 5,SERVICES,$740,1,true,3.4,266,0.0,2022-12-03
+PRD0153, SKU-27203 ,Pro Services Tool 4,SERVICES,6870,n,f,3.7,460,0.0,2023-05-31
+PRD0154,sku_95326,Enterprise Support Suite 5,Support,1099,Y,TRUE,3.5,235,0.0,2021-05-02
+PRD0155,sku-24197,Enterprise Training Suite 2,training,9339,N,TRUE,2.0,276,0.0,2021-11-12
+PRD0156,SKU-46999,Basic Hardware Tool 8,hARDWARE,1608.09,f,y,2.4,446,8.43,2022-02-18
+PRD0157,SKU-96141,Basic Hardware Tool 5,hARDWARE,3984,N,n,2.7,316,N/A,2023-09-06
+PRD0158, SKU-91040 ,Advanced Services Tool 8,sERVICES,USD 8010.22,TRUE,no,3.2,66,0.0,2023-04-29
+PRD0159,sku_17175,Advanced Services Suite 2,sERVICES,9683,t,T,2.5,180,0.0,2021-04-01
+PRD0160, SKU-39313 ,Pro Software Suite 6,software,USD 2103.24,No,1,1.5,183,0.0,2024-06-26
+PRD0161, SKU-10350 ,Basic Support Tool 9,sUPPORT,3542,True,0,2.5,391,0.0,2020-01-16
+PRD0162,SKU-86584,Enterprise Services Tool 3,sERVICES,4212,0,yes,3.4,12,0.0,2020-01-30
+PRD0163,sku_83852,Pro Software Suite 5,SOFTWARE,7837.23,No,F,3.4,486,0.0,2020-05-11
+PRD0164,sku_16015,Basic Support Suite 7,support,8040,yes,1,1.7,263,#VALUE!,2024-04-16
+PRD0165,sku-38394,Advanced Services Suite 6,services,$7349,FALSE,yes,1.3/5,431,0.0,2023-11-14
+PRD0166,sku-20532,Advanced Training Suite 2,Training,6371.38,no,true,4.2,438,0.0,2024-11-04
+PRD0167,SKU-45476,Enterprise Software Tool 4,sOFTWARE,2559.3,False,T,4.0,469,0.0,2021-03-18
+PRD0168,SKU15958,Advanced Services Suite 6,sERVICES,4037,TRUE,FALSE,4.7,443,0.0,2022-05-17
+PRD0169,sku_59451,Pro Software Suite 1,software,USD 6281.05,f,F,2.3,449,0.0,2023-08-20
+PRD0170,SKU-89557,Pro Training Suite 9,training,4892.8,F,FALSE,3.8,118,0.0,2023-08-15
+PRD0171, SKU-81436 ,Lite Consulting Suite 7,CONSULTING,587,Yes,1,1.6,230,0.0,2021-07-29
+PRD0172, SKU-63626 ,Pro Software Tool 1,sOFTWARE,"$7,117.47",1,1,2.9,177,0.0,2020-03-30
+PRD0173,sku_68638,Lite Consulting Suite 3,Consulting,$3387,T,N,1.8,494,0.0,2020-10-25
+PRD0174,SKU19547,Pro Services Suite 8,SERVICES,4131,n,TRUE,4.4/5,280,0.0,2024-10-25
+PRD0175,sku-31477,Enterprise Software Tool 2,sOFTWARE,"$6,956.45",T,TRUE,2.3,188,0.0,2024-02-18
+PRD0176,sku_67912,Lite Software Tool 3,sOFTWARE,3770.83,1,No,4.8,255,0.0,2023-02-13
+PRD0177,sku_92137,Lite Hardware Suite 8,hARDWARE,3564.17,TRUE,false,1.9,457,13.77,2023-10-25
+PRD0178,SKU15105,Lite Training Suite 3,tRAINING,9643,0,true,4.0,255,0.0,2024-01-01
+PRD0179,sku-86878,Pro Hardware Tool 1,Hardware,2091.57,0,false,2.5/5,287,10.63,2022-07-19
+PRD0180,SKU48864,Lite Training Tool 2,training,9174,n,F,4.6/5,331,0.0,2020-05-22
+PRD0181,sku_53742,Advanced Software Suite 4,SOFTWARE,"$6,792.88",n,t,2.9,223,0.0,2024-01-21
+PRD0182,sku_72501,Pro Training Suite 8,TRAINING,4754.27,YES,NO,4.3,282,0.0,2022-12-26
+PRD0183,SKU14558,Enterprise Consulting Tool 7,cONSULTING,1441,n,N,2.5/5,131,null,2024-01-28
+PRD0184,sku_90531,Pro Training Suite 9,tRAINING,1565,0,t,1.9,346,0.0,2023-05-10
+PRD0185,sku-31292,Basic Hardware Tool 5,Hardware,8859.44,No,Yes,4.3,41,—,2022-06-16
+PRD0186,sku-11670,Lite Support Suite 2,Support,8439,NO,N,4.6,297,0.0,2023-07-08
+PRD0187,sku_50600,Basic Services Tool 8,Services,"$1,289.04",FALSE,N,4.3,194,0.0,2021-10-11
+PRD0188,SKU91957,Basic Software Suite 2,software,$5856,no,N,1.5,343,0.0,2023-02-13
+PRD0189, SKU-29742 ,Lite Services Suite 5,sERVICES,$7884,True,N,3.3,380,0.0,2023-10-13
+PRD0190,SKU67339,Enterprise Services Tool 5,services,"$2,348.67",NO,1,3.5/5,489,0.0,2022-03-28
+PRD0191, SKU-88981 ,Enterprise Consulting Suite 3,CONSULTING,4159.22,yes,no,4.7,442,0.0,2020-07-05
+PRD0192,SKU-72826,Advanced Support Tool 9,support,9583,F,t,4.9,364,0.0,2024-11-18
+PRD0193,SKU53812,Pro Support Suite 8,sUPPORT,"$7,479.82",1,T,3.9,449,0.0,2020-09-22
+PRD0194,SKU-37215,Enterprise Software Tool 1,Software,$6854,y,no,2.6,440,0.0,2020-08-21
+PRD0195, SKU-25388 ,Pro Support Suite 4,Support,6527.31,no,false,1.9,306,0.0,2023-07-30
+PRD0196,SKU61288,Basic Services Suite 4,sERVICES,5324,f,TRUE,4.1,373,0.0,2021-01-22
+PRD0197,sku_60304,Advanced Training Tool 2,Training,"$7,832.93",0,T,4.9,261,0.0,2022-03-18
+PRD0198,sku-45194,Lite Services Suite 1,Services,$1804,True,NO,4.9,469,0.0,2023-09-28
+PRD0199,sku_98693,Pro Services Suite 2,Services,$6548,NO,FALSE,3.1,131,0.0,2021-01-24
+PRD0200,SKU-29609,Lite Training Tool 4,TRAINING,$4639,n,true,1.4,39,0.0,2022-05-12
