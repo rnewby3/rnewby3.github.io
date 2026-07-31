@@ -1,0 +1,222 @@
+/* ============================================================
+   rniii.com — console theme
+   One database client across three pages:
+     index      query console  (run, then EXPLAIN into lineage)
+     work       record browser (pick a row, read the record)
+     datasets   catalog        (browse tables, export them)
+   ============================================================ */
+
+:root{
+  --bg:#FBFAF7; --panel:#FFFFFF; --edge:#D8D4CC; --edge2:#EEEBE4;
+  --text:#1F2328; --dim:#6E7781;
+  --kw:#0550AE; --str:#0A7D48; --num:#953800; --com:#8C959F; --hl:#FFF4CE;
+  --src:#8C6239; --mid:#0550AE; --out:#0A7D48;
+  --chrome:#F3F1EC; --chrome2:#FAF9F6;
+  --mono:ui-monospace,Menlo,Consolas,"Courier New",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:15px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.app{max-width:1120px;margin:0 auto;padding:0 20px 90px}
+.mono{font-family:var(--mono)}
+a{color:var(--kw)}
+
+/* ─── connection bar (site nav) ─── */
+.conn{border-bottom:1px solid var(--edge);background:var(--chrome);position:sticky;top:0;z-index:20}
+.conn-in{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;flex-wrap:wrap}
+.conn-id{font-family:var(--mono);font-size:11.5px;color:var(--dim);padding:9px 0;
+  display:flex;align-items:center;gap:7px;white-space:nowrap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--str);flex:none}
+.conn-nav{display:flex}
+.conn-nav a{font-family:var(--mono);font-size:11.5px;color:var(--dim);text-decoration:none;
+  padding:11px 14px;border-left:1px solid var(--edge);white-space:nowrap}
+.conn-nav a:last-child{border-right:1px solid var(--edge)}
+.conn-nav a:hover{color:var(--text);background:var(--panel)}
+.conn-nav a[aria-current="page"]{background:var(--panel);color:var(--kw);font-weight:600;
+  box-shadow:inset 0 -2px 0 var(--kw)}
+
+/* ─── page header ─── */
+header.page{padding:34px 0 18px}
+h1{margin:0;font-size:clamp(24px,3.6vw,34px);font-weight:600;letter-spacing:-.02em}
+.who{font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:5px}
+.who b{color:var(--kw);font-weight:400}
+.lede{margin:16px 0 0;max-width:62ch;font-size:16.5px;line-height:1.45}
+
+/* ─── editor / tabs ─── */
+.editor{margin-top:26px;border:1px solid var(--edge);border-radius:6px 6px 0 0;
+  border-bottom:0;overflow:hidden;box-shadow:0 1px 2px rgba(31,35,40,.05)}
+.tabbar{display:flex;background:var(--chrome);border-bottom:1px solid var(--edge);overflow-x:auto}
+.tab{padding:9px 15px;font-family:var(--mono);font-size:12px;background:transparent;border:0;
+  border-right:1px solid var(--edge);cursor:pointer;color:var(--dim);white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--panel);color:var(--text);font-weight:600;
+  box-shadow:inset 0 -2px 0 var(--kw)}
+.tab:hover{color:var(--text)}
+.sql{background:var(--panel);padding:16px 18px;font-family:var(--mono);
+  font-size:13.5px;line-height:1.75;overflow-x:auto;white-space:pre;min-height:104px}
+.kw{color:var(--kw)} .str{color:var(--str)} .num{color:var(--num)} .com{color:var(--com);font-style:italic}
+.caret{display:inline-block;width:8px;height:15px;background:var(--kw);vertical-align:-3px;
+  animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ─── status bar / mode switch ─── */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 0 0 14px;
+  background:var(--chrome);border:1px solid var(--edge);border-bottom:0;
+  font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.bar .ok{color:var(--str);font-weight:600}
+.switch{display:flex}
+.switch button{padding:10px 16px;font-family:var(--mono);font-size:11.5px;background:transparent;
+  border:0;border-left:1px solid var(--edge);cursor:pointer;color:var(--dim);letter-spacing:.06em}
+.switch button[aria-pressed="true"]{background:var(--panel);color:var(--kw);font-weight:600}
+.switch button:hover{color:var(--text)}
+
+/* ─── panes ─── */
+.pane{border:1px solid var(--edge);border-radius:0 0 6px 6px;background:var(--panel);overflow:hidden}
+.pane.solo{border-radius:6px}
+.hidden{display:none}
+.pane-head{padding:8px 14px;background:var(--chrome);border-bottom:1px solid var(--edge);
+  font-family:var(--mono);font-size:11.5px;color:var(--dim);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ─── result tables ─── */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;padding:9px 14px;background:var(--chrome2);border-bottom:1px solid var(--edge);
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--dim);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--edge2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--hl)}
+td.m{font-family:var(--mono);font-size:12.5px;white-space:nowrap;color:var(--num)}
+td.s{font-family:var(--mono);font-size:12.5px;color:var(--str)}
+/* selectable rows (work + datasets) */
+tbody tr.pick{cursor:pointer}
+tbody tr.pick[aria-current="true"] td{background:var(--hl);box-shadow:inset 3px 0 0 var(--kw)}
+
+/* ─── lineage graph ─── */
+.graph{position:relative;padding:24px 18px;min-height:400px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;position:relative;z-index:2}
+.colhead{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--edge)}
+.stack{display:flex;flex-direction:column;gap:16px}
+svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.wire{stroke:#C9C4B8;stroke-width:1.5;fill:none;transition:stroke .18s,stroke-width .18s}
+.wire.hot{stroke:var(--kw);stroke-width:2.4}
+
+/* ─── table card (lineage nodes, project cards, dataset cards) ─── */
+.tbl{border:1px solid var(--edge);border-radius:5px;background:var(--panel);overflow:hidden;
+  text-align:left;font:inherit;color:inherit;padding:0;width:100%;
+  transition:box-shadow .16s,transform .16s}
+button.tbl{cursor:pointer}
+.tbl:hover,.tbl[aria-current="true"]{box-shadow:0 2px 10px rgba(31,35,40,.10);transform:translateY(-1px)}
+.tbl[aria-current="true"]{border-color:var(--kw)}
+.tbl.dim{opacity:.34}
+.tbl-h{display:flex;justify-content:space-between;align-items:center;gap:8px;
+  padding:8px 11px;border-bottom:1px solid var(--edge2);background:var(--chrome2);
+  font-family:var(--mono);font-size:12.5px;font-weight:600}
+.badge{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 6px;
+  border-radius:3px;font-weight:600;white-space:nowrap}
+.b-src{background:rgba(140,98,57,.13);color:var(--src)}
+.b-mid{background:rgba(5,80,174,.10);color:var(--mid)}
+.b-out{background:rgba(10,125,72,.11);color:var(--out)}
+.cols-list{padding:6px 0}
+.cols-list div{display:flex;justify-content:space-between;gap:10px;padding:3px 11px;
+  font-family:var(--mono);font-size:11.5px}
+.cols-list span:first-child{color:var(--text)}
+.cols-list span:last-child{color:var(--com)}
+
+/* ─── note / detail block ─── */
+.note{border-top:1px solid var(--edge);padding:16px 18px;background:var(--chrome2)}
+.note .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--kw);margin-bottom:6px}
+.note p{margin:0;max-width:78ch;font-size:14.5px}
+.note p+p{margin-top:10px}
+
+/* ─── record detail (work) ─── */
+.rec{padding:18px}
+.rec h2{margin:0;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.rec .sub{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-top:4px}
+.rec .summary{margin:13px 0 0;max-width:78ch;font-size:14.5px}
+.rec ul{margin:14px 0 0;padding:0;list-style:none}
+.rec li{position:relative;padding:5px 0 5px 20px;max-width:82ch;font-size:14.5px}
+.rec li::before{content:"→";position:absolute;left:0;top:5px;color:var(--kw);font-family:var(--mono);font-size:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.tg{font-family:var(--mono);font-size:11px;padding:3px 8px;border:1px solid var(--edge);
+  border-radius:3px;color:var(--dim);background:var(--chrome2)}
+.tg.k{color:var(--kw);border-color:rgba(5,80,174,.35);background:rgba(5,80,174,.06)}
+
+/* ─── metric pair (project impact) ─── */
+.mets{display:flex;gap:26px;flex-wrap:wrap;padding:11px;border-top:1px solid var(--edge2);
+  background:var(--chrome2)}
+.met{display:flex;flex-direction:column;gap:1px}
+.met b{font-family:var(--mono);font-size:17px;font-weight:600;color:var(--num);letter-spacing:-.02em}
+.met span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.tbl-body{padding:11px}
+.tbl-body p{margin:0;font-size:14px;line-height:1.55}
+
+/* ─── grid of cards ─── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding:18px}
+
+/* ─── section heading ─── */
+.sec{margin-top:38px}
+.sec-h{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dim);padding-bottom:7px;border-bottom:1px solid var(--edge);margin-bottom:16px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sec-h b{color:var(--kw);font-weight:600}
+
+/* ─── download / action buttons ─── */
+.dl{display:flex;flex-direction:column;gap:8px;padding:11px;border-top:1px solid var(--edge2)}
+.dl a{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--kw);
+  padding:8px 11px;border:1px solid var(--edge);border-radius:4px;background:var(--panel)}
+.dl a:hover{background:var(--hl);border-color:var(--kw)}
+.dl a em{font-style:normal;color:var(--com)}
+
+/* ─── signup ─── */
+.signup{display:flex;gap:10px;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--edge);
+  background:var(--chrome2);align-items:center}
+.signup input[type=email]{flex:1 1 240px;padding:9px 12px;font-family:var(--mono);font-size:12.5px;
+  border:1px solid var(--edge);border-radius:4px;background:var(--panel);color:var(--text)}
+.signup input[type=email]:focus{outline:2px solid var(--kw);outline-offset:-1px;border-color:var(--kw)}
+.signup button{padding:9px 18px;font-family:var(--mono);font-size:12px;font-weight:600;
+  border:1px solid var(--kw);border-radius:4px;background:var(--kw);color:#fff;cursor:pointer}
+.signup button:hover{opacity:.9}
+.signup .hint{width:100%;font-family:var(--mono);font-size:10.5px;color:var(--com)}
+.signup .done{font-family:var(--mono);font-size:12px;color:var(--str);font-weight:600}
+
+/* ─── footer ─── */
+footer{margin-top:30px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+footer a{color:var(--kw);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+:focus-visible{outline:2px solid var(--kw);outline-offset:2px}
+
+/* ─── responsive ─── */
+@media (max-width:840px){
+  .cols{grid-template-columns:1fr;gap:26px}
+  svg.wires{display:none}
+}
+@media (max-width:700px){
+  .conn-in{gap:0}
+  .conn-nav{width:100%;border-top:1px solid var(--edge)}
+  .conn-nav a{flex:1;text-align:center;padding:10px 6px}
+  .conn-nav a:last-child{border-right:0}
+  /* tabs wrap to a 2x2 grid instead of scrolling — every tab stays tappable */
+  .tabbar{flex-wrap:wrap;overflow:visible}
+  .tab{flex:1 1 50%;text-align:center;border-bottom:1px solid var(--edge)}
+  .tab:nth-child(2n){border-right:0}
+  .sql{font-size:12px;padding:14px}
+  /* results keep real column widths and scroll, the way any db client does */
+  table{min-width:560px}
+  th,td{padding:9px 11px}
+  .bar{flex-direction:column;align-items:stretch;padding:0}
+  .bar>span:first-child{padding:8px 14px 0}
+  .switch{border-top:1px solid var(--edge)}
+  .switch button{flex:1;border-left:0;border-right:1px solid var(--edge)}
+  .switch button:last-child{border-right:0}
+  .lede{font-size:15.5px}
+  .grid{grid-template-columns:1fr;padding:14px}
+  .rec{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){ .caret{animation:none} *{transition:none!important} }

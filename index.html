@@ -1,668 +1,281 @@
-﻿<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Newby III | AI &amp; Data Platform Architect</title>
-    <meta name="description" content="Richard Newby III builds the data infrastructure enterprise AI runs on. AI platform architecture, cost attribution, MCP governance, and Microsoft Fabric.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
-    <style>
-        /*  Page-specific: Hero  */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            padding-top: 68px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            --mx: 50%; --my: 50%;
-            background:
-                radial-gradient(ellipse 70% 60% at var(--mx) var(--my), rgba(124,110,255,0.18) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 50% at 20% 60%, rgba(124,110,255,0.12) 0%, transparent 55%),
-                radial-gradient(ellipse 40% 50% at 80% 20%, rgba(0,212,255,0.1) 0%, transparent 55%),
-                radial-gradient(ellipse 60% 40% at 55% 85%, rgba(255,107,107,0.1) 0%, transparent 55%);
-            filter: blur(55px);
-            animation: bgDrift 18s ease-in-out infinite;
-            transition: background 0.2s ease;
-        }
-
-        @keyframes bgDrift {
-            0%,100% { transform: translate(0,0) scale(1); }
-            30%      { transform: translate(-2%,3%) scale(1.04); }
-            60%      { transform: translate(3%,-2%) scale(0.97); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 820px;
-        }
-
-        .hero-eyebrow {
-            display: flex;
-            align-items: center;
-            gap: 0.65rem;
-            margin-bottom: 1.75rem;
-        }
-
-        .hero-eyebrow-iii {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: var(--accent);
-        }
-
-        .hero-eyebrow-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 3.5px;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .hero-headline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.5rem, 7vw, 5.2rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -2.5px;
-            margin-bottom: 1.75rem;
-            color: var(--text);
-        }
-
-        .hero-headline .line-name { display: block; }
-        .hero-headline .line-title { display: block; }
-
-        /* Apple-style word rotator */
-        .word-rotator {
-            display: block;
-            height: 1.15em;
-            overflow: visible;
-            clip-path: inset(0 -100vw);
-            position: relative;
-            max-width: 100%;
-        }
-
-        .word-item {
-            display: block;
-            position: absolute;
-            top: 0; left: 0;
-            line-height: 1.1;
-            white-space: nowrap;
-            will-change: transform, opacity;
-            opacity: 0;
-            transform: translateY(110%);
-        }
-
-        .hero-tagline {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--text-muted);
-            line-height: 1.75;
-            max-width: 540px;
-            margin-bottom: 2.75rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-scroll-hint {
-            position: absolute;
-            bottom: 2.5rem;
-            left: 5%;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-faint);
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            z-index: 1;
-            animation: scrollBounce 2s ease-in-out infinite;
-        }
-
-        .hero-scroll-hint svg { width: 16px; height: 16px; }
-
-        @keyframes scrollBounce {
-            0%,100% { transform: translateY(0); }
-            50%      { transform: translateY(6px); }
-        }
-
-        /*  About  */
-        .about { background: var(--bg-elev); }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-body p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: var(--text-muted);
-            margin-bottom: 1.4rem;
-        }
-
-        .about-body p strong { color: var(--text); font-weight: 600; }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1px;
-            background: var(--border);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            background: var(--surface);
-            padding: 1.6rem 1.4rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            color: var(--text);
-            line-height: 1;
-            margin-bottom: 0.4rem;
-        }
-
-        .stat-label {
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-
-        /* Skills */
-        .skills-block { margin-top: 0; }
-
-        .skill-category {
-            margin-bottom: 2.2rem;
-        }
-
-        .skill-category-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--text-faint);
-            margin-bottom: 0.85rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            padding: 0.4rem 0.9rem;
-            border-radius: 6px;
-            font-size: 0.84rem;
-            font-weight: 500;
-            background: var(--surface);
-            color: var(--text);
-            border: 1px solid var(--border);
-            transition: border-color 0.2s, color 0.2s, background 0.2s;
-        }
-
-        .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
-        .skill-tag.accent  { background: var(--accent-dim); color: var(--accent); border-color: transparent; }
-        .skill-tag.cyan    { background: var(--cyan-dim);   color: var(--cyan);   border-color: transparent; }
-        .skill-tag.coral   { background: var(--coral-dim);  color: var(--coral);  border-color: transparent; }
-
-        /*  Work preview  */
-        .work-preview { background: var(--bg); }
-
-        .work-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .work-card {
-            padding: 2rem;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .work-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--border-strong);
-        }
-
-        .work-card-icon {
-            width: 44px; height: 44px;
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .work-card-icon.blue  { background: var(--accent-dim); }
-        .work-card-icon.cyan  { background: var(--cyan-dim); }
-        .work-card-icon.coral { background: var(--coral-dim); }
-
-        .work-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            letter-spacing: -0.3px;
-        }
-
-        .work-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-            flex: 1;
-        }
-
-        .work-card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
-        /*  Contact  */
-        .contact-section {
-            background: var(--bg-elev);
-            text-align: center;
-        }
-
-        .contact-section .section-title { margin-bottom: 1rem; }
-        .contact-section .section-subtitle { margin: 0 auto 2.5rem; }
-
-        .contact-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        /*  Responsive  */
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .work-cards  { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 600px) {
-            .hero {
-                padding-top: 56px;
-                align-items: flex-start;
-                padding-top: calc(68px + 2rem);
-            }
-            .hero-content { max-width: 100%; }
-            .hero-eyebrow { margin-bottom: 1.25rem; }
-            .hero-headline {
-                letter-spacing: -1px;
-                margin-bottom: 1.25rem;
-            }
-            .hero-tagline {
-                font-size: 0.95rem;
-                margin-bottom: 2rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-            .hero-actions .btn {
-                width: 100%;
-                justify-content: center;
-                text-align: center;
-            }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .about-grid { gap: 2.5rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Newby III | AI &amp; Data Platform Architect</title>
+<meta name="description" content="Richard Newby III builds the data infrastructure enterprise AI runs on. Query the work, then run EXPLAIN and see the lineage underneath it.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="stylesheet" href="css/console.css">
+<meta property="og:title" content="Richard Newby III | AI &amp; Data Platform Architect">
+<meta property="og:description" content="Query the work, then run EXPLAIN and see the lineage underneath it.">
+<meta property="og:type" content="website">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <span class="logo-rn">RN</span>
-            <span class="logo-divider"></span>
-            <span class="logo-iii">III</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="work.html">Experience</a></li>
-            <li><a href="datasets.html">Datasets</a></li>
-        </ul>
-        <div class="nav-right">
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
-                <svg class="icon-sun"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            </button>
-            <a href="#contact" class="btn nav-cta">Say Hello</a>
-            <button class="nav-hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+<nav class="conn">
+  <div class="conn-in">
+    <div class="conn-id"><span class="dot"></span>rniii.com &rsaquo; public &rsaquo; console</div>
+    <div class="conn-nav">
+      <a href="index.html" aria-current="page">console</a>
+      <a href="work.html">work</a>
+      <a href="datasets.html">datasets</a>
+      <a href="mailto:rnewby3@gmail.com">contact</a>
+    </div>
+  </div>
+</nav>
+<div class="app">
+  <header class="page">
+    <h1>Richard Newby III</h1>
+    <div class="who">role: <b>AI &amp; Data Platform Architect</b> · richmond, va · 8 yrs</div>
+    <p class="lede">I spend my day making sure the answer a model gives you can be traced back to something true. So ask this page the way I'd ask the warehouse, then run <span class="mono" style="color:var(--kw)">EXPLAIN</span> and go look at what's underneath it.</p>
+  </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-bg" id="heroBg"></div>
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span class="hero-eyebrow-iii">III</span>
-                <span class="hero-eyebrow-text">Hi there, I&#39;m</span>
-            </div>
-            <h1 class="hero-headline">
-                <span class="line-name">Richard</span>
-                <span class="line-title">
-                    <span class="word-rotator" id="wordRotator">
-                        <span class="word-item" style="color:var(--accent)">AI &amp; Data Platform Architect</span>
-                        <span class="word-item" style="color:var(--cyan)">Enterprise AI Strategy</span>
-                        <span class="word-item" style="color:#a29bfe">Microsoft Fabric Architect</span>
-                        <span class="word-item" style="color:var(--green)">AI Governance</span>
-                        <span class="word-item" style="color:var(--coral)">BI Platform Owner</span>
-                    </span>
-                </span>
-            </h1>
-            <p class="hero-tagline">
-                I built the data infrastructure. Then I took over the AI strategy
-                sitting on top of it. Enterprise AI programs, cost attribution, MCP
-                governance, and the Fabric platform underneath all of it.
-            </p>
-            <div class="hero-actions">
-                <a href="work.html" class="btn btn-primary">View Experience</a>
-                <a href="#contact"  class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-scroll-hint">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-            <span>Scroll</span>
-        </div>
-    </section>
+  <div class="editor">
+    <div class="tabbar" role="tablist">
+      <button class="tab" role="tab" aria-selected="true"  data-q="ai">ai_platform.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="data">data_platform.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="history">history.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="offhours">off_hours.sql</button>
+    </div>
+    <div class="sql" id="sql"></div>
+  </div>
 
-    <!-- About -->
-    <section id="about" class="section about">
-        <div class="about-grid">
-            <div class="about-body">
-                <p class="section-label reveal">About Me</p>
-                <h2 class="section-title reveal" style="margin-bottom:1.5rem">Building the systems<br>behind smart decisions.</h2>
-                <p class="reveal">I'm an <strong>AI and data platform architect</strong>. I spent eight years building enterprise BI and analytics infrastructure, and I now own the AI programs and governance running on top of it.</p>
-                <p class="reveal">Currently serving as <strong>Principal Power Platform Architect at Majesco</strong>, where I own enterprise data strategy, the Microsoft Fabric platform, and the company's AI program. That means Fabric lakehouse architecture and CI/CD, enterprise AI deployment and adoption, MCP security policy developed with our CISO, and the cost attribution layer underneath all of it.</p>
-                <p class="reveal">My take: AI is only as good as the data layer underneath it, and most companies haven't built that layer yet. Getting the infrastructure right is what makes the answers trustworthy.</p>
+  <div class="bar">
+    <span><span id="stat">ready</span> <b class="ok" id="ms"></b></span>
+    <div class="switch">
+      <button id="btn-res" aria-pressed="true">▤ results</button>
+      <button id="btn-lin" aria-pressed="false">⌥ explain</button>
+    </div>
+  </div>
 
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="8" data-suffix="+">8+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="350" data-suffix="+">350+</div>
-                        <div class="stat-label">BI Users Served</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="2700" data-suffix="+">2,700+</div>
-                        <div class="stat-label">AI Users Enabled</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="14" data-suffix="%">14%</div>
-                        <div class="stat-label">Satisfaction Lift</div>
-                    </div>
-                </div>
-            </div>
+  <!-- results -->
+  <div class="pane" id="pane-res">
+    <div class="pane-head"><span id="reshead">0 rows</span><span id="fromtbl"></span></div>
+    <div class="tscroll"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+  </div>
 
-            <div class="skills-block">
-                <p class="section-label reveal">Core Skills</p>
+  <!-- lineage -->
+  <div class="pane hidden" id="pane-lin">
+    <div class="pane-head">
+      <span id="linhead">lineage</span>
+      <span style="color:var(--kw)">click a table to read it · hover to trace</span>
+    </div>
+    <div class="graph">
+      <svg class="wires" id="wires" preserveAspectRatio="none"></svg>
+      <div class="cols">
+        <div><div class="colhead">source</div><div class="stack" id="l1"></div></div>
+        <div><div class="colhead">transform</div><div class="stack" id="l2"></div></div>
+        <div><div class="colhead">served</div><div class="stack" id="l3"></div></div>
+      </div>
+    </div>
+    <div class="note">
+      <div class="lbl" id="n-lbl">select a table</div>
+      <p id="n-body">Every column in the result above came from somewhere. This is where.</p>
+    </div>
+  </div>
 
-                <div class="skill-category reveal">
-                    <div class="skill-category-label">AI Platforms &amp; Governance</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag accent">Claude Enterprise</span>
-                        <span class="skill-tag accent">Glean</span>
-                        <span class="skill-tag accent">MCP</span>
-                        <span class="skill-tag">LangGraph</span>
-                        <span class="skill-tag">LiteLLM</span>
-                        <span class="skill-tag">AI Cost Attribution</span>
-                        <span class="skill-tag">GitHub Copilot</span>
-                    </div>
-                </div>
+  <footer>
+    <span>rniii.com</span>
+    <span><a href="work.html">work</a> · <a href="datasets.html">datasets</a> · <a href="https://www.linkedin.com/in/richardnewby3">linkedin</a> · <a href="mailto:rnewby3@gmail.com">email</a></span>
+    <span>every claim has a source column</span>
+  </footer>
+</div>
 
-                <div class="skill-category reveal" data-delay="40">
-                    <div class="skill-category-label">Platforms &amp; Tools</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag accent">Power BI</span>
-                        <span class="skill-tag accent">Microsoft Fabric</span>
-                        <span class="skill-tag accent">Power Platform</span>
-                        <span class="skill-tag">Azure DevOps</span>
-                        <span class="skill-tag">Azure Data Factory</span>
-                    </div>
-                </div>
+<script>
+const T=(n,b,c,note)=>({n,b,c,note});
+const Q={
+ai:{from:"work",
+  sql:[["com","-- what I own on the AI side\n"],["kw","SELECT"],["p"," domain, what_i_built, evidence"],
+    ["kw","\nFROM"],["p"," work"],["kw","\nWHERE"],["p"," layer = "],["str","'ai_platform'"],
+    ["kw","\nORDER BY"],["p"," blast_radius "],["kw","DESC"],["p",";"]],
+  cols:["domain","what I built","evidence"],
+  rows:[["adoption","Enterprise AI program, rollout through governance","1,200 to ~2,700 seats"],
+        ["enablement","Designed and delivered the deep-dive curriculum","~1,000 attendees"],
+        ["deployment","Claude Enterprise, POC through company policy","40-person pilot"],
+        ["boundary","MCP connectors through CAB with the CISO","2 servers, InfoSec reviewed"],
+        ["economics","Gateway with per-agent, per-step attribution","litellm + langgraph"]],
+  src:[T("glean_directory","src",[["seat_id","uuid"],["dept","text"],["active","bool"]],"The enterprise AI search platform. Seat count is the honest adoption number, not licenses purchased."),
+       T("claude_admin","src",[["user","text"],["tier","text"],["policy","text"]],"Claude Enterprise admin surface. I do not hold the panel; I hold the decisions about what gets enabled."),
+       T("mcp_registry","src",[["server","text"],["system","text"],["cab_id","int"]],"Every MCP connector and the change advisory board review that approved it."),
+       T("gateway_spend","src",[["job_id","text"],["agent","text"],["tokens","int"],["usd","numeric"]],"Raw spend rows off the gateway. One row per model call, tagged by agent and by step.")],
+  mid:[T("ai_program","mid",[["domain","text"],["seats","int"],["trained","int"]],"Adoption and enablement joined. Growth is meaningless without knowing who was actually taught."),
+       T("ai_governance","mid",[["boundary","text"],["reviewed_by","text"]],"What an agent is permitted to reach, and who signed off. Built with the CISO, not handed to him."),
+       T("ai_economics","mid",[["agent","text"],["cost","numeric"],["produced","text"]],"Spend joined to the work it served. This join is the entire point of the gateway.")],
+  out:[T("work","out",[["domain","text"],["what_i_built","text"],["evidence","text"],["layer","text"]],"The table you just queried. Nothing in it is a claim I cannot trace back to a source column.")],
+  edges:[["glean_directory","ai_program"],["claude_admin","ai_program"],["mcp_registry","ai_governance"],
+         ["gateway_spend","ai_economics"],["ai_program","work"],["ai_governance","work"],["ai_economics","work"]]},
 
-                <div class="skill-category reveal" data-delay="80">
-                    <div class="skill-category-label">Languages &amp; Query</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag cyan">DAX</span>
-                        <span class="skill-tag cyan">SQL</span>
-                        <span class="skill-tag cyan">Power Query / M</span>
-                        <span class="skill-tag cyan">PySpark</span>
-                    </div>
-                </div>
+data:{from:"platform",
+  sql:[["com","-- the layer underneath all of it\n"],["kw","SELECT"],["p"," component, scope, still_running"],
+    ["kw","\nFROM"],["p"," platform"],["kw","\nWHERE"],["p"," owner = "],["str","'rn'"],
+    ["kw","\n  AND"],["p"," status = "],["str","'production'"],["p",";"]],
+  cols:["component","scope","still running"],
+  rows:[["Fabric medallion EDW","Sales · Marketing · Services · Product · HR","true"],
+        ["CI/CD for Power BI","8 repos, every business unit","true"],
+        ["Reporting estate","Support drew 3,576 opens / 136 viewers in 30d","true"],
+        ["KPI definitions","Operational through investor-level","true"]],
+  src:[T("salesforce","src",[["account","text"],["booking","numeric"]],"CRM. Refreshes three times a day now, which took diagnosing why values were vanishing from executive dashboards."),
+       T("servicenow","src",[["ticket","int"],["queue","text"]],"Service desk. Feeds the support reporting that draws the most traffic of anything I have built."),
+       T("netsuite","src",[["invoice","int"],["arr","numeric"]],"Finance. The bookings-to-ARR reconciliation against Salesforce had material variance until it was rebuilt."),
+       T("azure_devops","src",[["repo","text"],["branch","text"],["pr","int"]],"Eight repositories. Power BI development moved off the desktop and into pull requests.")],
+  mid:[T("bronze_raw","mid",[["src_system","text"],["landed_at","ts"]],"Landing zone. Nothing is trusted here, it is only captured."),
+       T("silver_conformed","mid",[["entity","text"],["key","text"]],"Conformed dimensions and resolved keys. Where the metric conflicts between source systems actually get settled."),
+       T("gold_serving","mid",[["measure","text"],["grain","text"]],"Serving layer. Written in Fabric notebooks, and the layer every report reads from.")],
+  out:[T("platform","out",[["component","text"],["scope","text"],["still_running","bool"]],"The estate as it stands. Every row is something still in production that somebody depends on today.")],
+  edges:[["salesforce","bronze_raw"],["servicenow","bronze_raw"],["netsuite","bronze_raw"],
+         ["bronze_raw","silver_conformed"],["silver_conformed","gold_serving"],
+         ["azure_devops","gold_serving"],["gold_serving","platform"]]},
 
-                <div class="skill-category reveal" data-delay="160">
-                    <div class="skill-category-label">Architecture &amp; Strategy</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag coral">Data Modeling</span>
-                        <span class="skill-tag coral">Data Governance</span>
-                        <span class="skill-tag coral">CI/CD for BI</span>
-                        <span class="skill-tag coral">KPI Standardization</span>
-                        <span class="skill-tag coral">Self-Service BI</span>
-                        <span class="skill-tag coral">AI Governance</span>
-                        <span class="skill-tag coral">Agent Architecture</span>
-                    </div>
-                </div>
+history:{from:"history",
+  sql:[["com","-- how I got here\n"],["kw","SELECT"],["p"," yrs, org, role, one_line"],
+    ["kw","\nFROM"],["p"," history"],["kw","\nORDER BY"],["p"," yrs "],["kw","DESC"],["p",";"]],
+  cols:["yrs","org","role","one line"],
+  rows:[["2023 →","Majesco","Principal Architect","Data strategy, the Fabric platform, and the AI program."],
+        ["2020-23","Deltek","Principal Ops Specialist","BI for 350+ users. 14% lift in data satisfaction, measured."],
+        ["2018-19","MicroStrategy","Applications Architect","On-site BI transformation for multinational clients."],
+        ["2017-18","FedBid","Senior Account Lead","Procurement analytics for 15+ federal contracting offices."]],
+  src:[T("retail_2010_16","src",[["store","text"],["team_size","int"]],"Managed sales teams before any of this. Turns out adoption is a people problem, which is the part most architects learn late."),
+       T("psychology_bs","src",[["school","text"],["year","int"]],"B.S. Psychology, Ursinus College, 2008. Unrelated on paper. Directly relevant to why anyone actually uses what you build."),
+       T("microstrategy","src",[["client","text"],["engagement","text"]],"On site with multinational enterprise clients. The credibility anchor: I presented analytics strategy to leadership before I ever owned a platform."),
+       T("deltek","src",[["users","int"],["satisfaction","numeric"]],"BI strategy for 350+ users, and a 14% satisfaction lift measured against pre and post surveys rather than asserted.")],
+  mid:[T("consulting_dna","mid",[["skill","text"],["earned_at","text"]],"Solving problems in someone else's environment, on their timeline, in front of their executives."),
+       T("platform_ownership","mid",[["system","text"],["yrs","int"]],"Where consulting instinct met actually having to live with the thing after it shipped.")],
+  out:[T("history","out",[["yrs","text"],["org","text"],["role","text"],["one_line","text"]],"Sixteen years of work, eight of them in this discipline. The retail years are not on the resume but they are in this graph, because they are why the adoption work lands.")],
+  edges:[["retail_2010_16","consulting_dna"],["psychology_bs","consulting_dna"],["microstrategy","consulting_dna"],
+         ["deltek","platform_ownership"],["consulting_dna","platform_ownership"],["platform_ownership","history"]]},
 
-                <div class="skill-category reveal" data-delay="240">
-                    <div class="skill-category-label">Leadership</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AI Strategy</span>
-                        <span class="skill-tag">BI Strategy</span>
-                        <span class="skill-tag">Stakeholder Management</span>
-                        <span class="skill-tag">Enterprise Roadmapping</span>
-                        <span class="skill-tag">Cross-functional Teams</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+offhours:{from:"off_hours",
+  sql:[["com","-- the part that is not on the resume\n"],["kw","SELECT"],["p"," pursuit, depth, notes"],
+    ["kw","\nFROM"],["p"," off_hours"],["kw","\nWHERE"],["p"," logged = "],["kw","true"],["p",";"]],
+  cols:["pursuit","depth","notes"],
+  rows:[["cigars","since 2005","49 sessions logged third by third. Yes, in a database."],
+        ["bourbon","MSRP only","Collection tracked. Never paid secondary."],
+        ["magic","draft &amp; brew","Currently trimming a bird tribal list to exactly 100."],
+        ["home lab","self-hosted","Jellyfin on a NAS. Hardware transcoding, Tailscale, no subscription."]],
+  src:[T("cigar_log","src",[["cigar","text"],["date_smoked","date"],["rating","int"],["notes","text"]],"An actual Airtable base. Pre-light, first third, second third, final third, plus what was going on in my life that night. 49 rows and counting."),
+       T("bourbon_collection","src",[["bottle","text"],["proof","numeric"],["paid","numeric"]],"Tracked the same way. The rule is MSRP or nothing, which is why the list is shorter than it could be."),
+       T("humidor","src",[["cigar","text"],["qty","int"],["status","text"]],"Inventory, separate from the journal. The log is what I smoked, the humidor is what is left."),
+       T("mtga_decks","src",[["deck","text"],["format","text"]],"Currently a Simic bird tribal Brawl list. The commander only triggers on Bird creature spells, which is a constraint I find genuinely fun."),
+       T("media_server","src",[["title","text"],["type","text"],["codec","text"]],"587 movies and 138 series on a NAS running Jellyfin in Docker. Hardware transcoding, Tailscale for remote access, FileBot handling the naming. The same instinct as everything else here.")],
+  mid:[T("tasting_notes","mid",[["flavor","text"],["freq","int"]],"Flavor frequency across every session. Cedar, leather and cocoa dominate, which is a real pattern and not a vibe."),
+       T("pairings","mid",[["cigar","text"],["pour","text"]],"What went with what, and whether it worked. Contrast beats complement more often than people expect.")],
+  out:[T("off_hours","out",[["pursuit","text"],["depth","text"],["notes","text"],["logged","bool"]],"Everything here has a WHERE logged = true clause for a reason. If I am into something, there is a schema for it.")],
+  edges:[["cigar_log","tasting_notes"],["humidor","tasting_notes"],["bourbon_collection","pairings"],
+         ["cigar_log","pairings"],["mtga_decks","off_hours"],["media_server","off_hours"],
+         ["tasting_notes","off_hours"],["pairings","off_hours"]]}
+};
 
-    <!-- Work Preview -->
-    <section class="section work-preview">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label reveal">Featured Work</p>
-                <h2 class="section-title reveal">Key initiatives &amp;<br>delivered outcomes.</h2>
-                <p class="section-subtitle reveal">A snapshot of high-impact projects from my career. For the full picture  roles, timelines, and details  see the Experience page.</p>
-            </div>
+const $=id=>document.getElementById(id);
+let CUR='ai', typing=null;
 
-            <div class="work-cards stagger-group">
-                <div class="work-card">
-                    <div class="work-card-icon blue"></div>
-                    <h3>Enterprise Data Warehouse  Majesco</h3>
-                    <p>Architected and delivered a centralized EDW integrating Sales, Marketing, Services, Product, and HR data. Built a full CI/CD pipeline for Power BI and Fabric deployments using Azure DevOps.</p>
-                    <div class="work-card-tags">
-                        <span class="tag">Microsoft Fabric</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag tag-cyan">Azure DevOps</span>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-card-icon cyan"></div>
-                    <h3>Platform Migration &amp; Enterprise Data Warehouse</h3>
-                    <p>Led migration from legacy BI infrastructure to a Microsoft Fabric medallion lakehouse, standing up the enterprise data warehouse across Sales, Marketing, Services, Product, and HR with CI/CD in every business unit.</p>
-                    <div class="work-card-tags">
-                        <span class="tag">Migration</span>
-                        <span class="tag tag-coral">5 Departments</span>
-                        <span class="tag">Enterprise BI</span>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-card-icon coral"></div>
-                    <h3>BI Modernization  Deltek</h3>
-                    <p>Developed and executed a BI strategy and roadmap for 350+ users, pioneering Power BI adoption and redesigning reporting for clarity and trust. Increased user satisfaction scores by 14%.</p>
-                    <div class="work-card-tags">
-                        <span class="tag">Strategy</span>
-                        <span class="tag">Governance</span>
-                        <span class="tag tag-cyan">350+ Users</span>
-                    </div>
-                </div>
-            </div>
+/* ── results ── */
+function renderRes(q){
+  $('thead').innerHTML='<tr>'+q.cols.map(c=>`<th>${c}</th>`).join('')+'</tr>';
+  $('tbody').innerHTML=q.rows.map(r=>'<tr>'+r.map((c,i)=>{
+    const cls=(i===0&&/^\d/.test(c))?'m':(c==='true'?'s':'');
+    return `<td class="${cls}">${c}</td>`;}).join('')+'</tr>').join('');
+  $('reshead').textContent=q.rows.length+' rows';
+  $('fromtbl').textContent='FROM '+q.from;
+}
 
-            <div style="text-align:center; margin-top:3rem;" class="reveal">
-                <a href="work.html" class="btn btn-secondary">
-                    View Full Experience
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
+/* ── typing ── */
+function type(q){
+  clearInterval(typing);
+  const flat=q.sql.map(([c,t])=>({c,t})); let seg=0,ch=0,out='';
+  $('stat').textContent='running…'; $('ms').textContent='';
+  const done=()=>{ $('sql').innerHTML=out; $('stat').textContent='ok';
+    $('ms').textContent=(6+Math.floor(Math.random()*12))+' ms'; renderRes(q); buildGraph(q); };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    out=flat.map(s=>`<span class="${s.c==='p'?'':s.c}">${s.t}</span>`).join(''); done(); return; }
+  typing=setInterval(()=>{
+    if(seg>=flat.length){ clearInterval(typing); done(); return; }
+    const s=flat[seg]; ch++;
+    const piece=`<span class="${s.c==='p'?'':s.c}">${s.t.slice(0,ch)}</span>`;
+    $('sql').innerHTML=out+piece+'<span class="caret"></span>';
+    if(ch>=s.t.length){ out+=piece; seg++; ch=0; }
+  },11);
+}
 
-    <!-- Contact -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <p class="section-label reveal">Contact</p>
-            <h2 class="section-title reveal">Let's build something<br>worth measuring.</h2>
-            <p class="section-subtitle reveal">Open to conversations about leadership roles, consulting engagements, or interesting data problems worth solving.</p>
-            <div class="contact-actions reveal">
-                <a href="mailto:rnewby3@gmail.com" class="btn btn-primary">Email Me</a>
-                <a href="https://www.linkedin.com/in/richardnewby3" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
-                <a href="https://github.com/rnewby3" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
-            </div>
-        </div>
-    </section>
+/* ── lineage ── */
+const NODES={};
+function card(t){
+  const cls=t.b==='src'?'b-src':t.b==='mid'?'b-mid':'b-out';
+  const lbl=t.b==='src'?'source':t.b==='mid'?'derived':'served';
+  return `<button class="tbl" id="t-${t.n}" data-n="${t.n}">
+    <div class="tbl-h"><span>${t.n}</span><span class="badge ${cls}">${lbl}</span></div>
+    <div class="cols-list">${t.c.map(([a,b])=>`<div><span>${a}</span><span>${b}</span></div>`).join('')}</div>
+  </button>`;
+}
+function buildGraph(q){
+  NODES.map={}; [...q.src,...q.mid,...q.out].forEach(t=>NODES.map[t.n]=t);
+  $('l1').innerHTML=q.src.map(card).join('');
+  $('l2').innerHTML=q.mid.map(card).join('');
+  $('l3').innerHTML=q.out.map(card).join('');
+  $('linhead').textContent='lineage of '+q.from;
+  $('n-lbl').textContent='select a table';
+  $('n-body').textContent='Every column in the result above came from somewhere. This is where.';
+  document.querySelectorAll('.tbl').forEach(b=>{
+    b.addEventListener('click',()=>pick(b.dataset.n));
+    b.addEventListener('mouseenter',()=>trace(b.dataset.n,true));
+    b.addEventListener('mouseleave',()=>trace(b.dataset.n,false));
+    b.addEventListener('focus',()=>{pick(b.dataset.n);trace(b.dataset.n,true)});
+    b.addEventListener('blur',()=>trace(b.dataset.n,false));
+  });
+  requestAnimationFrame(()=>wires(q));
+}
+function wires(q){
+  const g=$('wires'), host=g.parentElement.getBoundingClientRect();
+  g.innerHTML=''; g.setAttribute('viewBox',`0 0 ${host.width} ${host.height}`);
+  q.edges.forEach(([a,b])=>{
+    const A=$('t-'+a),B=$('t-'+b); if(!A||!B) return;
+    const ra=A.getBoundingClientRect(),rb=B.getBoundingClientRect();
+    const x1=ra.right-host.left,y1=ra.top-host.top+ra.height/2,
+          x2=rb.left-host.left,y2=rb.top-host.top+rb.height/2;
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',`M${x1} ${y1} C ${x1+40} ${y1}, ${x2-40} ${y2}, ${x2} ${y2}`);
+    p.setAttribute('class','wire'); p.dataset.a=a; p.dataset.b=b; g.appendChild(p);
+  });
+}
+function pick(n){
+  const t=NODES.map[n]; if(!t) return;
+  $('n-lbl').textContent=t.n;
+  $('n-body').textContent=t.note;
+  document.querySelectorAll('.tbl').forEach(b=>b.setAttribute('aria-current',b.dataset.n===n?'true':'false'));
+}
+function trace(n,on){
+  const q=Q[CUR], lit=new Set([n]);
+  if(on){ let grew=true,g=0;
+    while(grew&&g++<8){ grew=false;
+      q.edges.forEach(([a,b])=>{ if(lit.has(a)&&!lit.has(b)){lit.add(b);grew=true;}
+                                 if(lit.has(b)&&!lit.has(a)&&b===n){lit.add(a);grew=true;} }); } }
+  document.querySelectorAll('.tbl').forEach(b=>b.classList.toggle('dim',on&&!lit.has(b.dataset.n)));
+  $('wires').querySelectorAll('.wire').forEach(w=>
+    w.classList.toggle('hot',on&&lit.has(w.dataset.a)&&lit.has(w.dataset.b)));
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-logo">
-            <span>RN</span>
-            <span style="width:4px;height:4px;border-radius:50%;background:var(--accent);display:inline-block;margin:0 4px;"></span>
-            <span style="color:var(--accent);font-weight:300;letter-spacing:3px;font-size:1rem;line-height:1;">III</span>
-        </div>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Experience</a></li>
-            <li><a href="datasets.html">Datasets</a></li>
-            <li><a href="mailto:rnewby3@gmail.com">Email</a></li>
-        </ul>
-        <p class="footer-copy">&copy; 2026 Richard Newby III. All rights reserved.</p>
-    </footer>
+/* ── mode switch ── */
+function mode(showLin){
+  $('pane-res').classList.toggle('hidden',showLin);
+  $('pane-lin').classList.toggle('hidden',!showLin);
+  $('btn-res').setAttribute('aria-pressed',String(!showLin));
+  $('btn-lin').setAttribute('aria-pressed',String(showLin));
+  if(showLin) requestAnimationFrame(()=>wires(Q[CUR]));
+}
+$('btn-res').addEventListener('click',()=>mode(false));
+$('btn-lin').addEventListener('click',()=>mode(true));
 
-    <script src="js/main.js"></script>
-    <script>
-        //  Hero mouse-follow gradient 
-        const heroBg = document.getElementById('heroBg');
-        if (heroBg) {
-            document.querySelector('.hero').addEventListener('mousemove', e => {
-                const { left, top, width, height } = heroBg.parentElement.getBoundingClientRect();
-                heroBg.style.setProperty('--mx', ((e.clientX - left) / width * 100) + '%');
-                heroBg.style.setProperty('--my', ((e.clientY - top) / height * 100) + '%');
-            });
-        }
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+    t.setAttribute('aria-selected','true'); CUR=t.dataset.q; type(Q[CUR]);
+  });
+});
+addEventListener('resize',()=>{ if(!$('pane-lin').classList.contains('hidden')) wires(Q[CUR]); });
+type(Q.ai);
+</script>
 
-        //  Hero entrance + word rotator 
-        window.addEventListener('DOMContentLoaded', () => {
-            const { animate, stagger, createTimeline } = anime;
-
-            // Set initial hidden states
-            ['.hero-eyebrow', '.line-name', '.line-title', '.hero-tagline', '.hero-actions .btn', '.hero-scroll-hint']
-                .forEach(sel => document.querySelectorAll(sel).forEach(el => el.style.opacity = '0'));
-
-            // Position first word ready to show; rest below the fold
-            const wordItems = Array.from(document.querySelectorAll('.word-item'));
-            wordItems.forEach((w, i) => {
-                w.style.transform = i === 0 ? 'translateY(0)' : 'translateY(110%)';
-                w.style.opacity   = i === 0 ? '1' : '0';
-            });
-
-            // Entrance timeline
-            createTimeline({ defaults: { ease: 'outExpo', duration: 900 } })
-                .add('.hero-eyebrow',      { opacity: [0, 1], translateY: [24, 0] }, 150)
-                .add('.line-name',         { opacity: [0, 1], translateY: [40, 0] }, 280)
-                .add('.line-title',        { opacity: [0, 1], translateY: [40, 0] }, 400)
-                .add('.hero-tagline',      { opacity: [0, 1], translateY: [24, 0] }, 540)
-                .add('.hero-actions .btn', { opacity: [0, 1], translateY: [18, 0], delay: stagger(100) }, 680)
-                .add('.hero-scroll-hint',  { opacity: [0, 1] }, 900);
-
-            // Word rotator — starts after entrance settles
-            let currentWord = 0;
-            function rotateWord() {
-                const next = (currentWord + 1) % wordItems.length;
-                // Current exits upward
-                animate(wordItems[currentWord], {
-                    translateY: [0, '-110%'], opacity: [1, 0],
-                    duration: 480, ease: 'inExpo'
-                });
-                // Next enters from below — starts after exit finishes
-                animate(wordItems[next], {
-                    translateY: ['110%', 0], opacity: [0, 1],
-                    duration: 520, ease: 'outExpo', delay: 480
-                });
-                currentWord = next;
-            }
-            let rotatorInterval = null;
-
-            function startRotator() {
-                if (!rotatorInterval) rotatorInterval = setInterval(rotateWord, 3000);
-            }
-            function stopRotator() {
-                clearInterval(rotatorInterval);
-                rotatorInterval = null;
-            }
-
-            // Pause when tab is hidden, resume when visible — prevents queued-up ticks
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    stopRotator();
-                } else {
-                    // Small delay so the page has fully resumed before animating
-                    setTimeout(startRotator, 200);
-                }
-            });
-
-            setTimeout(startRotator, 3000);
-        });
-    </script>
 </body>
 </html>
