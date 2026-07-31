@@ -119,6 +119,12 @@ button.tbl{cursor:pointer}
 .b-src{background:rgba(140,98,57,.13);color:var(--src)}
 .b-mid{background:rgba(5,80,174,.10);color:var(--mid)}
 .b-out{background:rgba(10,125,72,.11);color:var(--out)}
+.tbl-h .hr{display:flex;align-items:center;gap:7px}
+/* per-card note: desktop reads it in the pane below, mobile expands it in place */
+.tbl-note{display:none;padding:10px 11px;border-top:1px solid var(--edge2);
+  background:var(--chrome2);font-size:13.5px;line-height:1.5;color:var(--text)}
+.chev{display:none;color:var(--dim);font-size:9px;transition:transform .18s}
+.hint-narrow{display:none}
 .cols-list{padding:6px 0}
 .cols-list div{display:flex;justify-content:space-between;gap:10px;padding:3px 11px;
   font-family:var(--mono);font-size:11.5px}
@@ -196,6 +202,14 @@ footer a:hover{text-decoration:underline}
 @media (max-width:840px){
   .cols{grid-template-columns:1fr;gap:26px}
   svg.wires{display:none}
+  /* no wires to trace and no room for a detail pane at the bottom, so the
+     reasoning expands inside the card you tapped instead */
+  #pane-lin .note{display:none}
+  .hint-wide{display:none}
+  .hint-narrow{display:inline}
+  .chev{display:inline-block}
+  .tbl[aria-expanded="true"] .tbl-note{display:block}
+  .tbl[aria-expanded="true"] .chev{transform:rotate(180deg)}
 }
 @media (max-width:700px){
   .conn-in{gap:0}

@@ -61,7 +61,8 @@
   <div class="pane hidden" id="pane-lin">
     <div class="pane-head">
       <span id="linhead">lineage</span>
-      <span style="color:var(--kw)">click a table to read it · hover to trace</span>
+      <span style="color:var(--kw)" class="hint-wide">click a table to read it &middot; hover to trace</span>
+      <span style="color:var(--kw)" class="hint-narrow">tap a table to expand it</span>
     </div>
     <div class="graph">
       <svg class="wires" id="wires" preserveAspectRatio="none"></svg>
@@ -201,12 +202,15 @@ function type(q){
 
 /* ── lineage ── */
 const NODES={};
+const NARROW=()=>matchMedia('(max-width:840px)').matches;
 function card(t){
   const cls=t.b==='src'?'b-src':t.b==='mid'?'b-mid':'b-out';
   const lbl=t.b==='src'?'source':t.b==='mid'?'derived':'served';
-  return `<button class="tbl" id="t-${t.n}" data-n="${t.n}">
-    <div class="tbl-h"><span>${t.n}</span><span class="badge ${cls}">${lbl}</span></div>
+  return `<button class="tbl" id="t-${t.n}" data-n="${t.n}" aria-expanded="false">
+    <div class="tbl-h"><span>${t.n}</span>
+      <span class="hr"><span class="badge ${cls}">${lbl}</span><span class="chev">&#9660;</span></span></div>
     <div class="cols-list">${t.c.map(([a,b])=>`<div><span>${a}</span><span>${b}</span></div>`).join('')}</div>
+    <div class="tbl-note">${t.note}</div>
   </button>`;
 }
 function buildGraph(q){
@@ -218,7 +222,17 @@ function buildGraph(q){
   $('n-lbl').textContent='select a table';
   $('n-body').textContent='Every column in the result above came from somewhere. This is where.';
   document.querySelectorAll('.tbl').forEach(b=>{
-    b.addEventListener('click',()=>pick(b.dataset.n));
+    b.addEventListener('click',()=>{
+      // mobile: tap expands the note inside this card, tap again collapses.
+      // desktop: unchanged, the note pane below does the talking.
+      if(NARROW()){
+        const open=b.getAttribute('aria-expanded')==='true';
+        document.querySelectorAll('.tbl').forEach(x=>x.setAttribute('aria-expanded','false'));
+        b.setAttribute('aria-expanded',open?'false':'true');
+        if(open){ b.setAttribute('aria-current','false'); return; }
+      }
+      pick(b.dataset.n);
+    });
     b.addEventListener('mouseenter',()=>trace(b.dataset.n,true));
     b.addEventListener('mouseleave',()=>trace(b.dataset.n,false));
     b.addEventListener('focus',()=>{pick(b.dataset.n);trace(b.dataset.n,true)});
