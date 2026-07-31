@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Newby III | AI &amp; Data Platform Architect</title>
+<meta name="description" content="Richard Newby III builds the data infrastructure enterprise AI runs on. Query the work, then run EXPLAIN and see the lineage underneath it.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<meta property="og:title" content="Richard Newby III | AI &amp; Data Platform Architect">
+<meta property="og:description" content="Query the work, then run EXPLAIN and see the lineage underneath it.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<style>
+  :root{
+    --bg:#FBFAF7; --panel:#FFFFFF; --edge:#D8D4CC; --edge2:#EEEBE4; --text:#1F2328; --dim:#6E7781;
+    --kw:#0550AE; --str:#0A7D48; --num:#953800; --com:#8C959F; --hl:#FFF4CE;
+    --src:#8C6239; --mid:#0550AE; --out:#0A7D48;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:15px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .app{max-width:1120px;margin:0 auto;padding:0 20px 90px}
+  .mono{font-family:ui-monospace,Menlo,Consolas,"Courier New",monospace}
+
+  header{padding:36px 0 18px}
+  h1{margin:0;font-size:clamp(24px,3.6vw,34px);font-weight:600;letter-spacing:-.02em}
+  .who{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--dim);margin-top:5px}
+  .who b{color:var(--kw);font-weight:400}
+  .lede{margin:16px 0 0;max-width:62ch;font-size:16.5px;line-height:1.45}
+
+  /* ─── editor ─── */
+  .editor{margin-top:26px;border:1px solid var(--edge);border-radius:6px 6px 0 0;
+    border-bottom:0;overflow:hidden;box-shadow:0 1px 2px rgba(31,35,40,.05)}
+  .tabbar{display:flex;background:#F3F1EC;border-bottom:1px solid var(--edge);overflow-x:auto}
+  .tab{padding:9px 15px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+    background:transparent;border:0;border-right:1px solid var(--edge);cursor:pointer;
+    color:var(--dim);white-space:nowrap}
+  .tab[aria-selected="true"]{background:var(--panel);color:var(--text);font-weight:600;
+    box-shadow:inset 0 -2px 0 var(--kw)}
+  .tab:hover{color:var(--text)}
+  .sql{background:var(--panel);padding:16px 18px;font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:13.5px;line-height:1.75;overflow-x:auto;white-space:pre;min-height:104px}
+  .kw{color:var(--kw)} .str{color:var(--str)} .num{color:var(--num)} .com{color:var(--com);font-style:italic}
+  .caret{display:inline-block;width:8px;height:15px;background:var(--kw);vertical-align:-3px;
+    animation:blink 1.05s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  /* ─── status / mode switch ─── */
+  .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 0 0 14px;
+    background:#F3F1EC;border:1px solid var(--edge);border-bottom:0;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:var(--dim)}
+  .bar .ok{color:var(--str);font-weight:600}
+  .switch{display:flex}
+  .switch button{padding:10px 16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;
+    background:transparent;border:0;border-left:1px solid var(--edge);cursor:pointer;color:var(--dim);
+    letter-spacing:.06em}
+  .switch button[aria-pressed="true"]{background:var(--panel);color:var(--kw);font-weight:600}
+  .switch button:hover{color:var(--text)}
+
+  /* ─── panes ─── */
+  .pane{border:1px solid var(--edge);border-radius:0 0 6px 6px;background:var(--panel);overflow:hidden}
+  .hidden{display:none}
+  .pane-head{padding:8px 14px;background:#F3F1EC;border-bottom:1px solid var(--edge);
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:var(--dim);
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;padding:9px 14px;background:#FAF9F6;border-bottom:1px solid var(--edge);
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+  td{padding:11px 14px;border-bottom:1px solid var(--edge2);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover td{background:var(--hl)}
+  td.m{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;white-space:nowrap;color:var(--num)}
+  td.s{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--str)}
+
+  /* ─── lineage ─── */
+  .graph{position:relative;padding:24px 18px;min-height:400px}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;position:relative;z-index:2}
+  .colhead{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--dim);margin-bottom:12px;padding-bottom:6px;
+    border-bottom:1px solid var(--edge)}
+  .stack{display:flex;flex-direction:column;gap:16px}
+  svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+  .wire{stroke:#C9C4B8;stroke-width:1.5;fill:none;transition:stroke .18s,stroke-width .18s}
+  .wire.hot{stroke:var(--kw);stroke-width:2.4}
+
+  .tbl{border:1px solid var(--edge);border-radius:5px;background:var(--panel);overflow:hidden;
+    cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0;width:100%;
+    transition:box-shadow .16s,transform .16s}
+  .tbl:hover,.tbl[aria-current="true"]{box-shadow:0 2px 10px rgba(31,35,40,.10);transform:translateY(-1px)}
+  .tbl[aria-current="true"]{border-color:var(--kw)}
+  .tbl.dim{opacity:.34}
+  .tbl-h{display:flex;justify-content:space-between;align-items:center;gap:8px;
+    padding:8px 11px;border-bottom:1px solid var(--edge2);background:#FAF9F6;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;font-weight:600}
+  .badge{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 6px;border-radius:3px;
+    font-weight:600}
+  .b-src{background:rgba(140,98,57,.13);color:var(--src)}
+  .b-mid{background:rgba(5,80,174,.10);color:var(--mid)}
+  .b-out{background:rgba(10,125,72,.11);color:var(--out)}
+  .cols-list{padding:6px 0}
+  .cols-list div{display:flex;justify-content:space-between;gap:10px;padding:3px 11px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px}
+  .cols-list span:first-child{color:var(--text)}
+  .cols-list span:last-child{color:var(--com)}
+
+  .note{border-top:1px solid var(--edge);padding:16px 18px;background:#FAF9F6}
+  .note .lbl{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--kw);margin-bottom:6px}
+  .note p{margin:0;max-width:78ch;font-size:14.5px}
+
+  footer{margin-top:30px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:var(--dim)}
+  footer a{color:var(--kw);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--kw);outline-offset:2px}
+
+  @media (max-width:840px){
+    .cols{grid-template-columns:1fr;gap:26px}
+    svg.wires{display:none}
+  }
+  @media (max-width:700px){
+    /* tabs wrap to a 2x2 grid instead of scrolling — every tab stays tappable */
+    .tabbar{flex-wrap:wrap;overflow:visible}
+    .tab{flex:1 1 50%;text-align:center;border-bottom:1px solid var(--edge)}
+    .tab:nth-child(2n){border-right:0}
+    .sql{font-size:12px;padding:14px}
+    /* results keep real column widths and scroll, the way any db client does */
+    table{min-width:560px}
+    th,td{padding:9px 11px}
+    .bar{flex-direction:column;align-items:stretch;padding:0}
+    .bar>span:first-child{padding:8px 14px 0}
+    .switch{border-top:1px solid var(--edge)}
+    .switch button{flex:1;border-left:0;border-right:1px solid var(--edge)}
+    .switch button:last-child{border-right:0}
+    .lede{font-size:15.5px}
+  }
+  @media (prefers-reduced-motion:reduce){ .caret{animation:none} *{transition:none!important} }
+</style>
+
+<div class="app">
+  <header>
+    <h1>Richard Newby III</h1>
+    <div class="who">role: <b>AI &amp; Data Platform Architect</b> · richmond, va · 8 yrs</div>
+    <p class="lede">I spend my day making sure the answer a model gives you can be traced back to something true. So ask this page the way I'd ask the warehouse, then run <span class="mono" style="color:var(--kw)">EXPLAIN</span> and go look at what's underneath it.</p>
+  </header>
+
+  <div class="editor">
+    <div class="tabbar" role="tablist">
+      <button class="tab" role="tab" aria-selected="true"  data-q="ai">ai_platform.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="data">data_platform.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="history">history.sql</button>
+      <button class="tab" role="tab" aria-selected="false" data-q="offhours">off_hours.sql</button>
+    </div>
+    <div class="sql" id="sql"></div>
+  </div>
+
+  <div class="bar">
+    <span><span id="stat">ready</span> <b class="ok" id="ms"></b></span>
+    <div class="switch">
+      <button id="btn-res" aria-pressed="true">▤ results</button>
+      <button id="btn-lin" aria-pressed="false">⌥ explain</button>
+    </div>
+  </div>
+
+  <!-- results -->
+  <div class="pane" id="pane-res">
+    <div class="pane-head"><span id="reshead">0 rows</span><span id="fromtbl"></span></div>
+    <div class="tscroll"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+  </div>
+
+  <!-- lineage -->
+  <div class="pane hidden" id="pane-lin">
+    <div class="pane-head">
+      <span id="linhead">lineage</span>
+      <span style="color:var(--kw)">click a table to read it · hover to trace</span>
+    </div>
+    <div class="graph">
+      <svg class="wires" id="wires" preserveAspectRatio="none"></svg>
+      <div class="cols">
+        <div><div class="colhead">source</div><div class="stack" id="l1"></div></div>
+        <div><div class="colhead">transform</div><div class="stack" id="l2"></div></div>
+        <div><div class="colhead">served</div><div class="stack" id="l3"></div></div>
+      </div>
+    </div>
+    <div class="note">
+      <div class="lbl" id="n-lbl">select a table</div>
+      <p id="n-body">Every column in the result above came from somewhere. This is where.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>rniii.com</span>
+    <span><a href="work.html">work</a> · <a href="datasets.html">datasets</a> · <a href="https://www.linkedin.com/in/richardnewby3">linkedin</a> · <a href="mailto:rnewby3@gmail.com">email</a></span>
+    <span>every claim has a source column</span>
+  </footer>
+</div>
+
+<script>
+const T=(n,b,c,note)=>({n,b,c,note});
+const Q={
+ai:{from:"work",
+  sql:[["com","-- what I own on the AI side\n"],["kw","SELECT"],["p"," domain, what_i_built, evidence"],
+    ["kw","\nFROM"],["p"," work"],["kw","\nWHERE"],["p"," layer = "],["str","'ai_platform'"],
+    ["kw","\nORDER BY"],["p"," blast_radius "],["kw","DESC"],["p",";"]],
+  cols:["domain","what I built","evidence"],
+  rows:[["adoption","Enterprise AI program, rollout through governance","1,200 to ~2,700 seats"],
+        ["enablement","Designed and delivered the deep-dive curriculum","~1,000 attendees"],
+        ["deployment","Claude Enterprise, POC through company policy","40-person pilot"],
+        ["boundary","MCP connectors through CAB with the CISO","2 servers, InfoSec reviewed"],
+        ["economics","Gateway with per-agent, per-step attribution","litellm + langgraph"]],
+  src:[T("glean_directory","src",[["seat_id","uuid"],["dept","text"],["active","bool"]],"The enterprise AI search platform. Seat count is the honest adoption number, not licenses purchased."),
+       T("claude_admin","src",[["user","text"],["tier","text"],["policy","text"]],"Claude Enterprise admin surface. I do not hold the panel; I hold the decisions about what gets enabled."),
+       T("mcp_registry","src",[["server","text"],["system","text"],["cab_id","int"]],"Every MCP connector and the change advisory board review that approved it."),
+       T("gateway_spend","src",[["job_id","text"],["agent","text"],["tokens","int"],["usd","numeric"]],"Raw spend rows off the gateway. One row per model call, tagged by agent and by step.")],
+  mid:[T("ai_program","mid",[["domain","text"],["seats","int"],["trained","int"]],"Adoption and enablement joined. Growth is meaningless without knowing who was actually taught."),
+       T("ai_governance","mid",[["boundary","text"],["reviewed_by","text"]],"What an agent is permitted to reach, and who signed off. Built with the CISO, not handed to him."),
+       T("ai_economics","mid",[["agent","text"],["cost","numeric"],["produced","text"]],"Spend joined to the work it served. This join is the entire point of the gateway.")],
+  out:[T("work","out",[["domain","text"],["what_i_built","text"],["evidence","text"],["layer","text"]],"The table you just queried. Nothing in it is a claim I cannot trace back to a source column.")],
+  edges:[["glean_directory","ai_program"],["claude_admin","ai_program"],["mcp_registry","ai_governance"],
+         ["gateway_spend","ai_economics"],["ai_program","work"],["ai_governance","work"],["ai_economics","work"]]},
+
+data:{from:"platform",
+  sql:[["com","-- the layer underneath all of it\n"],["kw","SELECT"],["p"," component, scope, still_running"],
+    ["kw","\nFROM"],["p"," platform"],["kw","\nWHERE"],["p"," owner = "],["str","'rn'"],
+    ["kw","\n  AND"],["p"," status = "],["str","'production'"],["p",";"]],
+  cols:["component","scope","still running"],
+  rows:[["Fabric medallion EDW","Sales · Marketing · Services · Product · HR","true"],
+        ["CI/CD for Power BI","8 repos, every business unit","true"],
+        ["Reporting estate","Support drew 3,576 opens / 136 viewers in 30d","true"],
+        ["KPI definitions","Operational through investor-level","true"]],
+  src:[T("salesforce","src",[["account","text"],["booking","numeric"]],"CRM. Refreshes three times a day now, which took diagnosing why values were vanishing from executive dashboards."),
+       T("servicenow","src",[["ticket","int"],["queue","text"]],"Service desk. Feeds the support reporting that draws the most traffic of anything I have built."),
+       T("netsuite","src",[["invoice","int"],["arr","numeric"]],"Finance. The bookings-to-ARR reconciliation against Salesforce had material variance until it was rebuilt."),
+       T("azure_devops","src",[["repo","text"],["branch","text"],["pr","int"]],"Eight repositories. Power BI development moved off the desktop and into pull requests.")],
+  mid:[T("bronze_raw","mid",[["src_system","text"],["landed_at","ts"]],"Landing zone. Nothing is trusted here, it is only captured."),
+       T("silver_conformed","mid",[["entity","text"],["key","text"]],"Conformed dimensions and resolved keys. Where the metric conflicts between source systems actually get settled."),
+       T("gold_serving","mid",[["measure","text"],["grain","text"]],"Serving layer. Written in Fabric notebooks, and the layer every report reads from.")],
+  out:[T("platform","out",[["component","text"],["scope","text"],["still_running","bool"]],"The estate as it stands. Every row is something still in production that somebody depends on today.")],
+  edges:[["salesforce","bronze_raw"],["servicenow","bronze_raw"],["netsuite","bronze_raw"],
+         ["bronze_raw","silver_conformed"],["silver_conformed","gold_serving"],
+         ["azure_devops","gold_serving"],["gold_serving","platform"]]},
+
+history:{from:"history",
+  sql:[["com","-- how I got here\n"],["kw","SELECT"],["p"," yrs, org, role, one_line"],
+    ["kw","\nFROM"],["p"," history"],["kw","\nORDER BY"],["p"," yrs "],["kw","DESC"],["p",";"]],
+  cols:["yrs","org","role","one line"],
+  rows:[["2023 →","Majesco","Principal Architect","Data strategy, the Fabric platform, and the AI program."],
+        ["2020-23","Deltek","Principal Ops Specialist","BI for 350+ users. 14% lift in data satisfaction, measured."],
+        ["2018-19","MicroStrategy","Applications Architect","On-site BI transformation for multinational clients."],
+        ["2017-18","FedBid","Senior Account Lead","Procurement analytics for 15+ federal contracting offices."]],
+  src:[T("retail_2010_16","src",[["store","text"],["team_size","int"]],"Managed sales teams before any of this. Turns out adoption is a people problem, which is the part most architects learn late."),
+       T("psychology_bs","src",[["school","text"],["year","int"]],"B.S. Psychology, Ursinus College, 2008. Unrelated on paper. Directly relevant to why anyone actually uses what you build."),
+       T("microstrategy","src",[["client","text"],["engagement","text"]],"On site with multinational enterprise clients. The credibility anchor: I presented analytics strategy to leadership before I ever owned a platform."),
+       T("deltek","src",[["users","int"],["satisfaction","numeric"]],"BI strategy for 350+ users, and a 14% satisfaction lift measured against pre and post surveys rather than asserted.")],
+  mid:[T("consulting_dna","mid",[["skill","text"],["earned_at","text"]],"Solving problems in someone else's environment, on their timeline, in front of their executives."),
+       T("platform_ownership","mid",[["system","text"],["yrs","int"]],"Where consulting instinct met actually having to live with the thing after it shipped.")],
+  out:[T("history","out",[["yrs","text"],["org","text"],["role","text"],["one_line","text"]],"Sixteen years of work, eight of them in this discipline. The retail years are not on the resume but they are in this graph, because they are why the adoption work lands.")],
+  edges:[["retail_2010_16","consulting_dna"],["psychology_bs","consulting_dna"],["microstrategy","consulting_dna"],
+         ["deltek","platform_ownership"],["consulting_dna","platform_ownership"],["platform_ownership","history"]]},
+
+offhours:{from:"off_hours",
+  sql:[["com","-- the part that is not on the resume\n"],["kw","SELECT"],["p"," pursuit, depth, notes"],
+    ["kw","\nFROM"],["p"," off_hours"],["kw","\nWHERE"],["p"," logged = "],["kw","true"],["p",";"]],
+  cols:["pursuit","depth","notes"],
+  rows:[["cigars","since 2005","49 sessions logged third by third. Yes, in a database."],
+        ["bourbon","MSRP only","Collection tracked. Never paid secondary."],
+        ["magic","draft &amp; brew","Currently trimming a bird tribal list to exactly 100."],
+        ["tattoos","american traditional","Bold colour, nautical, Christ as anchor."]],
+  src:[T("cigar_log","src",[["cigar","text"],["date_smoked","date"],["rating","int"],["notes","text"]],"An actual Airtable base. Pre-light, first third, second third, final third, plus what was going on in my life that night. 49 rows and counting."),
+       T("bourbon_collection","src",[["bottle","text"],["proof","numeric"],["paid","numeric"]],"Tracked the same way. The rule is MSRP or nothing, which is why the list is shorter than it could be."),
+       T("humidor","src",[["cigar","text"],["qty","int"],["status","text"]],"Inventory, separate from the journal. The log is what I smoked, the humidor is what is left."),
+       T("mtga_decks","src",[["deck","text"],["format","text"]],"Currently a Simic bird tribal Brawl list. The commander only triggers on Bird creature spells, which is a constraint I find genuinely fun.")],
+  mid:[T("tasting_notes","mid",[["flavor","text"],["freq","int"]],"Flavour frequency across every session. Cedar, leather and cocoa dominate, which is a real pattern and not a vibe."),
+       T("pairings","mid",[["cigar","text"],["pour","text"]],"What went with what, and whether it worked. Contrast beats complement more often than people expect.")],
+  out:[T("off_hours","out",[["pursuit","text"],["depth","text"],["notes","text"],["logged","bool"]],"Everything here has a WHERE logged = true clause for a reason. If I am into something, there is a schema for it.")],
+  edges:[["cigar_log","tasting_notes"],["humidor","tasting_notes"],["bourbon_collection","pairings"],
+         ["cigar_log","pairings"],["mtga_decks","off_hours"],["tasting_notes","off_hours"],["pairings","off_hours"]]}
+};
+
+const $=id=>document.getElementById(id);
+let CUR='ai', typing=null;
+
+/* ── results ── */
+function renderRes(q){
+  $('thead').innerHTML='<tr>'+q.cols.map(c=>`<th>${c}</th>`).join('')+'</tr>';
+  $('tbody').innerHTML=q.rows.map(r=>'<tr>'+r.map((c,i)=>{
+    const cls=(i===0&&/^\d/.test(c))?'m':(c==='true'?'s':'');
+    return `<td class="${cls}">${c}</td>`;}).join('')+'</tr>').join('');
+  $('reshead').textContent=q.rows.length+' rows';
+  $('fromtbl').textContent='FROM '+q.from;
+}
+
+/* ── typing ── */
+function type(q){
+  clearInterval(typing);
+  const flat=q.sql.map(([c,t])=>({c,t})); let seg=0,ch=0,out='';
+  $('stat').textContent='running…'; $('ms').textContent='';
+  const done=()=>{ $('sql').innerHTML=out; $('stat').textContent='ok';
+    $('ms').textContent=(6+Math.floor(Math.random()*12))+' ms'; renderRes(q); buildGraph(q); };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    out=flat.map(s=>`<span class="${s.c==='p'?'':s.c}">${s.t}</span>`).join(''); done(); return; }
+  typing=setInterval(()=>{
+    if(seg>=flat.length){ clearInterval(typing); done(); return; }
+    const s=flat[seg]; ch++;
+    const piece=`<span class="${s.c==='p'?'':s.c}">${s.t.slice(0,ch)}</span>`;
+    $('sql').innerHTML=out+piece+'<span class="caret"></span>';
+    if(ch>=s.t.length){ out+=piece; seg++; ch=0; }
+  },11);
+}
+
+/* ── lineage ── */
+const NODES={};
+function card(t){
+  const cls=t.b==='src'?'b-src':t.b==='mid'?'b-mid':'b-out';
+  const lbl=t.b==='src'?'source':t.b==='mid'?'derived':'served';
+  return `<button class="tbl" id="t-${t.n}" data-n="${t.n}">
+    <div class="tbl-h"><span>${t.n}</span><span class="badge ${cls}">${lbl}</span></div>
+    <div class="cols-list">${t.c.map(([a,b])=>`<div><span>${a}</span><span>${b}</span></div>`).join('')}</div>
+  </button>`;
+}
+function buildGraph(q){
+  NODES.map={}; [...q.src,...q.mid,...q.out].forEach(t=>NODES.map[t.n]=t);
+  $('l1').innerHTML=q.src.map(card).join('');
+  $('l2').innerHTML=q.mid.map(card).join('');
+  $('l3').innerHTML=q.out.map(card).join('');
+  $('linhead').textContent='lineage of '+q.from;
+  $('n-lbl').textContent='select a table';
+  $('n-body').textContent='Every column in the result above came from somewhere. This is where.';
+  document.querySelectorAll('.tbl').forEach(b=>{
+    b.addEventListener('click',()=>pick(b.dataset.n));
+    b.addEventListener('mouseenter',()=>trace(b.dataset.n,true));
+    b.addEventListener('mouseleave',()=>trace(b.dataset.n,false));
+    b.addEventListener('focus',()=>{pick(b.dataset.n);trace(b.dataset.n,true)});
+    b.addEventListener('blur',()=>trace(b.dataset.n,false));
+  });
+  requestAnimationFrame(()=>wires(q));
+}
+function wires(q){
+  const g=$('wires'), host=g.parentElement.getBoundingClientRect();
+  g.innerHTML=''; g.setAttribute('viewBox',`0 0 ${host.width} ${host.height}`);
+  q.edges.forEach(([a,b])=>{
+    const A=$('t-'+a),B=$('t-'+b); if(!A||!B) return;
+    const ra=A.getBoundingClientRect(),rb=B.getBoundingClientRect();
+    const x1=ra.right-host.left,y1=ra.top-host.top+ra.height/2,
+          x2=rb.left-host.left,y2=rb.top-host.top+rb.height/2;
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',`M${x1} ${y1} C ${x1+40} ${y1}, ${x2-40} ${y2}, ${x2} ${y2}`);
+    p.setAttribute('class','wire'); p.dataset.a=a; p.dataset.b=b; g.appendChild(p);
+  });
+}
+function pick(n){
+  const t=NODES.map[n]; if(!t) return;
+  $('n-lbl').textContent=t.n;
+  $('n-body').textContent=t.note;
+  document.querySelectorAll('.tbl').forEach(b=>b.setAttribute('aria-current',b.dataset.n===n?'true':'false'));
+}
+function trace(n,on){
+  const q=Q[CUR], lit=new Set([n]);
+  if(on){ let grew=true,g=0;
+    while(grew&&g++<8){ grew=false;
+      q.edges.forEach(([a,b])=>{ if(lit.has(a)&&!lit.has(b)){lit.add(b);grew=true;}
+                                 if(lit.has(b)&&!lit.has(a)&&b===n){lit.add(a);grew=true;} }); } }
+  document.querySelectorAll('.tbl').forEach(b=>b.classList.toggle('dim',on&&!lit.has(b.dataset.n)));
+  $('wires').querySelectorAll('.wire').forEach(w=>
+    w.classList.toggle('hot',on&&lit.has(w.dataset.a)&&lit.has(w.dataset.b)));
+}
+
+/* ── mode switch ── */
+function mode(showLin){
+  $('pane-res').classList.toggle('hidden',showLin);
+  $('pane-lin').classList.toggle('hidden',!showLin);
+  $('btn-res').setAttribute('aria-pressed',String(!showLin));
+  $('btn-lin').setAttribute('aria-pressed',String(showLin));
+  if(showLin) requestAnimationFrame(()=>wires(Q[CUR]));
+}
+$('btn-res').addEventListener('click',()=>mode(false));
+$('btn-lin').addEventListener('click',()=>mode(true));
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+    t.setAttribute('aria-selected','true'); CUR=t.dataset.q; type(Q[CUR]);
+  });
+});
+addEventListener('resize',()=>{ if(!$('pane-lin').classList.contains('hidden')) wires(Q[CUR]); });
+type(Q.ai);
+</script>
+
+</body>
+</html>
