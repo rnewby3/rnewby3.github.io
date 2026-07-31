@@ -272,16 +272,18 @@ offhours:{from:"off_hours",
   rows:[["cigars","since 2005","49 sessions logged third by third. Yes, in a database."],
         ["bourbon","MSRP only","Collection tracked. Never paid secondary."],
         ["magic","draft &amp; brew","Currently trimming a bird tribal list to exactly 100."],
-        ["tattoos","american traditional","Bold colour, nautical, Christ as anchor."]],
+        ["home lab","self-hosted","Jellyfin on a NAS. Hardware transcoding, Tailscale, no subscription."]],
   src:[T("cigar_log","src",[["cigar","text"],["date_smoked","date"],["rating","int"],["notes","text"]],"An actual Airtable base. Pre-light, first third, second third, final third, plus what was going on in my life that night. 49 rows and counting."),
        T("bourbon_collection","src",[["bottle","text"],["proof","numeric"],["paid","numeric"]],"Tracked the same way. The rule is MSRP or nothing, which is why the list is shorter than it could be."),
        T("humidor","src",[["cigar","text"],["qty","int"],["status","text"]],"Inventory, separate from the journal. The log is what I smoked, the humidor is what is left."),
-       T("mtga_decks","src",[["deck","text"],["format","text"]],"Currently a Simic bird tribal Brawl list. The commander only triggers on Bird creature spells, which is a constraint I find genuinely fun.")],
-  mid:[T("tasting_notes","mid",[["flavor","text"],["freq","int"]],"Flavour frequency across every session. Cedar, leather and cocoa dominate, which is a real pattern and not a vibe."),
+       T("mtga_decks","src",[["deck","text"],["format","text"]],"Currently a Simic bird tribal Brawl list. The commander only triggers on Bird creature spells, which is a constraint I find genuinely fun."),
+       T("media_server","src",[["title","text"],["type","text"],["codec","text"]],"587 movies and 138 series on a NAS running Jellyfin in Docker. Hardware transcoding, Tailscale for remote access, FileBot handling the naming. The same instinct as everything else here.")],
+  mid:[T("tasting_notes","mid",[["flavor","text"],["freq","int"]],"Flavor frequency across every session. Cedar, leather and cocoa dominate, which is a real pattern and not a vibe."),
        T("pairings","mid",[["cigar","text"],["pour","text"]],"What went with what, and whether it worked. Contrast beats complement more often than people expect.")],
   out:[T("off_hours","out",[["pursuit","text"],["depth","text"],["notes","text"],["logged","bool"]],"Everything here has a WHERE logged = true clause for a reason. If I am into something, there is a schema for it.")],
   edges:[["cigar_log","tasting_notes"],["humidor","tasting_notes"],["bourbon_collection","pairings"],
-         ["cigar_log","pairings"],["mtga_decks","off_hours"],["tasting_notes","off_hours"],["pairings","off_hours"]]}
+         ["cigar_log","pairings"],["mtga_decks","off_hours"],["media_server","off_hours"],
+         ["tasting_notes","off_hours"],["pairings","off_hours"]]}
 };
 
 const $=id=>document.getElementById(id);
