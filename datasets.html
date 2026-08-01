@@ -34,10 +34,11 @@
     <p class="lede">Real-world datasets built by a BI architect. Fact and dimension tables separated, a data dictionary in every set, and a deliberately broken copy of each one. No Kaggle toy data &mdash; this looks like what you actually get after a CRM export.</p>
   </header>
 
-  <div class="editor" style="border-radius:6px;border-bottom:1px solid var(--edge)">
-    <div class="sql" style="min-height:0"><span class="com">-- everything here is downloadable, no signup wall</span>
-<span class="kw">SELECT</span> domain, contents, variants <span class="kw">FROM</span> catalog
-<span class="kw">WHERE</span> status = <span class="str">'available'</span>;</div>
+  <div class="editor" style="border-radius:6px 6px 0 0">
+    <div class="sql" id="sql" style="min-height:0"></div>
+  </div>
+  <div class="bar" style="border-radius:0 0 6px 6px;margin-bottom:0">
+    <span><span id="stat">ready</span> <b class="ok" id="ms"></b></span>
   </div>
 
   <div class="sec">
@@ -74,7 +75,7 @@
   </div>
 
   <div class="sec">
-    <div class="sec-h"><span>release log</span><b>5 shipped &middot; 1 planned</b></div>
+    <div class="sec-h"><span>release log</span><b>5 shipped</b></div>
     <div class="pane solo">
       <div class="tscroll">
         <table>
@@ -90,18 +91,8 @@
                 <td>Five standalone challenge files &mdash; duplicates, orphaned keys, date format chaos, null patterns (MCAR/MAR/MNAR), and type chaos &mdash; each with a documented answer key.</td></tr>
             <tr><td class="s">live</td><td><strong>Star Schema Kits</strong></td>
                 <td>Retail and e-commerce kit: 2,000-row fact_sales, a date dimension with 18 attributes including fiscal calendar and holiday flags, 5 dimension tables, a relationship map, and ready-to-paste DAX and SQL.</td></tr>
-            <tr><td class="m">2027</td><td><strong>Community &amp; API</strong></td>
-                <td>Community-contributed datasets, automated generators, and a lightweight API for programmatic access. Analysts should be able to script their setups.</td></tr>
           </tbody>
         </table>
-      </div>
-      <div class="signup">
-        <form id="signupForm" action="https://formspree.io/f/mnjbrwgg" method="POST" style="display:contents">
-          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-          <button type="submit" id="signupBtn">notify me</button>
-        </form>
-        <span class="done hidden" id="signupSuccess">&#10003; You're on the list.</span>
-        <span class="hint" id="signupNote">One email when new sets drop. No spam, unsubscribe anytime.</span>
       </div>
     </div>
   </div>
@@ -115,7 +106,16 @@
   </footer>
 </div>
 
+<script src="js/sql-type.js"></script>
 <script>
+/* Same typewriter as the console, so the pages behave like one product. */
+sqlType(document.getElementById('sql'), [
+  ["com","-- everything here is downloadable, no signup wall\n"],
+  ["kw","SELECT"],["p"," domain, contents, variants"],
+  ["kw","\nFROM"],["p"," catalog"],
+  ["kw","\nWHERE"],["p"," status = "],["str","'available'"],["p",";"]
+], {status:'stat', ms:'ms'});
+
 const CAT=[
 {domain:"sales_revenue",label:"Sales &amp; Revenue",variants:"clean + dirty",fmt:"csv · xlsx",
  blurb:"Opportunity pipeline data, closed-won and closed-lost deals, rep performance, quota attainment, and ARR/MRR breakdowns. Good for building CRM-style dashboards end to end.",
@@ -186,28 +186,6 @@ document.getElementById('catbody').addEventListener('click',e=>{
   const tr=e.target.closest('tr[data-i]'); if(tr) show(+tr.dataset.i);
 });
 show(0);
-
-/* signup — same Formspree endpoint, same behaviour as before */
-(function(){
-  const form=document.getElementById('signupForm'),
-        btn=document.getElementById('signupBtn'),
-        ok=document.getElementById('signupSuccess'),
-        note=document.getElementById('signupNote');
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    btn.textContent='sending…'; btn.disabled=true;
-    try{
-      const res=await fetch(form.action,{method:'POST',body:new FormData(form),
-        headers:{'Accept':'application/json'}});
-      if(!res.ok) throw new Error('bad response');
-      form.style.display='none'; ok.classList.remove('hidden');
-      note.textContent='Thanks — you will hear from me when the next set lands.';
-    }catch(err){
-      btn.textContent='notify me'; btn.disabled=false;
-      note.textContent='That did not go through. Email rnewby3@gmail.com and I will add you manually.';
-    }
-  });
-})();
 </script>
 </body>
 </html>

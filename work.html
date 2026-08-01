@@ -34,9 +34,11 @@
     <p class="lede">The console gives you the summary. This is the full record for each row &mdash; every role, what it actually involved, and the initiatives that came out of it.</p>
   </header>
 
-  <div class="editor" style="border-radius:6px;border-bottom:1px solid var(--edge)">
-    <div class="sql" style="min-height:0"><span class="com">-- the long version</span>
-<span class="kw">SELECT</span> * <span class="kw">FROM</span> roles <span class="kw">ORDER BY</span> started <span class="kw">DESC</span>;</div>
+  <div class="editor" style="border-radius:6px 6px 0 0">
+    <div class="sql" id="sql" style="min-height:0"></div>
+  </div>
+  <div class="bar" style="border-radius:0 0 6px 6px;margin-bottom:0">
+    <span><span id="stat">ready</span> <b class="ok" id="ms"></b></span>
   </div>
 
   <div class="sec">
@@ -86,9 +88,17 @@
   </footer>
 </div>
 
+<script src="js/sql-type.js"></script>
 <script>
+/* Same typewriter as the console, so the pages behave like one product. */
+sqlType(document.getElementById('sql'), [
+  ["com","-- the long version\n"],
+  ["kw","SELECT"],["p"," * "],["kw","FROM"],["p"," roles "],
+  ["kw","ORDER BY"],["p"," started "],["kw","DESC"],["p",";"]
+], {status:'stat', ms:'ms'});
+
 const ROLES=[
-{yrs:"2022 –",org:"Majesco",role:"Principal Power Platform Architect",focus:"data + AI platform",cur:true,
+{yrs:"2023 –",org:"Majesco",role:"Principal Power Platform Architect",focus:"data + AI platform",cur:true,
  summary:"Own enterprise data and analytics strategy for a global insurance software company, and the AI program sitting on top of it. Built the data infrastructure first, then took over the AI layer that runs on it: platform adoption, enablement, deployment architecture, and the governance that decides what any agent is allowed to reach.",
  bullets:[
  "Architected and delivered a centralized Enterprise Data Warehouse integrating five business domains: Sales, Marketing, Services, Product, and HR",
@@ -103,7 +113,7 @@ const ROLES=[
  tags:[["Microsoft Fabric",1],["Power BI",0],["Azure DevOps",0],["Data Governance",0],["CI/CD",0],
        ["EDW Architecture",0],["Enterprise AI",1],["MCP Governance",1],["AI Cost Attribution",1]]},
 
-{yrs:"2019–22",org:"Deltek",role:"Business Intelligence Analyst / Lead",focus:"BI modernization",
+{yrs:"2020–23",org:"Deltek",role:"Principal Operations Specialist",focus:"BI modernization",
  summary:"Drove BI modernization across a project-based ERP software company, shifting the organization from static reports to a self-service Power BI ecosystem used by 350+ internal stakeholders.",
  bullets:[
  "Developed and executed a comprehensive BI strategy and multi-year roadmap aligned to organizational OKRs",
